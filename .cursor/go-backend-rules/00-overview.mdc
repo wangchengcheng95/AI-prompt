@@ -1,0 +1,27 @@
+---
+description: Rules v2 overview (priority, applicability, conflict resolution)
+alwaysApply: true
+---
+# Rules v2 Overview
+
+## Goals
+- Make Cursor behave like a reliable **vibe engineering** agent: safe, correct, pragmatic, and easy to review.
+- Keep rules **actionable**, **non-conflicting**, and **minimal**.
+
+## Priority (when rules conflict)
+```
+Safety > Correctness > Maintainability > Performance > Convenience
+```
+
+## Applicability
+- **Always**: `ai-boundary`, `architecture`, `engineering-doctrine`, `go-backend`, `testing`.
+- **Optional (opt-in)**: `ai-interaction`, `clean-code`.
+- **When reviewing or explaining**: you may reference current implementation and provide summaries if it improves correctness and reviewability.
+
+## Conflict resolution
+- More specific rule wins over generic rule.
+- If still unclear, **stop and ask** with a concrete option set (A/B) and the minimal required context.
+
+## Change presentation
+- Multi-file changes: present diffs **file-by-file**.
+- Within one file: provide the full final edit for that file (avoid multi-step partial edits).

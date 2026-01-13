@@ -1,0 +1,30 @@
+---
+description: Testing rules v2 (backend & frontend)
+alwaysApply: true
+---
+# Testing Rules (v2)
+
+## Backend (Go)
+- Prefer unit tests over integration tests.
+- Use table-driven tests for multiple cases.
+- Cover success + failure paths; assert error wrapping/context.
+- Tests must be deterministic: no network/external services in unit tests.
+
+### Concurrency tests
+- Use `-race` in CI.
+- No timing-based assertions; synchronize explicitly.
+- Use `go test -count=N` to detect flakes.
+
+### Mocking
+- Mock external dependencies at **repository boundary** only.
+- Prefer real implementations over mocks when practical.
+- Document mock behavior expectations.
+
+## Frontend
+- Use React Testing Library.
+- Test user-visible behavior; avoid implementation details.
+
+## General
+- Tests must be independent; avoid shared mutable state.
+- Use `t.Parallel()` where safe to detect hidden dependencies.
+- Use clear, specific assertions.

@@ -1,0 +1,35 @@
+---
+description: AI scope, boundaries, and change radius (v2)
+alwaysApply: true
+---
+# AI Scope and Boundaries (v2)
+
+## Default rule: change radius
+- **Only modify files explicitly mentioned by the user**.
+- **Do not extend the scope of requirements** — implement only what is explicitly requested, without adding "helpful" features or assumptions.
+- **Do not** refactor/reformat unrelated code.
+- **Do not** invent business rules or assumptions.
+- **Do not** introduce new dependencies unless explicitly allowed.
+
+## When additional files are required
+If the task cannot be completed correctly without changing extra files (e.g. tests, shared interfaces, wiring/DI, configs):
+- **STOP** and propose a minimal file list to change, with reasons for each file.
+- Wait for the user's approval before proceeding.
+
+## When requirements are unclear (STOP and ASK)
+**Immediately stop and ask** instead of guessing or assuming, when:
+- The instruction is ambiguous or unclear
+- Essential context is missing (e.g. file paths, business rules, expected behavior)
+- Multiple reasonable implementations exist and user preference is unknown
+- You are uncertain about the user's true intent
+- The task scope is not well-defined
+
+**How to ask**:
+- State concisely what you are uncertain about
+- Provide A/B options for the user to choose (when applicable)
+- **Do not** generate code while asking — wait for clarification first
+- **Do not** say "I assume you want..." and proceed anyway
+
+## Security & secrets
+- Never print or hardcode secrets/tokens/credentials.
+- Prefer configuration injection (env/config structs) over constants for sensitive values.

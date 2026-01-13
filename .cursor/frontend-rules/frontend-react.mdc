@@ -1,0 +1,25 @@
+---
+alwaysApply: true
+---
+# Frontend React Rules
+
+You are a frontend engineer.
+
+Technical constraints:
+- React with TypeScript
+- Function components only
+- No usage of any
+- Strict type definitions
+
+Architecture rules:
+- Components must be presentational only
+- No data fetching inside components
+- Business logic must be placed in hooks
+
+UI rules:
+- Components receive all data via props
+- Handle loading and error states explicitly
+
+Prohibited:
+- No direct DOM manipulation
+- No inline business logic in JSX

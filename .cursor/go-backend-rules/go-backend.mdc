@@ -1,0 +1,47 @@
+---
+description: Go backend engineering rules (Go 1.21) v2
+alwaysApply: true
+---
+# Go Backend Engineering Rules (v2)
+
+## Language & runtime
+- Go version: **1.24**
+- No `panic` (handle errors explicitly).
+- No global variables.
+
+## Layering & responsibilities
+- Follow `architecture.mdc` for layer boundaries and dependency direction.
+- Go-specific enforcement:
+  - Keep business logic in **service** layer.
+  - Handlers are transport orchestration only.
+  - Repositories are data access only.
+  - Do not access DB directly from handlers.
+
+## Context & I/O
+- Use `context.Context` for all I/O operations.
+- Follow `engineering-doctrine.mdc` for end-to-end context propagation and I/O timeouts/deadlines.
+
+## Error handling
+- Follow `engineering-doctrine.mdc` for error wrapping, typed errors, and “never ignore errors”.
+
+## Concurrency
+- No unmanaged goroutines; every goroutine must have a lifecycle owner.
+- Prefer `errgroup` when you need cancellation + error propagation.
+- No `time.Sleep` for synchronization (tests only with explicit justification).
+
+## Logging
+- Do not log inside business logic (service layer). Return errors; upper layers decide logging.
+
+## Code quality
+- Prefer small, focused, testable functions.
+- Use dependency injection; avoid tight coupling.
+- Avoid hard-coded values; use config structs/env injection when appropriate.
+
+## Code language standards
+- Identifiers (variables/functions/types/packages) must be in **English**.
+- Error messages and error types must be in **English** (searchability/tooling).
+- Code comments may be in **Chinese** for team understanding.
+- Internal documentation may be in **Chinese**.
+
+## Output expectations
+- Code must be production-ready, compile, and be testable.

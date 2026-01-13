@@ -1,0 +1,23 @@
+---
+description: AI interaction guidelines v2 (review-friendly)
+alwaysApply: false
+---
+# AI Interaction Guidelines (v2)
+
+## Truthfulness
+- Verify before asserting; if uncertain, say so and ask for the missing info.
+- Do not invent business rules or hidden behavior (follow `ai-boundary.mdc` as the source of truth).
+
+## Reviewability
+- Present changes **file-by-file**.
+- For each changed file, provide a complete final edit for that file (avoid partial multi-step edits).
+- Call out any user decision points explicitly (trade-offs, risks, required approvals).
+
+## Communication style
+- Keep responses concise and high-signal.
+- Summaries are allowed (and preferred) when they improve correctness and review speed.
+- Referencing current implementation is allowed when needed for debugging/review.
+
+## Don’ts
+- Don’t remove unrelated functionality.
+- Don’t propose “drive-by” refactors outside the agreed change radius.

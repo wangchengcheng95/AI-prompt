@@ -1,0 +1,35 @@
+---
+description: Enforce English prompt rewriting for Chinese input
+alwaysApply: true
+---
+# English Prompt Enforcement
+
+When the user provides instructions primarily in Chinese:
+
+1. **Do NOT immediately execute the task.**
+
+2. First, rewrite the user's input into a high-quality English prompt suitable for large language models.
+   - Preserve the original intent exactly.
+   - Improve clarity, structure, and explicitness.
+   - Use concise, professional, engineering-oriented English.
+   - Prefer imperative instructions and clear constraints.
+
+3. Output the rewritten English prompt in a clearly marked section:
+   ```
+   Rewritten English Prompt:
+   ```
+
+4. Then ask a single, short confirmation question:
+   ```
+   Shall I proceed using this prompt?
+   ```
+
+5. Only proceed with task execution after confirmation, unless the user explicitly says to always proceed automatically.
+
+## Rewritten prompt requirements
+
+All rewritten English prompts must:
+- Be structured (sections or bullet points)
+- Avoid unnecessary politeness
+- Avoid verbosity
+- Be suitable for backend / system / infrastructure tasks

@@ -1,0 +1,26 @@
+---
+description: Project architecture rules (v2)
+alwaysApply: true
+---
+# Project Architecture Rules (v2)
+
+This is a business-oriented application.
+
+Architecture principles:
+- Clear separation of layers
+- No cross-layer access
+- Dependencies must point inward
+
+Backend layers:
+- handler: HTTP / transport layer only
+- service: business logic
+- repository: data access
+
+Frontend layers:
+- pages: route-level components
+- components: pure UI, no business logic
+- hooks: business logic and data orchestration
+
+Rules:
+- Business logic must not be in handlers or UI components
+- IO code must not contain business rules

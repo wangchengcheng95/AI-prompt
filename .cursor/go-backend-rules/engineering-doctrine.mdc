@@ -1,0 +1,64 @@
+---
+description: Engineering doctrine (reliability, correctness, explicitness) v2
+alwaysApply: true
+---
+# Engineering Doctrine (v2)
+
+Priority:
+```
+Safety > Correctness > Maintainability > Performance > Convenience
+```
+
+## Assume failure by default
+- Assume retries, duplication, partial failure, concurrency.
+- Network / external systems can fail, timeout, return stale data.
+- Operations may be interrupted mid-execution.
+
+## Write operations: protection & idempotency
+- Externally visible write operations must be **idempotent**.
+- Protect write paths explicitly (distributed lock or fencing token) when needed.
+- Document idempotency keys and deduplication strategy.
+
+## No implicit behavior
+- No implicit retries or hidden side effects.
+- No timing-based correctness assumptions.
+- No background goroutines without clear ownership.
+- No `time.Sleep` for synchronization (use context, timers, or explicit state checks).
+
+## Error handling
+- Never ignore returned errors.
+- Wrap errors with context: `fmt.Errorf("operation: %w", err)`.
+- Prefer typed errors; do not rely on string matching.
+
+## Context propagation
+- `context.Context` must propagate end-to-end.
+- All I/O must accept and respect context cancellation.
+- Use timeouts/deadlines for I/O boundaries.
+
+## Shell command execution
+- **All shell commands must have explicit timeout** to prevent hanging.
+- Use `timeout` command or equivalent mechanism (e.g., `timeout 30s <command>`).
+- Default timeout should be reasonable:
+  - Quick operations (file ops, simple checks): 10-30 seconds
+  - Network operations (downloads, API calls): 30-60 seconds
+  - Build/compile operations: 5-10 minutes (configurable)
+- For long-running operations, use context-aware timeouts or explicit timeout flags.
+- Always handle timeout errors explicitly (check exit code 124 from `timeout`).
+- Never execute shell commands without timeout protection.
+
+## Repository boundaries
+- No SQL outside repository layer.
+- Cross-repository transactions require explicit coordination.
+
+## Concurrency & goroutines
+- Every goroutine has a clear owner responsible for lifecycle and shutdown.
+- Prefer `errgroup.WithContext` for managed goroutine lifecycles.
+- Use `select { case <-ctx.Done(): ... }` for cancellation checks.
+
+## Distributed locks (if used)
+- Acquire with timeout; handle acquisition failure gracefully.
+- Always release in `defer` and surface release failures to the caller.
+- **Logging policy**: service/business logic should not log; return errors and let upper layers decide logging.
+
+## If any constraint cannot be satisfied
+STOP, explain the conflict, propose alternatives, and do not silently violate rules.

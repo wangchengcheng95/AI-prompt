@@ -1,0 +1,25 @@
+---
+description: Clean code guidelines v2 (within change radius)
+alwaysApply: false
+---
+# Clean Code Guidelines (v2)
+
+## Scope guard
+- Apply these guidelines **only within the agreed change radius**.
+- Do not do drive-by refactors; if a refactor is needed beyond the radius, ask first.
+
+## Readability & structure
+- Use meaningful names; avoid unclear abbreviations.
+- Keep functions small and single-purpose.
+- Prefer clear interfaces; hide implementation details.
+
+## Avoid duplication (DRY)
+- Extract repeated logic into helpers when it improves clarity and testability.
+
+## Comments
+- Prefer self-documenting code.
+- Use comments to explain **why** (trade-offs, invariants, non-obvious side effects), not what.
+
+## Magic numbers & config
+- Replace magic numbers with named constants when it improves maintainability.
+- Avoid hard-coded operational values; prefer config injection where appropriate.
