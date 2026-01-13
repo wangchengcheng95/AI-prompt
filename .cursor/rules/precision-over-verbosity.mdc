@@ -1,0 +1,34 @@
+---
+alwaysApply: true
+description: Precision over verbosity - keep content lean and focused
+---
+
+# Precision Over Verbosity
+
+## Rules
+
+**Every word must earn its place.** Concise, actionable instructions > lengthy explanations.
+
+**1. Commands**: Action-oriented - focus on WHAT and HOW, not WHY
+
+**2. Overviews**: 2-4 sentences maximum
+
+**3. Steps**: Direct and specific - show code/commands immediately, not explanations first
+
+**4. Documentation**: Delete redundancy - check overlap (`grep -r "keyword" docs/`), if >60% delete/consolidate, delete process files after completion
+
+**5. Examples**: Show, don't explain - code example directly, no preamble
+
+**6. Comments**: Explain "Why", not "What"
+
+---
+
+## Enforcement
+
+**Creating content**: Write first draft, cut 30%, ask "Does each sentence add value?", replace explanations with examples
+
+**Reviewing content**: Flag paragraphs >5 sentences, flag docs with >60% overlap, delete process files after completion
+
+**Red flags**: Paragraphs >5 sentences, overviews >4 sentences, multiple docs on same topic (>60% overlap), explanations before examples, hedging
+
+**Anti-patterns**: ❌ Unnecessary politeness, hedging, redundant modifiers, passive voice | ✅ Direct, confident, precise, active voice

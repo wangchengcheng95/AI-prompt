@@ -8,13 +8,15 @@ This repository contains organized AI commands and rules specifically designed f
 
 **Focus:** AI-assisted prompt engineering for backend development workflows
 
-**Scope:** 
+**Scope:**
 - Backend API development (REST, GraphQL)
 - Database design and optimization
 - Server architecture and microservices
 - Authentication and security
 - Performance optimization
 - DevOps and infrastructure
+
+---
 
 ## Backend Development Commands
 
@@ -173,10 +175,6 @@ Follow this classification when adding new commands:
 - All commands and rules are optimized for backend development workflows
 - Frontend-related commands are excluded
 - Full-stack commands are not included (backend-only focus)
-
-### Clear Separation
-- **Meta-level** (`.cursor/`): Commands for managing this repository
-- **Application-level** (other directories): Commands for actual backend development
 
 ### Quality Standards
 - Commands include clear steps, checklists, and best practices

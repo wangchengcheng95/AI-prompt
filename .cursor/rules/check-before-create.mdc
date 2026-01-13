@@ -1,0 +1,28 @@
+---
+alwaysApply: true
+description: Check for duplicates before creating new content
+---
+
+# Check Before Create
+
+## Rules
+
+**Before creating ANY new command or rule**, perform similarity checks:
+- **Commands**: Use `check-similar-commands.md`, search keywords, check filenames, read candidates
+- **Rules**: Grep for rule topic across `*-rules/`, check purpose, assess overlap
+
+**Similarity thresholds**:
+- **High (80-100%)**: ❌ REJECT, use existing
+- **Medium (50-80%)**: ❌ REJECT, extend existing
+- **Low (20-50%)**: ⚠️ Consider, create with differentiation if distinct
+- **None (0-20%)**: ✅ Proceed
+
+**Search strategies**: Keyword search, filename patterns, content analysis (compare Overview, check Steps overlap)
+
+## Enforcement
+
+**Before creating**: Search similar content, read candidates, assess overlap
+
+**Decision**: High/medium similarity → REJECT, reference/extend existing. Low/no similarity → Proceed with differentiation.
+
+**Key principle**: Default to NO. When in doubt, don't create. Prefer extending existing content. Quality over quantity.

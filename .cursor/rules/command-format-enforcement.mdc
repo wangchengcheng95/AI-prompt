@@ -1,0 +1,35 @@
+---
+alwaysApply: true
+description: Enforce standard command format (Overview → Steps → Checklist)
+---
+
+# Command Format Enforcement
+
+## Format Rules
+
+Required structure: Title (H1) → Overview (H2, 2-4 sentences) → Steps (H2 with H3 numbered) → Checklist (H2, verifiable items)
+
+**1. Title (H1)**: H1 heading (`#`), Title Case, filename: kebab-case matching title, no version numbers
+
+**2. Overview (H2)**: H2 heading (`##`), 2-4 sentences max, answer "What?" and "When?", no implementation details
+
+**3. Steps (H2)**: H2 heading (`##`), each step: H3 (`###`) with numbered bold title, sequential and actionable, include code/commands where relevant
+
+**4. Checklist (H2)**: H2 heading (`##`), GitHub checkboxes (`- [ ]`), verifiable items, 3-7 items, completion criteria
+
+## Optional Sections
+Examples (if complex), Notes (if warnings exist)
+
+## File & Directory Rules
+
+**Naming**: kebab-case, descriptive, action-oriented, match title, `.md` extension
+
+**Placement**: Managing THIS repo? → `.cursor/commands/` (meta-level), else → application directories (`backend-commands/`, `go-backend-commands/`, `user-commands/`, `devops-commands/`)
+
+## Enforcement
+
+**Creating commands**: Use `create-ai-command.md`, validate Title/Overview/Steps/Checklist present, check filename and heading levels
+
+**Common violations**: Missing sections, wrong heading levels, non-actionable checklist items
+
+**After creation**: Update `.cursor/README.md` inventory, use `check-similar-commands.md` to prevent duplicates, test command

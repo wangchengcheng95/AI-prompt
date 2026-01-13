@@ -1,0 +1,33 @@
+---
+alwaysApply: true
+description: All .cursor/ documentation must be in English
+---
+
+# English-Only Content
+
+## Rules
+
+**`.cursor/` directory documentation = English only**
+- `.cursor/commands/*.md` - Meta-commands
+- `.cursor/rules/*.mdc` - Meta-rules
+- `.cursor/README.md` - Documentation
+
+**User communication = Any language (respond in user's language)**
+
+## Chinese Input Protocol
+
+**When user provides Chinese input**:
+
+1. **Do NOT execute immediately**
+2. **Rewrite to English** (follow `CLAUDE.md` protocol):
+   - Preserve intent exactly
+   - Improve clarity and structure
+   - Use concise, professional, engineering-oriented English
+3. **Output**: "Rewritten English Prompt: [prompt]"
+4. **Ask**: "Shall I proceed using this prompt?"
+5. **Only proceed after confirmation**
+
+## Enforcement
+
+When creating files in `.cursor/`: Check input language (Chinese? → Convert first), write in English, verify file names and content.
+

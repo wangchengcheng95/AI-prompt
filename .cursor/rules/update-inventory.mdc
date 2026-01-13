@@ -1,0 +1,29 @@
+---
+alwaysApply: true
+description: Maintain accurate command counts in .cursor/README.md
+---
+
+# Update Inventory
+
+## When to Update
+
+**After every command/rule change, update `.cursor/README.md` statistics.**
+
+1. **Added command** → Increment count
+2. **Deleted command** → Decrement count
+3. **Moved command** → Adjust both categories
+4. **Added/deleted rule** → Update rule count
+
+---
+
+## What to Update
+
+**Command Description**: Add/remove/update entry in appropriate section (`backend-commands/`, `go-backend-commands/`, `user-commands/`, `devops-commands/`). Format: `- \`filename.md\` - Brief one-line description`
+
+**Repository Statistics**: Update counts (Backend Commands, Go-Specific Commands, User Commands, DevOps Commands, Total Active Commands, Backend Rules). **Important**: Do NOT include meta-level counts (per `meta-application-separation.mdc`)
+
+**Formula**: Total Active Commands = Backend + Go + User + DevOps
+
+**Verification**: Count files `find [dir]/ -name "*.md" | wc -l` for each category, compare with `.cursor/README.md`
+
+**Common mistakes**: Forgot to update count/list, total doesn't match sum, included meta-level counts

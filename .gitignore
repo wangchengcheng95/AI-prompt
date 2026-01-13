@@ -1,8 +1,4 @@
 # Claude Code Configuration
 # Local AI assistant configuration files - not for version control
-.CLAUDE.md
+CLAUDE.md
 .claude/
-
-# Meta-Level Commands
-# Repository management tools - not part of the distributed command collection
-.cursor/commands/

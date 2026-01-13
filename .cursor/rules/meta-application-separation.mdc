@@ -1,0 +1,39 @@
+---
+alwaysApply: true
+description: Maintain separation between meta-level (repository management) and application-level (backend development)
+---
+
+# Meta-Application Separation
+
+## Rules
+
+**Application-level** (backend development in other projects):
+- `backend-commands/`, `go-backend-commands/`, `user-commands/`, `devops-commands/`, `go-backend-rules/`, `docs/` - Committed to git, distributed, public
+- Users: Backend developers
+
+**Never mix levels**: Meta in `.cursor/`, Application in other directories
+
+**Decision rule**: Ask "What is this for?" - "Managing THIS repository" → Meta, "Using in backend projects" → Application
+
+**Naming**: Meta references "this repository", Application references "projects" or domains
+
+## Documentation Placement
+
+**Application-level docs** (`.cursor/README.md`, `README.md`, `docs/*`):
+- ✅ Document: Backend development commands/rules, usage guide, command classification
+- ❌ Do NOT document: Meta-commands/rules, repository management tools, internal processes
+- **Rationale**: Application-level docs are distributed. Meta-level is internal.
+
+**Repository statistics** (in `.cursor/README.md`):
+- ✅ Include: Backend Commands, User Commands, Total Active Commands, application-level rules count
+- ❌ Exclude: Meta-Rules count, Meta-Commands count
+
+## Enforcement Actions
+
+**When creating files**: Determine level (managing repo? → `.cursor/`, backend development? → application directories), never mix
+
+**When updating documentation**: Scan for meta-level content in `.cursor/README.md` or `README.md`, remove if found, keep application-level only
+
+**When user asks to document meta-content**: "Meta-level content (`.cursor/commands/`, `.cursor/rules/`) is for managing this repository and should not be documented in `.cursor/README.md` or `README.md`. These files are application-level docs distributed with the command collection. Meta-level content is internal and excluded from version control."
+
+**Key**: `.cursor/README.md` is application-level despite being in `.cursor/`

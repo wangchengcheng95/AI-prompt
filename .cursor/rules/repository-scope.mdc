@@ -1,0 +1,33 @@
+---
+alwaysApply: true
+description: Enforce backend-only scope - reject all frontend/fullstack content
+---
+
+# Repository Scope Enforcement
+
+## Rules
+
+### ✅ Accept Only Backend Content
+
+- **Backend API Development**: REST, GraphQL, gRPC, WebSocket servers
+- **Database Layer**: Schema design, migrations, queries, optimization, ORM/query builders
+- **Server Architecture**: Microservices, monoliths, service design, patterns
+- **Authentication & Authorization**: JWT, OAuth, session management, RBAC, security policies
+- **Performance & Monitoring**: Profiling, optimization, logging, tracing, metrics
+- **DevOps & Infrastructure**: Docker, CI/CD, deployment, orchestration, infrastructure-as-code
+- **Backend Testing**: Unit tests, integration tests, API tests, e2e backend tests
+- **Backend Code Quality**: Refactoring, linting, security audits (server-side only)
+
+### ❌ Reject Frontend Content
+
+- **Frontend Frameworks**: React, Vue, Angular, Svelte, etc.
+- **UI/UX**: Component design, styling, CSS, HTML templates, accessibility (UI)
+- **Client-Side Logic**: Browser APIs, client state management, frontend routing
+- **Fullstack Features**: Features that mix client and server concerns
+- **Build Tools**: Webpack, Vite, Rollup (unless for backend bundling)
+
+## Enforcement
+
+When detecting out-of-scope content: Flag violation, explain why (reference `docs/REPOSITORY-GOALS.md`), suggest alternative ("backend-only" or "separate backend concerns"), recommend deletion if existing content violates scope.
+
+**Reference**: `docs/REPOSITORY-GOALS.md` - Backend API, databases, server architecture, auth, performance, DevOps, testing (in scope); Frontend, fullstack, UI/UX, client-side (out of scope)
