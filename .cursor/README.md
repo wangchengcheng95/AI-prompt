@@ -1,3 +1,5 @@
+[English](README.md) | [中文](README.zh.md)
+
 # Backend AI Prompt Engineering Repository
 
 This repository contains organized AI commands and rules specifically designed for **backend development**. The structure separates meta-commands (for managing this repository) from actual backend development commands.
@@ -16,11 +18,12 @@ This repository contains organized AI commands and rules specifically designed f
 
 ## Directory Structure
 
-### `.cursor/commands/` (4 meta-commands)
+### `.cursor/commands/` (5 meta-commands)
 **Purpose:** Commands for managing THIS prompt engineering repository itself
 
 These are meta-level commands for creating, testing, and optimizing the prompts and commands in this repository:
 
+- `check-similar-commands.md` - Check for similar commands before creating new ones
 - `create-ai-command.md` - Create new AI commands following repository patterns
 - `test-ai-command.md` - Test and validate command effectiveness
 - `optimize-ai-prompt.md` - Optimize AI prompts for better results
@@ -168,6 +171,11 @@ user-commands/ + devops-commands/
 
 When managing this prompt engineering repository itself:
 
+**Checking for Similar Commands:**
+```
+Use: .cursor/commands/check-similar-commands.md
+```
+
 **Creating New Commands:**
 ```
 Use: .cursor/commands/create-ai-command.md
@@ -269,12 +277,12 @@ Brief description of purpose and when to use
 
 ## Repository Statistics
 
-- **Meta-Commands:** 4 (for repository management)
+- **Meta-Commands:** 5 (for repository management)
 - **Backend Commands:** 6 (language-agnostic)
 - **Go-Specific Commands:** 1
 - **User Commands:** 34 (project-agnostic)
 - **DevOps Commands:** 1
-- **Total Active Commands:** 45
+- **Total Active Commands:** 46
 - **Backend Rules:** 9 (Go-focused)
 
 ---
@@ -283,8 +291,9 @@ Brief description of purpose and when to use
 
 When contributing to this repository:
 
-1. Use `create-ai-command.md` to create new commands with proper structure
-2. Use `test-ai-command.md` to validate commands before committing
-3. Ensure commands align with backend development focus
-4. Follow the directory classification guidelines
-5. Update this README when adding new commands or categories
+1. Use `check-similar-commands.md` to check for existing similar commands before creating new ones
+2. Use `create-ai-command.md` to create new commands with proper structure
+3. Use `test-ai-command.md` to validate commands before committing
+4. Ensure commands align with backend development focus
+5. Follow the directory classification guidelines
+6. Update this README when adding new commands or categories
