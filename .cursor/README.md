@@ -1,13 +1,65 @@
-# Cursor Commands
+# Backend AI Prompt Engineering Repository
 
-This directory contains organized Cursor AI commands categorized by scope and tech stack.
+This repository contains organized AI commands and rules specifically designed for **backend development**. The structure separates meta-commands (for managing this repository) from actual backend development commands.
+
+## Repository Purpose
+
+**Focus:** AI-assisted prompt engineering for backend development workflows
+
+**Scope:** 
+- Backend API development (REST, GraphQL)
+- Database design and optimization
+- Server architecture and microservices
+- Authentication and security
+- Performance optimization
+- DevOps and infrastructure
 
 ## Directory Structure
 
-### `user-commands/` (35 commands)
-**Scope:** Project-agnostic, reusable across most AI-assisted coding projects
+### `.cursor/commands/` (4 meta-commands)
+**Purpose:** Commands for managing THIS prompt engineering repository itself
 
-Generic programming commands that work with any project or tech stack:
+These are meta-level commands for creating, testing, and optimizing the prompts and commands in this repository:
+
+- `create-ai-command.md` - Create new AI commands following repository patterns
+- `test-ai-command.md` - Test and validate command effectiveness
+- `optimize-ai-prompt.md` - Optimize AI prompts for better results
+- `refactor-cursor-commands.md` - Refactor and organize commands in this repository
+
+---
+
+## Backend Development Commands
+
+These directories contain commands that are used **in actual backend development projects**:
+
+### `backend-commands/` (6 commands)
+**Scope:** Language-agnostic backend development commands
+
+General backend commands that work across different programming languages:
+
+**API Development:**
+- `design-rest-api.md` - Design RESTful API endpoints following best practices
+- `generate-api-docs.md` - Generate comprehensive API documentation
+- `generate-crud-operations.md` - Generate complete CRUD operations for data models
+
+**Database:**
+- `database-migration.md` - Create and manage database migrations
+- `optimize-database-queries.md` - Analyze and optimize database query performance
+
+**Testing:**
+- `write-integration-tests.md` - Create integration tests for multi-component systems
+
+### `go-backend-commands/` (1 command)
+**Scope:** Go-specific backend development
+
+Commands tailored for Go backend projects:
+
+- `add-error-handling.md` - Implement Go error handling patterns (explicit `if err != nil`, error wrapping, context usage)
+
+### `user-commands/` (34 commands)
+**Scope:** Project-agnostic, reusable across backend projects
+
+Generic programming commands that work with any backend project or tech stack:
 
 **Development Workflow:**
 - `clarify-task.md` - Ask clarifying questions before coding
@@ -53,73 +105,186 @@ Generic programming commands that work with any project or tech stack:
 - `critique-phase.md` - Critique phase workflow
 - `verification-phase.md` - Verification phase workflow
 
-**Go Refactoring:**
+**Go Backend Standards:**
 - `go-backend-standards.md` - Go backend coding standards
 - `go-refactor-conventions.md` - Go refactoring conventions
 - `go-refactor-design.md` - Go refactoring design patterns
-
-**Utilities:**
-- `english-prompt-enforcement.md` - English prompt enforcement rules
-- `refactor-cursor-commands.md` - Refactor cursor commands
-
-### `go-backend-commands/` (1 command)
-**Scope:** Go-specific backend development
-
-- `add-error-handling.md` - Implement Go error handling patterns (explicit `if err != nil`, error wrapping, context usage)
-
-### `backend-commands/` (2 commands)
-**Scope:** General backend development (language-agnostic)
-
-- `database-migration.md` - Create and manage database migrations
-- `generate-api-docs.md` - Generate API documentation
 
 ### `devops-commands/` (1 command)
 **Scope:** DevOps and infrastructure management
 
 - `docker-logs.md` - Tail Docker container logs
 
-### `frontend-commands/` (1 command)
-**Scope:** Frontend/UI development
-
-- `accessibility-audit.md` - Comprehensive WCAG accessibility audit
-
 ### `project-specific-archived/` (4 commands)
 **Scope:** Project-specific commands (archived for reference)
 
-Commands that are tightly coupled to a specific project and not easily reusable:
+Commands that are tightly coupled to specific projects and not easily reusable:
 - `generate-device-protocol-docs.md` - Device protocol documentation
 - `generate-mqtt-docs.md` - MQTT documentation
 - `onboard-new-developer.md` - Project-specific onboarding
 - `run-regression-tests-and-fix.md` - Project-specific regression tests
 
-## Usage Recommendations
+---
 
-### For Most Projects
-Start with `user-commands/` - these work across any project and tech stack.
+## Backend Development Rules
 
-### For Go Backend Projects
-Use `user-commands/` + `go-backend-commands/` + `backend-commands/`
+### `go-backend-rules/` (9 rules)
+Rules and standards for Go backend development:
 
-### For Frontend Projects
-Use `user-commands/` + `frontend-commands/`
+- `00-overview.mdc` - Overview of Go backend standards
+- `ai-boundary.mdc` - AI interaction boundaries
+- `ai-interaction.mdc` - AI interaction guidelines
+- `architecture.mdc` - Architecture principles
+- `clean-code.mdc` - Clean code standards
+- `engineering-doctrine.mdc` - Engineering principles
+- `english-prompt.mdc` - English prompt requirements
+- `go-backend.mdc` - Go backend specific rules
+- `testing.mdc` - Testing standards
 
-### For Full-Stack Projects
-Use all relevant directories based on your tech stack.
+---
+
+## Usage Guide
+
+### For Backend Developers Using This Repository
+
+When working on backend projects, use these command categories:
+
+**For Go Backend Projects:**
+```
+user-commands/ + go-backend-commands/ + backend-commands/ + go-backend-rules/
+```
+
+**For General Backend Projects (any language):**
+```
+user-commands/ + backend-commands/
+```
+
+**For DevOps Tasks:**
+```
+user-commands/ + devops-commands/
+```
+
+### For Contributors Managing This Repository
+
+When managing this prompt engineering repository itself:
+
+**Creating New Commands:**
+```
+Use: .cursor/commands/create-ai-command.md
+```
+
+**Testing Commands:**
+```
+Use: .cursor/commands/test-ai-command.md
+```
+
+**Optimizing Prompts:**
+```
+Use: .cursor/commands/optimize-ai-prompt.md
+```
+
+**Refactoring Commands:**
+```
+Use: .cursor/commands/refactor-cursor-commands.md
+```
+
+---
 
 ## Adding New Commands
 
-When adding new commands, follow this classification:
+Follow this classification when adding new commands:
 
-1. **Is it project-agnostic?** → `user-commands/`
-2. **Is it Go-specific?** → `go-backend-commands/`
-3. **Is it backend but language-agnostic?** → `backend-commands/`
-4. **Is it frontend-specific?** → `frontend-commands/`
-5. **Is it DevOps/infrastructure?** → `devops-commands/`
-6. **Is it tightly coupled to your specific project?** → Keep in project root or archive
+### For Meta-Commands (Managing This Repo):
+→ `.cursor/commands/`
+- Commands for creating, testing, or managing prompts
+- Tools for maintaining the repository structure
+
+### For Backend Development Commands:
+1. **Is it Go-specific?** → `go-backend-commands/`
+2. **Is it backend but language-agnostic?** → `backend-commands/`
+3. **Is it DevOps/infrastructure?** → `devops-commands/`
+4. **Is it project-agnostic and reusable?** → `user-commands/`
+5. **Is it tightly coupled to a specific project?** → `project-specific-archived/`
+
+---
+
+## Repository Principles
+
+### Backend-First Focus
+- All commands and rules are optimized for backend development workflows
+- Frontend-related commands are excluded
+- Full-stack commands are not included (backend-only focus)
+
+### Clear Separation
+- **Meta-level** (`.cursor/`): Commands for managing this repository
+- **Application-level** (other directories): Commands for actual backend development
+
+### Quality Standards
+- Commands include clear steps, checklists, and best practices
+- Each command is actionable and specific
+- Examples provided for common use cases
+- Security and performance considerations included
+
+### Language Support
+- Primary: Go backend development
+- General: Language-agnostic backend patterns
+- Documentation: English with technical precision
+
+---
+
+## Command Format
+
+All commands follow this standard structure:
+
+```markdown
+# Command Title
+
+## Overview
+Brief description of purpose and when to use
+
+## Steps
+1. **Step Name**
+    - Detailed sub-step
+    - Specific actions
+    
+2. **Next Step**
+    - More details
+
+## Checklist
+- [ ] Verifiable item
+- [ ] Another checkpoint
+```
+
+---
 
 ## Notes
 
-- Commands are designed to be used with Cursor AI assistant
+- Commands are designed for use with Cursor AI assistant and Claude
 - Each command includes clear steps, checklists, and best practices
-- Generic commands are preferred over project-specific ones for better reusability
-- Tech-stack specific commands should be clearly documented with their dependencies
+- Backend-specific commands prioritize security, performance, and scalability
+- Commands should be language-agnostic unless in language-specific directories
+- Regular updates ensure alignment with current backend best practices
+
+---
+
+## Repository Statistics
+
+- **Meta-Commands:** 4 (for repository management)
+- **Backend Commands:** 6 (language-agnostic)
+- **Go-Specific Commands:** 1
+- **User Commands:** 34 (project-agnostic)
+- **DevOps Commands:** 1
+- **Total Active Commands:** 45
+- **Backend Rules:** 9 (Go-focused)
+
+---
+
+## Contributing
+
+When contributing to this repository:
+
+1. Use `create-ai-command.md` to create new commands with proper structure
+2. Use `test-ai-command.md` to validate commands before committing
+3. Ensure commands align with backend development focus
+4. Follow the directory classification guidelines
+5. Update this README when adding new commands or categories
