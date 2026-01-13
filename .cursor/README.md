@@ -2,7 +2,7 @@
 
 # Backend AI Prompt Engineering Repository
 
-This repository contains organized AI commands and rules specifically designed for **backend development**. The structure separates meta-commands (for managing this repository) from actual backend development commands.
+This repository contains organized AI commands and rules specifically designed for **backend development**.
 
 ## Repository Purpose
 
@@ -15,21 +15,6 @@ This repository contains organized AI commands and rules specifically designed f
 - Authentication and security
 - Performance optimization
 - DevOps and infrastructure
-
-## Directory Structure
-
-### `.cursor/commands/` (5 meta-commands)
-**Purpose:** Commands for managing THIS prompt engineering repository itself
-
-These are meta-level commands for creating, testing, and optimizing the prompts and commands in this repository:
-
-- `check-similar-commands.md` - Check for similar commands before creating new ones
-- `create-ai-command.md` - Create new AI commands following repository patterns
-- `test-ai-command.md` - Test and validate command effectiveness
-- `optimize-ai-prompt.md` - Optimize AI prompts for better results
-- `refactor-cursor-commands.md` - Refactor and organize commands in this repository
-
----
 
 ## Backend Development Commands
 
@@ -167,45 +152,11 @@ user-commands/ + backend-commands/
 user-commands/ + devops-commands/
 ```
 
-### For Contributors Managing This Repository
-
-When managing this prompt engineering repository itself:
-
-**Checking for Similar Commands:**
-```
-Use: .cursor/commands/check-similar-commands.md
-```
-
-**Creating New Commands:**
-```
-Use: .cursor/commands/create-ai-command.md
-```
-
-**Testing Commands:**
-```
-Use: .cursor/commands/test-ai-command.md
-```
-
-**Optimizing Prompts:**
-```
-Use: .cursor/commands/optimize-ai-prompt.md
-```
-
-**Refactoring Commands:**
-```
-Use: .cursor/commands/refactor-cursor-commands.md
-```
-
 ---
 
 ## Adding New Commands
 
 Follow this classification when adding new commands:
-
-### For Meta-Commands (Managing This Repo):
-→ `.cursor/commands/`
-- Commands for creating, testing, or managing prompts
-- Tools for maintaining the repository structure
 
 ### For Backend Development Commands:
 1. **Is it Go-specific?** → `go-backend-commands/`
@@ -277,12 +228,11 @@ Brief description of purpose and when to use
 
 ## Repository Statistics
 
-- **Meta-Commands:** 5 (for repository management)
 - **Backend Commands:** 6 (language-agnostic)
 - **Go-Specific Commands:** 1
 - **User Commands:** 34 (project-agnostic)
 - **DevOps Commands:** 1
-- **Total Active Commands:** 46
+- **Total Active Commands:** 41
 - **Backend Rules:** 9 (Go-focused)
 
 ---
@@ -291,9 +241,6 @@ Brief description of purpose and when to use
 
 When contributing to this repository:
 
-1. Use `check-similar-commands.md` to check for existing similar commands before creating new ones
-2. Use `create-ai-command.md` to create new commands with proper structure
-3. Use `test-ai-command.md` to validate commands before committing
-4. Ensure commands align with backend development focus
-5. Follow the directory classification guidelines
-6. Update this README when adding new commands or categories
+1. Ensure commands align with backend development focus
+2. Follow the directory classification guidelines
+3. Update this README when adding new commands or categories

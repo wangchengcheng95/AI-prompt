@@ -2,7 +2,7 @@
 
 # 后端 AI 提示工程仓库
 
-本仓库包含专门为**后端开发**设计的 AI 命令和规则集合。结构上将元命令（用于管理本仓库）与实际的后端开发命令分开。
+本仓库包含专门为**后端开发**设计的 AI 命令和规则集合。
 
 ## 仓库目的
 
@@ -15,21 +15,6 @@
 - 认证和安全
 - 性能优化
 - DevOps 和基础设施
-
-## 目录结构
-
-### `.cursor/commands/` (5 个元命令)
-**目的：** 用于管理本提示工程仓库的命令
-
-这些是用于创建、测试和优化本仓库中提示和命令的元级命令：
-
-- `check-similar-commands.md` - 创建新命令前检查相似命令
-- `create-ai-command.md` - 按照仓库模式创建新的 AI 命令
-- `test-ai-command.md` - 测试和验证命令有效性
-- `optimize-ai-prompt.md` - 优化 AI 提示以获得更好结果
-- `refactor-cursor-commands.md` - 重构和组织本仓库中的命令
-
----
 
 ## 后端开发命令
 
@@ -167,45 +152,11 @@ user-commands/ + backend-commands/
 user-commands/ + devops-commands/
 ```
 
-### 对于管理本仓库的贡献者
-
-管理本提示工程仓库时：
-
-**检查相似命令：**
-```
-使用：.cursor/commands/check-similar-commands.md
-```
-
-**创建新命令：**
-```
-使用：.cursor/commands/create-ai-command.md
-```
-
-**测试命令：**
-```
-使用：.cursor/commands/test-ai-command.md
-```
-
-**优化提示：**
-```
-使用：.cursor/commands/optimize-ai-prompt.md
-```
-
-**重构命令：**
-```
-使用：.cursor/commands/refactor-cursor-commands.md
-```
-
 ---
 
 ## 添加新命令
 
 添加新命令时遵循以下分类：
-
-### 对于元命令（管理本仓库）：
-→ `.cursor/commands/`
-- 用于创建、测试或管理提示的命令
-- 用于维护仓库结构的工具
 
 ### 对于后端开发命令：
 1. **是否 Go 特定？** → `go-backend-commands/`
@@ -224,8 +175,7 @@ user-commands/ + devops-commands/
 - 不包含全栈命令（仅后端）
 
 ### 清晰分离
-- **元级**（`.cursor/`）：用于管理本仓库的命令
-- **应用级**（其他目录）：用于实际后端开发的命令
+- **应用级**（所有目录）：用于实际后端开发的命令
 
 ### 质量标准
 - 命令包含清晰的步骤、检查清单和最佳实践
@@ -277,12 +227,11 @@ user-commands/ + devops-commands/
 
 ## 仓库统计
 
-- **元命令：** 5 个（用于仓库管理）
 - **后端命令：** 6 个（语言无关）
 - **Go 特定命令：** 1 个
 - **用户命令：** 34 个（项目无关）
 - **DevOps 命令：** 1 个
-- **活跃命令总数：** 46 个
+- **活跃命令总数：** 41 个
 - **后端规则：** 9 个（Go 重点）
 
 ---
@@ -291,9 +240,6 @@ user-commands/ + devops-commands/
 
 向本仓库贡献时：
 
-1. 使用 `check-similar-commands.md` 在创建新命令前检查现有相似命令
-2. 使用 `create-ai-command.md` 创建具有适当结构的新命令
-3. 使用 `test-ai-command.md` 在提交前验证命令
-4. 确保命令符合后端开发重点
-5. 遵循目录分类指南
-6. 添加新命令或类别时更新本 README
+1. 确保命令符合后端开发重点
+2. 遵循目录分类指南
+3. 添加新命令或类别时更新本 README
