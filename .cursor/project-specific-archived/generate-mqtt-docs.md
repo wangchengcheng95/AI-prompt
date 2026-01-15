@@ -2,7 +2,7 @@
 
 ## Overview
 
-Create comprehensive documentation for MQTT topics, message formats, and data upload protocols used in the Edge Agent project.
+Create comprehensive documentation for MQTT topics, message formats, and data upload protocols.
 
 ## Steps
 
@@ -17,7 +17,7 @@ Create comprehensive documentation for MQTT topics, message formats, and data up
     - Document topic naming conventions
     - Include topic structure and hierarchy
     - Document QoS levels for each topic
-    - Provide examples: `rdata/sensor/server`
+    - Provide examples: `data/sensor/device`
 3. **Message Formats**
     - Document Protobuf message format (primary format)
     - Document JSON message format (if used)
@@ -26,13 +26,12 @@ Create comprehensive documentation for MQTT topics, message formats, and data up
     - Provide message examples for each sensor type
 4. **Sensor Data Messages**
     - Document message format for each sensor type:
-      - `power_htac8uis`: Power data structure
-      - `power_hc33c3`: Power data structure
-      - `th_sht30`: Temperature and humidity data structure
-      - `weight_sj101cx`: Weight data structure
-      - `water_modx420`: Water flow data structure
-      - `tcp_scanner`: Scanner data structure
-      - `serial_scanner`: Scanner data structure
+      - Power sensors: Power data structure
+      - Temperature/humidity sensors: Temperature and humidity data structure
+      - Weight sensors: Weight data structure
+      - Flow sensors: Flow data structure
+      - TCP devices: TCP message format and protocol
+      - Serial devices: Serial message format and protocol
 5. **Usage Examples**
     - MQTT publish examples
     - Using mqtt_listener tool for debugging

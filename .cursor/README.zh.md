@@ -46,7 +46,7 @@
 
 - `add-error-handling.md` - 实现 Go 错误处理模式（显式 `if err != nil`、错误包装、context 使用）
 
-### `user-commands/` (34 个命令)
+### `user-commands/` (36 个命令)
 **范围：** 项目无关，可在后端项目中复用
 
 适用于任何后端项目或技术栈的通用编程命令：
@@ -66,6 +66,7 @@
 - `lint-suite.md` - 运行 linter 并自动修复
 - `deslop.md` - 移除 AI 生成的代码冗余
 - `add-documentation.md` - 添加全面的文档
+- `simplify-doc.md` - 简化和整合文档
 
 **测试：**
 - `write-unit-tests.md` - 创建全面的单元测试
@@ -78,6 +79,7 @@
 **Git 和 PR 管理：**
 - `git-commit.md` - 创建聚焦的提交消息
 - `git-push.md` - 推送并与远程同步
+- `git-squash-merge-branch.md` - 压缩合并分支并生成提交摘要
 - `fix-git-issues.md` - 解决 Git 问题
 - `create-pr.md` - 创建结构良好的 PR
 - `generate-pr-description.md` - 生成 PR 描述
@@ -228,9 +230,9 @@ user-commands/ + devops-commands/
 
 - **后端命令：** 6 个（语言无关）
 - **Go 特定命令：** 1 个
-- **用户命令：** 34 个（项目无关）
+- **用户命令：** 36 个（项目无关）
 - **DevOps 命令：** 1 个
-- **活跃命令总数：** 41 个
+- **活跃命令总数：** 44 个
 - **后端规则：** 9 个（Go 重点）
 
 ---

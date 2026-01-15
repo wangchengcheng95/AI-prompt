@@ -2,7 +2,7 @@
 
 ## Overview
 
-Comprehensive onboarding process to get a new developer up and running quickly with the Edge Agent project.
+Comprehensive onboarding process to get a new developer up and running quickly with the project.
 
 ## Steps
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Create comprehensive documentation for device communication protocols used in the Edge Agent project, including Modbus RTU, TCP, and Serial protocols.
+Create comprehensive documentation for device communication protocols, including Modbus RTU, TCP, and Serial protocols.
 
 ## Steps
 
@@ -29,15 +29,14 @@ Create comprehensive documentation for device communication protocols used in th
     - Document message formats and framing
     - Include timeout and retry mechanisms
     - Provide communication examples
-5. **Sensor-Specific Protocols**
-    - Document protocol for each sensor type:
-      - `power_htac8uis`: Modbus register addresses and data format
-      - `power_hc33c3`: Modbus register addresses and data format
-      - `th_sht30`: Modbus register addresses and data format
-      - `weight_sj101cx`: Modbus register addresses and data format
-      - `water_modx420`: Modbus register addresses and data format
-      - `tcp_scanner`: TCP message format and protocol
-      - `serial_scanner`: Serial message format and protocol
+5. **Device-Specific Protocols**
+    - Document protocol for each device type:
+      - Power devices: Modbus register addresses and data format
+      - Temperature/humidity devices: Modbus register addresses and data format
+      - Weight devices: Modbus register addresses and data format
+      - Flow devices: Modbus register addresses and data format
+      - TCP devices: TCP message format and protocol
+      - Serial devices: Serial message format and protocol
 
 ## Device Protocol Documentation Checklist
 

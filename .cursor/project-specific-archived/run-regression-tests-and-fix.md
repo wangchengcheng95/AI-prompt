@@ -2,26 +2,26 @@
 
 ## Overview
 
-Execute regression tests from both `test/integration/` (Shell scripts) and `test/regression/` (Go module), analyze failures, fix errors systematically, and verify all tests pass. This ensures the edge-agent system maintains correctness across sensor data collection, device communication, and MQTT data upload workflows.
+Execute regression tests from both `test/integration/` (Shell scripts) and `test/regression/` (Go module), analyze failures, fix errors systematically, and verify all tests pass. This ensures the system maintains correctness across data collection, device communication, and message queue workflows.
 
 ## Test Structure
 
 ### Integration Tests (`test/integration/`)
 - Shell script-based end-to-end tests
-- Test multiple components: `edge-agent`, `sensor_mock`, `mqtt_listener`
+- Test multiple components: main application, mock services, message listeners
 - Use virtual serial ports (socat) for device simulation
-- Require MQTT broker running on `tcp://127.0.0.1:1883`
+- Require message broker running on localhost
 
 **Test scripts:**
-- `test_longzhong_basic.sh` - Longzhong power system basic test (no MQTT listener)
-- `test_longzhong.sh` - Longzhong power system full test (with MQTT listener)
-- `test_serial_scanner.sh` - Serial scanner basic integration test
-- `test_serial_scanner_mqtt.sh` - Serial scanner full data flow test
+- `test_basic.sh` - Basic integration test
+- `test_full.sh` - Full integration test with message listener
+- `test_device.sh` - Device communication integration test
+- `test_device_mqtt.sh` - Device communication full data flow test
 
 ### Regression Tests (`test/regression/`)
 - Independent Go module with its own `go.mod`
 - Automated test framework with test cases, verifiers, and reporters
-- Manages service orchestration (MQTT broker, sensor_mock, edge-agent)
+- Manages service orchestration (message broker, mock services, main application)
 - Generates test reports
 
 ## Steps
@@ -33,9 +33,9 @@ Execute regression tests from both `test/integration/` (Shell scripts) and `test
 - Check MQTT broker is running (or start via `docker compose`)
 
 **Compile binaries:**
-- Build `edge-agent`: `go build -o bin/edge-agent ./cmd`
-- Build `tools/sensor_mock`: `cd tools/sensor_mock && go build -o sensor_mock`
-- Build `tools/mqtt_listener`: `cd tools/mqtt_listener && go build -o mqtt_listener`
+- Build main application: `go build -o bin/app ./cmd`
+- Build mock services: `cd tools/mock && go build -o mock_service`
+- Build message listener: `cd tools/listener && go build -o listener`
 - Build regression test: `cd test/regression && go build -o regression_test ./cmd/runner`
 
 **Setup virtual serial ports (for regression tests):**
@@ -50,10 +50,10 @@ Execute each integration test script from `test/integration/`:
 
 ```bash
 cd test/integration
-./test_longzhong_basic.sh
-./test_longzhong.sh
-./test_serial_scanner.sh
-./test_serial_scanner_mqtt.sh
+./test_basic.sh
+./test_full.sh
+./test_device.sh
+./test_device_mqtt.sh
 ```
 
 **Capture:**
@@ -65,9 +65,9 @@ cd test/integration
 **Common failure patterns:**
 - Binary not found (compilation required)
 - Virtual serial port creation failed (socat not installed or ports in use)
-- MQTT connection failed (broker not running)
+- Message broker connection failed (broker not running)
 - Timeout errors (service startup or data collection)
-- Data validation failures (protobuf parsing, sensor data format)
+- Data validation failures (message parsing, data format)
 
 ### 3. **Run Regression Tests**
 
@@ -83,23 +83,23 @@ cd test/regression
 - MQTT verification results
 
 **Test case types:**
-- Modbus sensor tests (`modbus_power_htac8uis`, `modbus_th_sht30`, `modbus_weight_sj101cx`)
-- TCP scanner tests (`tcp_scanner_length_mode`)
-- Serial scanner tests
+- Modbus device tests (power devices, temperature/humidity devices, weight devices)
+- TCP device tests
+- Serial device tests
 
 ### 4. **Analyze Failures**
 
 **Categorize failures:**
 - **Compilation errors**: Missing dependencies, syntax errors, import issues
 - **Service startup failures**: Port conflicts, config errors, missing binaries
-- **Communication errors**: Serial port connection, MQTT connection, TCP connection
-- **Data validation errors**: Protobuf parsing, sensor data format, missing fields
+- **Communication errors**: Serial port connection, message broker connection, TCP connection
+- **Data validation errors**: Message parsing, data format, missing fields
 - **Timeout errors**: Service health checks, data collection timeouts
 - **Resource cleanup errors**: Process cleanup, file cleanup, port cleanup
 
 **Identify root causes:**
 - Check error messages and stack traces
-- Review relevant log files (`logs/edge_agent.log`, `logs/sensor_mock.log`, etc.)
+- Review relevant log files (`logs/app.log`, `logs/mock.log`, etc.)
 - Verify configuration files match test requirements
 - Check if failures are related to recent code changes
 - Verify test environment setup (ports, broker, binaries)
@@ -123,17 +123,17 @@ cd test/regression
 - Fix configuration file errors (YAML syntax, missing fields, invalid values)
 - Resolve port conflicts (check if ports are in use, update configs)
 - Ensure binaries are compiled and executable
-- Fix Docker/MQTT broker startup issues
+- Fix Docker/message broker startup issues
 
 **Communication errors:**
 - Fix serial port connection issues (virtual port paths, permissions)
-- Fix MQTT connection issues (broker URL, credentials, topic names)
+- Fix message broker connection issues (broker URL, credentials, topic names)
 - Fix TCP connection issues (addresses, timeouts, connection handling)
 - Verify device communication protocols match specifications
 
 **Data validation errors:**
-- Fix protobuf message structure mismatches
-- Ensure sensor data fields match expected format
+- Fix message structure mismatches
+- Ensure data fields match expected format
 - Fix data type conversions and parsing logic
 - Verify message headers and payloads
 
@@ -172,7 +172,7 @@ cd test/regression
 
 **Integration tests:**
 - Test scripts use `trap` handlers for automatic cleanup
-- Manually verify: `pkill -f socat`, `pkill -f sensor_mock`, `pkill -f edge-agent`, `pkill -f mqtt_listener`
+- Manually verify: `pkill -f socat`, `pkill -f mock`, `pkill -f app`, `pkill -f listener`
 - Remove test log files from `logs/` and `/tmp/`
 - Remove virtual serial port symlinks from `/tmp/vserial/`
 
@@ -209,10 +209,10 @@ cd test/regression
 - Check if ports are in use: `lsof | grep pts`
 - Restart virtual ports: `./scripts/create_virtual_serial.sh restart`
 
-### Issue: MQTT connection failed
+### Issue: Message broker connection failed
 **Solution:**
-- Start MQTT broker: `cd docker/infrastructure && docker compose up -d`
-- Verify broker is running: `docker ps | grep mqtt`
+- Start message broker: `cd docker/infrastructure && docker compose up -d`
+- Verify broker is running: `docker ps | grep broker`
 - Check broker URL in configs matches running broker
 
 ### Issue: Test timeout
@@ -223,9 +223,9 @@ cd test/regression
 
 ### Issue: Data validation failure
 **Solution:**
-- Check protobuf message structure matches expected format
-- Verify sensor data fields in test fixtures match actual sensor output
-- Review MQTT message parsing logic in verifiers
+- Check message structure matches expected format
+- Verify data fields in test fixtures match actual device output
+- Review message parsing logic in verifiers
 
 ## Notes
 

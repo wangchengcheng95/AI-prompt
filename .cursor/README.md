@@ -46,7 +46,7 @@ Commands tailored for Go backend projects:
 
 - `add-error-handling.md` - Implement Go error handling patterns (explicit `if err != nil`, error wrapping, context usage)
 
-### `user-commands/` (34 commands)
+### `user-commands/` (36 commands)
 **Scope:** Project-agnostic, reusable across backend projects
 
 Generic programming commands that work with any backend project or tech stack:
@@ -66,6 +66,7 @@ Generic programming commands that work with any backend project or tech stack:
 - `lint-suite.md` - Run linters with autofix
 - `deslop.md` - Remove AI-generated code slop
 - `add-documentation.md` - Add comprehensive documentation
+- `simplify-doc.md` - Simplify and consolidate documentation
 
 **Testing:**
 - `write-unit-tests.md` - Create comprehensive unit tests
@@ -78,6 +79,7 @@ Generic programming commands that work with any backend project or tech stack:
 **Git & PR Management:**
 - `git-commit.md` - Create focused commit messages
 - `git-push.md` - Push and sync with remote
+- `git-squash-merge-branch.md` - Squash merge branches with commit summary
 - `fix-git-issues.md` - Resolve Git problems
 - `create-pr.md` - Create well-structured PRs
 - `generate-pr-description.md` - Generate PR descriptions
@@ -228,9 +230,9 @@ Brief description of purpose and when to use
 
 - **Backend Commands:** 6 (language-agnostic)
 - **Go-Specific Commands:** 1
-- **User Commands:** 34 (project-agnostic)
+- **User Commands:** 36 (project-agnostic)
 - **DevOps Commands:** 1
-- **Total Active Commands:** 41
+- **Total Active Commands:** 44
 - **Backend Rules:** 9 (Go-focused)
 
 ---
