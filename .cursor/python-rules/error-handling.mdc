@@ -1,0 +1,46 @@
+---
+description: Python error handling patterns v2
+alwaysApply: true
+---
+
+# Python Error Handling (v2)
+
+## Exception hierarchy
+- Define custom exception classes for domain errors.
+- Inherit from appropriate base exceptions (`ValueError`, `RuntimeError`, or custom base).
+- Use exception chaining with `raise ... from ...` to preserve context.
+
+```python
+# ❌ BAD
+try:
+    result = db.query(...)
+except Exception:
+    return None
+
+# ✅ GOOD
+class UserNotFoundError(Exception):
+    """Raised when user is not found in database."""
+    pass
+
+try:
+    result = db.query(...)
+except DatabaseError as e:
+    logger.error("Database query failed", exc_info=e)
+    raise UserNotFoundError(f"User {user_id} not found") from e
+```
+
+## Never ignore errors
+- Always handle exceptions explicitly.
+- Log errors with context before re-raising.
+- Use `finally` blocks for cleanup, not error handling.
+
+## Error propagation
+- Let exceptions propagate to appropriate handler layer.
+- Service layer: raise domain exceptions.
+- Handler layer: catch and convert to HTTP responses.
+- Repository layer: catch DB exceptions and wrap in domain exceptions.
+
+## Type safety
+- Use `Optional[T]` or `T | None` for nullable returns.
+- Prefer exceptions over returning `None` for error cases.
+- Use `assert` only for invariants, never for user input validation.

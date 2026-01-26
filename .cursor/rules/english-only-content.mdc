@@ -11,6 +11,7 @@ description: All .cursor/ documentation must be in English
 - `.cursor/commands/*.md` - Meta-commands
 - `.cursor/rules/*.mdc` - Meta-rules
 - `.cursor/README.md` - Documentation
+- `.cursor/README.zh.md` - Documentation (Chinese translation, exception)
 
 **User communication = Any language (respond in user's language)**
 

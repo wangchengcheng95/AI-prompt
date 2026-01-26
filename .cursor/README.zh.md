@@ -133,6 +133,16 @@ Go 后端开发的规则和标准：
 - `go-backend.mdc` - Go 后端特定规则
 - `testing.mdc` - 测试标准
 
+### `python-rules/` (6 个规则)
+Python 后端开发的规则和标准：
+
+- `00-overview.mdc` - Python 后端标准概述
+- `architecture.mdc` - 架构原则
+- `clean-code.mdc` - 代码整洁标准
+- `error-handling.mdc` - 错误处理模式
+- `python-backend.mdc` - Python 后端特定规则
+- `testing.mdc` - 测试标准
+
 ---
 
 ## 使用指南
@@ -144,6 +154,11 @@ Go 后端开发的规则和标准：
 **Go 后端项目：**
 ```
 user-commands/ + go-backend-commands/ + backend-commands/ + go-backend-rules/
+```
+
+**Python 后端项目：**
+```
+user-commands/ + backend-commands/ + python-rules/
 ```
 
 **通用后端项目（任何语言）：**
@@ -186,6 +201,7 @@ user-commands/ + devops-commands/
 
 ### 语言支持
 - 主要：Go 后端开发
+- 次要：Python 后端开发
 - 通用：语言无关的后端模式
 - 文档：英文，技术精确
 
@@ -233,7 +249,7 @@ user-commands/ + devops-commands/
 - **用户命令：** 36 个（项目无关）
 - **DevOps 命令：** 1 个
 - **活跃命令总数：** 44 个
-- **后端规则：** 9 个（Go 重点）
+- **后端规则：** 15 个（9 个 Go 重点，6 个 Python 重点）
 
 ---
 

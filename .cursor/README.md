@@ -133,6 +133,16 @@ Rules and standards for Go backend development:
 - `go-backend.mdc` - Go backend specific rules
 - `testing.mdc` - Testing standards
 
+### `python-rules/` (6 rules)
+Rules and standards for Python backend development:
+
+- `00-overview.mdc` - Overview of Python backend standards
+- `architecture.mdc` - Architecture principles
+- `clean-code.mdc` - Clean code standards
+- `error-handling.mdc` - Error handling patterns
+- `python-backend.mdc` - Python backend specific rules
+- `testing.mdc` - Testing standards
+
 ---
 
 ## Usage Guide
@@ -144,6 +154,11 @@ When working on backend projects, use these command categories:
 **For Go Backend Projects:**
 ```
 user-commands/ + go-backend-commands/ + backend-commands/ + go-backend-rules/
+```
+
+**For Python Backend Projects:**
+```
+user-commands/ + backend-commands/ + python-rules/
 ```
 
 **For General Backend Projects (any language):**
@@ -186,6 +201,7 @@ Follow this classification when adding new commands:
 
 ### Language Support
 - Primary: Go backend development
+- Secondary: Python backend development
 - General: Language-agnostic backend patterns
 - Documentation: English with technical precision
 
@@ -233,7 +249,7 @@ Brief description of purpose and when to use
 - **User Commands:** 36 (project-agnostic)
 - **DevOps Commands:** 1
 - **Total Active Commands:** 44
-- **Backend Rules:** 9 (Go-focused)
+- **Backend Rules:** 15 (9 Go-focused, 6 Python-focused)
 
 ---
 
