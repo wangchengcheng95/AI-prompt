@@ -1,0 +1,66 @@
+---
+description: Python virtual environment requirements for debugging
+alwaysApply: true
+---
+
+# Python Virtual Environment Requirements
+
+## Rules
+
+**Always use virtual environments for debugging and development.**
+
+- Never run Python code directly against system Python during debugging.
+- Create and activate a virtual environment before debugging.
+- Verify virtual environment is active before running code.
+
+## Setup
+
+```bash
+# Create virtual environment
+python3 -m venv venv  # or: virtualenv venv
+
+# Activate (Linux/macOS)
+source venv/bin/activate
+
+# Activate (Windows)
+venv\Scripts\activate
+
+# Verify activation
+which python  # Should point to venv/bin/python
+```
+
+## Debugging Requirements
+
+**Before debugging:**
+- [ ] Virtual environment is created and activated (verify with `which python`)
+- [ ] Dependencies are installed (`pip install -r requirements.txt`)
+- [ ] IDE/debugger is configured to use venv Python interpreter
+
+**During debugging:**
+- Use virtual environment's Python interpreter only.
+- Never use `sudo pip install` or system-wide Python.
+
+## Examples
+
+```bash
+# ❌ BAD
+python app.py
+
+# ✅ GOOD
+source venv/bin/activate
+python app.py
+```
+
+## IDE Configuration
+
+**VS Code / Cursor:** `Cmd/Ctrl+Shift+P` → "Python: Select Interpreter" → Choose `./venv/bin/python` (verify status bar shows `Python 3.x.x ('venv': venv)`)
+
+**PyCharm:** Settings → Project → Python Interpreter → Select `venv/bin/python`
+
+## Enforcement
+
+When debugging Python code:
+1. Check if virtual environment exists; if not, create one.
+2. Verify virtual environment is activated.
+3. Ensure IDE uses venv interpreter.
+4. Install dependencies in venv if missing.

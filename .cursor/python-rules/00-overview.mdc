@@ -15,7 +15,7 @@ Safety > Correctness > Maintainability > Performance > Convenience
 ```
 
 ## Applicability
-- **Always**: `python-backend`, `architecture`, `testing`, `error-handling`.
+- **Always**: `python-backend`, `architecture`, `testing`, `error-handling`, `virtual-env`.
 - **Optional (opt-in)**: `clean-code`.
 - **When reviewing or explaining**: reference current implementation and provide summaries if it improves correctness and reviewability.
 

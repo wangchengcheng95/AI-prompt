@@ -18,8 +18,7 @@ This is a business-oriented application.
 - **repository**: data access (database, external APIs)
 
 ## Rules
-- Business logic must not be in handlers/views.
-- I/O code must not contain business rules.
+- Business logic must not be in handlers/views; I/O code must not contain business rules.
 - Handlers call services; services call repositories.
 - Repositories return domain models or data transfer objects (DTOs).
 

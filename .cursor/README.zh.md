@@ -133,7 +133,7 @@ Go 后端开发的规则和标准：
 - `go-backend.mdc` - Go 后端特定规则
 - `testing.mdc` - 测试标准
 
-### `python-rules/` (6 个规则)
+### `python-rules/` (7 个规则)
 Python 后端开发的规则和标准：
 
 - `00-overview.mdc` - Python 后端标准概述
@@ -142,6 +142,7 @@ Python 后端开发的规则和标准：
 - `error-handling.mdc` - 错误处理模式
 - `python-backend.mdc` - Python 后端特定规则
 - `testing.mdc` - 测试标准
+- `virtual-env.mdc` - 调试时虚拟环境要求
 
 ---
 
@@ -249,7 +250,7 @@ user-commands/ + devops-commands/
 - **用户命令：** 36 个（项目无关）
 - **DevOps 命令：** 1 个
 - **活跃命令总数：** 44 个
-- **后端规则：** 15 个（9 个 Go 重点，6 个 Python 重点）
+- **后端规则：** 16 个（9 个 Go 重点，7 个 Python 重点）
 
 ---
 

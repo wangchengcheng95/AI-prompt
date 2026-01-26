@@ -30,8 +30,7 @@ except DatabaseError as e:
 ```
 
 ## Never ignore errors
-- Always handle exceptions explicitly.
-- Log errors with context before re-raising.
+- Always handle exceptions explicitly; log errors with context before re-raising.
 - Use `finally` blocks for cleanup, not error handling.
 
 ## Error propagation
