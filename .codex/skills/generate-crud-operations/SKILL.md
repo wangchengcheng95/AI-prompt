@@ -1,8 +1,8 @@
 ---
 name: generate-crud-operations
 description: Generate CRUD Operations
-disable-model-invocation: true
 ---
+<!-- codex-migrate:owned source=.cursor/skills/generate-crud-operations/SKILL.md -->
 # Generate CRUD Operations
 
 ## Overview

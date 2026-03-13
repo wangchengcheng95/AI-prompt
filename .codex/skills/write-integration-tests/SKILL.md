@@ -1,8 +1,8 @@
 ---
 name: write-integration-tests
 description: Write Integration Tests
-disable-model-invocation: true
 ---
+<!-- codex-migrate:owned source=.cursor/skills/write-integration-tests/SKILL.md -->
 # Write Integration Tests
 
 ## Overview

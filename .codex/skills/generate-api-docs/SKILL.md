@@ -1,8 +1,8 @@
 ---
 name: generate-api-docs
 description: Generate MQTT/Device Protocol Documentation
-disable-model-invocation: true
 ---
+<!-- codex-migrate:owned source=.cursor/skills/generate-api-docs/SKILL.md -->
 # Generate MQTT/Device Protocol Documentation
 
 ## Overview

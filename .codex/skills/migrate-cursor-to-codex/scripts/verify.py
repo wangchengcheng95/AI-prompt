@@ -84,14 +84,27 @@ def verify_plan(classified: dict[str, Any], plan: dict[str, Any], repo_root: Pat
                 break
     checks.append(check(unmanaged_skill_conflicts, "skill-conflict-detection", "Pre-existing unmanaged target skills are reported as conflicts"))
 
-    report_only_for_agends = True
     agents_path = repo_root / "AGENTS.md"
-    if agents_path.exists() and agents_path.read_text(encoding="utf-8").strip():
+    agents_text = agents_path.read_text(encoding="utf-8") if agents_path.exists() else ""
+    managed_agents_md = "<!-- codex-migrate:start:" in agents_text
+    rules_gate_ok = True
+    if agents_text.strip():
         for action in plan.get("actions", []):
-            if action["kind"] == "rule" and action["status"] != "conflict":
-                report_only_for_agends = False
+            if action["kind"] != "rule":
+                continue
+            if managed_agents_md and action["status"] not in {"planned", "noop"}:
+                rules_gate_ok = False
                 break
-    checks.append(check(report_only_for_agends, "agents-md-conflict-detection", "Existing unmanaged AGENTS.md blocks rule apply actions"))
+            if not managed_agents_md and action["status"] != "conflict":
+                rules_gate_ok = False
+                break
+    checks.append(
+        check(
+            rules_gate_ok,
+            "agents-md-rule-gating",
+            "Rules are blocked by unmanaged AGENTS.md and allowed by managed AGENTS.md",
+        )
+    )
     return checks
 
 

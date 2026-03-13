@@ -1,8 +1,8 @@
 ---
 name: database-migration
 description: Database Migration
-disable-model-invocation: true
 ---
+<!-- codex-migrate:owned source=.cursor/skills/database-migration/SKILL.md -->
 # Database Migration
 
 ## Overview

@@ -1,8 +1,8 @@
 ---
 name: add-error-handling
 description: Add Error Handling
-disable-model-invocation: true
 ---
+<!-- codex-migrate:owned source=.cursor/skills/add-error-handling/SKILL.md -->
 # Add Error Handling
 
 ## Overview

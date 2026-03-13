@@ -1,8 +1,8 @@
 ---
 name: optimize-database-queries
 description: Optimize Database Queries
-disable-model-invocation: true
 ---
+<!-- codex-migrate:owned source=.cursor/skills/optimize-database-queries/SKILL.md -->
 # Optimize Database Queries
 
 ## Overview

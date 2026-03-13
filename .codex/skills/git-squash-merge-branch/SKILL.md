@@ -1,8 +1,8 @@
 ---
 name: git-squash-merge-branch
 description: Merge Branch
-disable-model-invocation: true
 ---
+<!-- codex-migrate:owned source=.cursor/skills/git-squash-merge-branch/SKILL.md -->
 # Merge Branch
 
 Squash merge a branch into the current branch, combining all commits into one clean commit.

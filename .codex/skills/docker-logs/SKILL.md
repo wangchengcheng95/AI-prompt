@@ -1,8 +1,8 @@
 ---
 name: docker-logs
 description: Docker Logs Tail
-disable-model-invocation: true
 ---
+<!-- codex-migrate:owned source=.cursor/skills/docker-logs/SKILL.md -->
 # Docker Logs Tail
 
 Tail logs from Docker containers to check for errors and monitor application behavior.

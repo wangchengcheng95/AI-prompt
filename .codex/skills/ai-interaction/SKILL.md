@@ -2,6 +2,7 @@
 name: ai-interaction
 description: AI interaction guidelines (review-friendly)
 ---
+<!-- codex-migrate:owned source=.cursor/skills/ai-interaction/SKILL.md -->
 # AI Interaction Guidelines
 
 ## Truthfulness

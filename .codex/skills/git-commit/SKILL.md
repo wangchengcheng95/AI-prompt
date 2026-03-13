@@ -1,8 +1,8 @@
 ---
 name: git-commit
 description: Git Create Commit
-disable-model-invocation: true
 ---
+<!-- codex-migrate:owned source=.cursor/skills/git-commit/SKILL.md -->
 # Git Create Commit
 
 ## Overview

@@ -2,6 +2,7 @@
 name: clean-code
 description: Clean code guidelines(within change radius)
 ---
+<!-- codex-migrate:owned source=.cursor/skills/clean-code/SKILL.md -->
 # Clean Code Guidelines
 
 ## Scope guard

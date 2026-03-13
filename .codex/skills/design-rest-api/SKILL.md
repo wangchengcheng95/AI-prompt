@@ -1,8 +1,8 @@
 ---
 name: design-rest-api
 description: Design REST API
-disable-model-invocation: true
 ---
+<!-- codex-migrate:owned source=.cursor/skills/design-rest-api/SKILL.md -->
 # Design REST API
 
 ## Overview

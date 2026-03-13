@@ -1,8 +1,8 @@
 ---
 name: onboard-new-developer
 description: Onboard New Developer
-disable-model-invocation: true
 ---
+<!-- codex-migrate:owned source=.cursor/skills/onboard-new-developer/SKILL.md -->
 # Onboard New Developer
 
 ## Overview
