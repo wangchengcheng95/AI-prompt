@@ -1,0 +1,14 @@
+# codex-migrate:start:agents
+[agents.debugger]
+description = "Go debugging expert. Use when you see panic, test failures, 500 responses, concurrency issues, log anomalies, or race detector reports. Outputs root-cause analysis and minimal fix suggestions."
+config_file = "agents/debugger.toml"
+
+[agents.test_runner]
+description = "Go test expert. After code changes, new features, or bug fixes, proactively run go test, analyze failures, attempt minimal fixes (without changing test intent), and loop until tests pass or produce a clear \"cannot fix\" report. Suitable for all Go projects."
+config_file = "agents/test_runner.toml"
+
+[agents.verifier]
+description = "Strict verifier. Use when a task or feature is claimed \"done\" or \"implemented\" — check that it actually works, edge cases are covered, and error handling is sound. Prevents false completion."
+config_file = "agents/verifier.toml"
+
+# codex-migrate:end:agents

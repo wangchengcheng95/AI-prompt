@@ -1,8 +1,8 @@
 ---
-description: Clean code guidelines v2 (within change radius)
-alwaysApply: false
+name: clean-code
+description: Clean code guidelines(within change radius)
 ---
-# Clean Code Guidelines (v2)
+# Clean Code Guidelines
 
 ## Scope guard
 - Apply these guidelines **only within the agreed change radius**.

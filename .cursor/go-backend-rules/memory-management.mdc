@@ -1,0 +1,35 @@
+---
+description: When and how to update Memory Bank; triggers, size limits, incremental updates
+alwaysApply: true
+---
+
+# Memory Management
+
+## Triggers
+
+**Must run Memory Bank update immediately** when the user says (or equivalent):
+- update memory / 更新记忆 / sync memory / 更新 memory bank / 同步记忆体
+- mem:update / /update-memory / refresh memory
+
+**Suggest (do not auto-run) update** after:
+- Completing a feature or user story
+- Major refactor or architecture change
+- Architecture/design decision is confirmed
+- New dependency or significant config change
+- User says "remember this", "this is important", "write this down", "add to memory"
+
+## Update behavior
+
+- Use the **memory-bank-update** skill workflow (or `.cursor/commands/update-memory` if present).
+- **File names**: English with numeric prefix (`01_xxx.md`, `02_xxx.md`, …).
+- **Entries**: Each important decision/change must have a date heading, e.g. `#### 2026-03-03 …`.
+- **active_context.md**: Strictly **≤ 800 words**; keep it concise.
+- **Large files**: If any file is near or over ~1200 lines, propose summarizing and trimming (archive or changelog); give a concrete plan.
+- **Incremental only**: Add or edit only relevant sections; do not rewrite unrelated content.
+- **No secrets**: Never store API keys, passwords, or confidential data in Memory Bank.
+
+## Other
+
+- Memory Bank (`.cursor/memory/` or `docs/memory_bank/`) should be in git unless it contains secrets.
+- `.cursor/commands/` and `.cursor/rules/` must be in git.
+- After creating or changing this rule, test with `/update-memory` or "update memory bank" to confirm behavior.

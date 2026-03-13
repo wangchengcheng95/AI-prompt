@@ -1,8 +1,8 @@
 ---
-description: Go backend engineering rules (Go 1.21) v2
+description: Go backend engineering rules (Go 1.24)
 alwaysApply: true
 ---
-# Go Backend Engineering Rules (v2)
+# Go Backend Engineering
 
 ## Language & runtime
 - Go version: **1.24**

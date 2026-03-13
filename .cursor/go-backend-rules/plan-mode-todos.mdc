@@ -1,0 +1,33 @@
+---
+description: Plan mode todos, TDD preference, and 6 closing steps for code-changing plans under .cursor/plans/*.plan.md
+globs: .cursor/plans/*.plan.md
+alwaysApply: false
+---
+
+# Plan Mode: Todos & Closing Steps
+
+## Scope
+
+- Applies only when editing `.cursor/plans/*.plan.md`.
+
+## Todo list
+
+- **Required**: every plan must have a Markdown checklist (`- [ ] ...`).
+- Generate and maintain todos by default. If the user says they do not want todos, still suggest a minimal executable list and briefly explain why.
+
+## TDD usage
+
+- **Prefer** planning with `/test-driven-development` (test-first → minimal implementation → refactor).
+- If TDD is clearly not suitable (e.g. docs-only, scheduling, communication), briefly state why and use normal planning.
+
+## Checklist structure
+
+- Use a **single flat** checklist.
+- First items: feature / test / implementation steps (optionally ordered by TDD).
+- **Only when the plan involves code changes** (any language), append these 6 items at the **end**, in order:
+  1. Use `/run-all-tests-and-fix` to run tests and fix failures
+  2. Use `/verification-phase` for acceptance
+  3. Use `/go-refactor-design` to refactor the written code for design patterns
+  4. Use `/go-refactor-conventions` to refactor new Go code for conventions
+  5. Use `/clean-code` to clean up new code
+  6. Use `/update-solution-design` to update the solution design document

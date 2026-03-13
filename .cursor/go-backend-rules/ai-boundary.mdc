@@ -1,12 +1,12 @@
 ---
-description: AI scope, boundaries, and change radius (v2)
+description: AI scope, boundaries, and change radius
 alwaysApply: true
 ---
-# AI Scope and Boundaries (v2)
+# AI Scope and Boundaries
 
 ## Default rule: change radius
 - **Only modify files explicitly mentioned by the user**.
-- **Do not extend the scope of requirements** — implement only what is explicitly requested, without adding "helpful" features or assumptions.
+- **Do not extend the scope of requirements** â€” implement only what is explicitly requested, without adding "helpful" features or assumptions.
 - **Do not** refactor/reformat unrelated code.
 - **Do not** invent business rules or assumptions.
 - **Do not** introduce new dependencies unless explicitly allowed.
@@ -27,7 +27,7 @@ If the task cannot be completed correctly without changing extra files (e.g. tes
 **How to ask**:
 - State concisely what you are uncertain about
 - Provide A/B options for the user to choose (when applicable)
-- **Do not** generate code while asking — wait for clarification first
+- **Do not** generate code while asking â€” wait for clarification first
 - **Do not** say "I assume you want..." and proceed anyway
 
 ## Security & secrets

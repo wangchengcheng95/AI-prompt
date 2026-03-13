@@ -1,0 +1,15 @@
+---
+description: Design/spec doc constraints — use definitive wording, not suggestive
+globs: docs/design/**, docs/plans/**
+alwaysApply: false
+---
+# Design and Spec Document Constraints
+
+- **Use definitive wording for decided behavior.** For any agreed design or contract, write in definitive form (e.g. “when X then Y”, “Z also does A and B”). Do **not** use suggestive language (“建议”, “可考虑”, “推荐”) or vague qualifiers (“一般”, “通常”, “可能”, “酌情”) for decided behavior; use “不” / “仅” / “须” as appropriate.
+- **Exception:** Content that is truly optional or TBD must be labeled (e.g. “可选”) or placed in a “待确认” / optional section.
+
+Example (Chinese design docs):
+- ❌ 4xx 建议同样 fail-open 并打 ERROR
+- ✅ 4xx 同样 fail-open 并记录 ERROR 日志
+- ❌ 图片一般不脱敏
+- ✅ 仅文本支持脱敏，图片不脱敏

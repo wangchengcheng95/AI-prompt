@@ -4,6 +4,8 @@ alwaysApply: true
 ---
 # English Prompt Enforcement
 
+**Scope**: ALL Chinese inputs — including tasks, questions, and information queries. **No exceptions.**
+
 When the user provides instructions primarily in Chinese:
 
 1. **Do NOT immediately execute the task.**

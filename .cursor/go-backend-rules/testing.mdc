@@ -1,8 +1,8 @@
 ---
-description: Testing rules v2 (backend & frontend)
+description: Testing (backend & frontend)
 alwaysApply: true
 ---
-# Testing Rules (v2)
+# Testing
 
 ## Backend (Go)
 - Prefer unit tests over integration tests.

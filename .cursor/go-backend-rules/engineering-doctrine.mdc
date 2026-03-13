@@ -1,8 +1,8 @@
 ---
-description: Engineering doctrine (reliability, correctness, explicitness) v2
+description: Engineering doctrine (reliability, correctness, explicitness)
 alwaysApply: true
 ---
-# Engineering Doctrine (v2)
+# Engineering Doctrine
 
 Priority:
 ```
@@ -34,17 +34,6 @@ Safety > Correctness > Maintainability > Performance > Convenience
 - `context.Context` must propagate end-to-end.
 - All I/O must accept and respect context cancellation.
 - Use timeouts/deadlines for I/O boundaries.
-
-## Shell command execution
-- **All shell commands must have explicit timeout** to prevent hanging.
-- Use `timeout` command or equivalent mechanism (e.g., `timeout 30s <command>`).
-- Default timeout should be reasonable:
-  - Quick operations (file ops, simple checks): 10-30 seconds
-  - Network operations (downloads, API calls): 30-60 seconds
-  - Build/compile operations: 5-10 minutes (configurable)
-- For long-running operations, use context-aware timeouts or explicit timeout flags.
-- Always handle timeout errors explicitly (check exit code 124 from `timeout`).
-- Never execute shell commands without timeout protection.
 
 ## Repository boundaries
 - No SQL outside repository layer.

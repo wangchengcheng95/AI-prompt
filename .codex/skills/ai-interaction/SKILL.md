@@ -1,8 +1,8 @@
 ---
-description: AI interaction guidelines v2 (review-friendly)
-alwaysApply: false
+name: ai-interaction
+description: AI interaction guidelines (review-friendly)
 ---
-# AI Interaction Guidelines (v2)
+# AI Interaction Guidelines
 
 ## Truthfulness
 - Verify before asserting; if uncertain, say so and ask for the missing info.
@@ -18,6 +18,6 @@ alwaysApply: false
 - Summaries are allowed (and preferred) when they improve correctness and review speed.
 - Referencing current implementation is allowed when needed for debugging/review.
 
-## Don’ts
-- Don’t remove unrelated functionality.
-- Don’t propose “drive-by” refactors outside the agreed change radius.
+## Don'ts
+- Don't remove unrelated functionality.
+- Don't propose "drive-by" refactors outside the agreed change radius.
