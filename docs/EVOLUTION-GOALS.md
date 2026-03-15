@@ -59,6 +59,19 @@ This direction remains deferred until the repository has stable platform homes a
 
 The repository should evolve by synchronizing semantic units rather than platform-specific prose. Shared intent should be modeled once and then mapped into each platform’s native carrier.
 
+## External Reference Repositories
+
+This section records external repositories that may be useful comparative references for later evolution work. These references do not change the active repository contract or the current Phase 1 boundaries.
+
+### 2026-03-15 `affaan-m/everything-claude-code`
+
+- Repository: <https://github.com/affaan-m/everything-claude-code>
+- Observed on 2026-03-15: the repository presents itself as a cross-tool AI coding configuration or plugin-style package for direct downstream use rather than as a repo-local maintenance source/archive.
+- Relevant overlap: it appears to address a similar cross-platform configuration problem space across tools such as Claude Code and Codex.
+- Important difference: this repository is currently structured as a source/archive repository that separates repo-maintenance entrypoints, archived external platform assets under `platforms/`, and tool-neutral reusable templates under `templates/`.
+- Why keep this reference: it may be useful later when evaluating packaging boundaries, installation ergonomics, test surface, and downstream distribution patterns for cross-platform AI engineering assets.
+- Current implication: treat it as an external comparative example for future evolution work, not as a replacement for the active Phase 1 repository model.
+
 ## Phase 2: Semantic Consistency
 
 Goal: ensure shared rules and workflows mean the same thing across platforms, even when the file format or delivery mechanism differs.
