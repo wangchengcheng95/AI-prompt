@@ -35,3 +35,9 @@ This document records confirmed design decisions and why they replaced, narrowed
 - Decision: Later semantic alignment will handle shared rules first, high-frequency skills second, and agents or sub-agents last.
 - Why: Rules and skills are more reusable across platforms, while agents and sub-agents vary the most by platform and are the highest-risk layer for premature abstraction.
 - Impact: Future cross-platform work should not start by forcing agent parity across Cursor, Claude, and Codex.
+
+### 2026-03-15 Repo-local self-iteration starts with a collaboration contract
+
+- Decision: Repo-local Codex self-iteration should first be defined as a documented goal-to-ready-to-merge collaboration contract rather than as a dedicated skill, agent, or fixed template system.
+- Why: The repository needs a stable execution boundary for intake, scope control, branch and commit expectations, and pull request handoff before deciding whether repeated behavior deserves stronger abstraction.
+- Impact: Root `AGENTS.md` can stay concise, `docs/agent-iteration-contract.md` can hold the stable loop, and later skill or agent extraction can remain optional.

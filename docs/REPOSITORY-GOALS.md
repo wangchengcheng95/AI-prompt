@@ -46,6 +46,7 @@ The standard repository-maintenance documents under `docs/` are:
 
 - `docs/REPOSITORY-GOALS.md` for the active repository contract
 - `docs/EVOLUTION-GOALS.md` for deferred future-facing direction
+- `docs/agent-iteration-contract.md` for the repo-local goal-to-ready-to-merge collaboration contract
 - `docs/system-overview.md` for stable system facts
 - `docs/architecture.md` for stable structure and mapping rules
 - `docs/decisions.md` for dated design decisions
@@ -72,6 +73,7 @@ Phase 1 does not attempt to:
 ### In scope
 
 - repository contract and governance documents
+- repo-local goal intake and ready-to-merge collaboration rules
 - separation between repo-maintenance entrypoints and archived external assets
 - platform-specific homes under `platforms/`
 - shared reusable templates under `templates/`
@@ -91,4 +93,5 @@ Phase 1 does not attempt to:
 3. Shared reusable templates live under `templates/` and remain distinct from repo-maintenance docs and platform-specific assets.
 4. Core repository docs no longer position the repository as a backend-only prompt collection.
 5. Standard docs distinguish active contract, deferred evolution, stable facts, stable structure, and dated decisions.
-6. Removed discussion-style notes do not retain unique design information outside the standard docs set.
+6. Repo-local Codex maintenance can be driven from a user goal to a ready-to-merge handoff with a documented collaboration contract.
+7. Removed discussion-style notes do not retain unique design information outside the standard docs set.

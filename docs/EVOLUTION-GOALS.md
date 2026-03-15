@@ -10,6 +10,8 @@ Phase 1 establishes the repository split between repo-maintenance entrypoints an
 
 Phase 1 deliberately prioritizes low-friction maintenance reduction over immediate generation. The repository keeps stable platform homes first, then evolves toward a stronger shared model later.
 
+Before deeper semantic normalization, the repository may also tighten its repo-local maintenance loop so Codex can intake a goal and drive it toward a ready-to-merge result with limited user intervention.
+
 The next phases are ordered to protect correctness before scale:
 
 1. semantic consistency
@@ -32,6 +34,18 @@ Deferred repo-local skill backlog:
 - repo-doc normalization for turning discussion outcomes into the standard docs set
 - maintenance-change review for checking proposed repository updates against Phase 1 boundaries and repository scope
 - repository intake triage for deciding whether new maintenance material extends an existing asset or deserves a new home
+
+## Near-Term Repo-Local Iteration Contract
+
+Goal: let Codex drive repo-maintenance tasks from user goal intake to ready-to-merge handoff without first freezing that workflow into rigid templates.
+
+Expected outcomes:
+
+- a documented intake gate for `accept`, `shrink`, and `stop`
+- a default interaction budget that keeps user participation low
+- a consistent repo-local handoff standard for branch, verification, commit, and pull request preparation
+
+Reason for sequencing: this improves execution reliability for this repository itself without prematurely committing to cross-platform semantic automation.
 
 ## Long-Term Direction
 
