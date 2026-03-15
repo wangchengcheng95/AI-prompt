@@ -83,6 +83,13 @@ Once a goal is accepted for execution, the default loop is:
 
 The agent should not stop at analysis if it can continue safely within this loop.
 
+When the repo-local Git skills are available, prefer using:
+
+- `$repo-self-iteration` as the entry workflow for goal-driven tasks
+- `$git-start-task` for branch setup
+- `$git-commit` for commit creation
+- `$pr-handoff` for push and pull request handoff
+
 ## Delivery Contract
 
 For a task to be considered complete for handoff, the agent should provide:

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Repo Self Iteration"
+  short_description: "Drive a repo task to ready-to-merge."
+  default_prompt: "Use $repo-self-iteration to intake a repo-local goal and drive it through branch setup, implementation, commit, and PR handoff."
