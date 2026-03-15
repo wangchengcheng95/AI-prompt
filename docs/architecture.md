@@ -12,7 +12,14 @@ The repository uses a three-part architecture in the current state:
 - archived external platform assets under `platforms/`
 - tool-neutral reusable templates under `templates/`
 
+The repository may also keep a lightweight support area under `references/`:
+
+- versioned reference notes that explain which third-party repositories are useful to compare against
+- gitignored local checkouts of those third-party repositories for study across environments
+
 Root entrypoints exist to operate on this repository itself. Archived platform assets are maintained content and are not the active runtime instructions for maintaining this repository. Shared templates are maintained content assets intended to be copied into other repositories, but they are not tied to any single platform carrier.
+
+Reference checkouts under `references/` are not maintained outputs of this repository. They exist only as local comparison material and must not be treated as `platforms/` assets or template content.
 
 Repo-maintenance execution also uses a two-layer control model:
 
@@ -50,6 +57,7 @@ Templates capture reusable repository assets that are meant to be copied into ot
 - Role-specific instructions belong in agent or sub-agent definitions rather than in the shared baseline.
 - Claude keeps a native shell entrypoint that can reference shared rules rather than being replaced by a raw `AGENTS.md` entry.
 - Tool-neutral reusable templates belong under `templates/`, not under `docs/` or `platforms/`.
+- Third-party reference checkouts belong under `references/`, not under `platforms/` or root tool directories.
 
 ## Current Versus Deferred Architecture
 

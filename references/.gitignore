@@ -1,0 +1,7 @@
+*
+!.gitignore
+!README.md
+!repos.manifest.tsv
+!external/
+external/*
+!external/.gitkeep
