@@ -3,6 +3,14 @@
 description = "Go debugging expert. Use when you see panic, test failures, 500 responses, concurrency issues, log anomalies, or race detector reports. Outputs root-cause analysis and minimal fix suggestions."
 config_file = "agents/debugger.toml"
 
+[agents.go_build_resolver]
+description = "Go build and static-analysis fixer. Use when `go build`, `go vet`, or linter checks fail and you want minimal, surgical repairs."
+config_file = "agents/go_build_resolver.toml"
+
+[agents.go_reviewer]
+description = "Go code reviewer focused on idiomatic design, layering, error handling, concurrency risks, and verification gaps."
+config_file = "agents/go_reviewer.toml"
+
 [agents.test_runner]
 description = "Go test expert. After code changes, new features, or bug fixes, proactively run go test, analyze failures, attempt minimal fixes (without changing test intent), and loop until tests pass or produce a clear \"cannot fix\" report. Suitable for all Go projects."
 config_file = "agents/test_runner.toml"

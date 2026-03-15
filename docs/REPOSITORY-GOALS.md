@@ -65,6 +65,7 @@ Phase 1 must:
 Phase 1 does not attempt to:
 
 - introduce generation pipelines
+- package the repository as a single installable downstream distribution
 - unify every platform-specific behavior
 - preserve the old root layout for backward compatibility
 

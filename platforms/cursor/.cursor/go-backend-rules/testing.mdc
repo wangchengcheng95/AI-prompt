@@ -7,8 +7,14 @@ alwaysApply: true
 ## Backend (Go)
 - Prefer unit tests over integration tests.
 - Use table-driven tests for multiple cases.
+- Use subtests to keep scenarios isolated and easy to target.
 - Cover success + failure paths; assert error wrapping/context.
 - Tests must be deterministic: no network/external services in unit tests.
+- Start with targeted package tests when the change radius is small.
+- Full backend verification should normally run with `go test -race -count=1 ./...`.
+- Use `go test -cover ./...` when adding or changing backend behavior, or explain the coverage gap.
+- Consider fuzz tests for parsers, decoders, and validation-heavy inputs.
+- Add benchmarks for hot paths instead of guessing about performance.
 
 ### Concurrency tests
 - Use `-race` in CI.

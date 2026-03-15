@@ -72,6 +72,25 @@ This section records external repositories that may be useful comparative refere
 - Why keep this reference: it may be useful later when evaluating packaging boundaries, installation ergonomics, test surface, and downstream distribution patterns for cross-platform AI engineering assets.
 - Current implication: treat it as an external comparative example for future evolution work, not as a replacement for the active Phase 1 repository model.
 
+Borrowable points for later phases:
+
+- clearer packaging boundaries between source material and downstream-consumable deliverables
+- more explicit downstream installation or enablement paths once this repository eventually owns a delivery surface
+- stronger validation expectations for distributed assets, including tests around packaging or activation behavior
+- a more deliberate inventory of asset types that may eventually need separate mapping or delivery treatment
+
+Points not to borrow into the current repository model:
+
+- reframing this repository around direct end-user installation as the primary purpose of the root
+- collapsing repo-maintenance entrypoints into the same shape as downstream platform deliverables
+- treating a plugin-style distribution model as a prerequisite for Phase 1 cleanup or Phase 2 semantic alignment
+- expanding platform-specific surface area before the repository has a stronger shared semantic model
+
+Documentation clarification check:
+
+- Yes: the repository should keep stating that it is a source/archive repository first, not yet a unified installable distribution.
+- Yes: external reference repositories should remain comparative inputs for evolution work rather than implicit target architecture.
+
 ## Phase 2: Semantic Consistency
 
 Goal: ensure shared rules and workflows mean the same thing across platforms, even when the file format or delivery mechanism differs.
