@@ -23,6 +23,7 @@ This repository maintains archived/source AI configuration assets for multiple t
 ## Working Rules
 
 - Keep governance and repo-maintenance docs English-first.
+- When discussing, proposing, or reviewing skills, agents, or sub-agents, explicitly state whether they are repo-local assets for maintaining this repository or archived external platform assets under `platforms/`.
 - If content is platform-specific and meant to be consumed by another repository or tool, store it under `platforms/<tool>/`.
 - If content is tool-neutral and meant to be copied into another repository, store it under `templates/`.
 - Keep root tool-specific directories repo-specific and minimal.

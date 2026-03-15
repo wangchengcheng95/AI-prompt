@@ -16,6 +16,23 @@ The next phases are ordered to protect correctness before scale:
 2. auditability and historical traceability
 3. platform expansion
 
+## Near-Term Repo-Maintenance Skill Sequencing
+
+Current near-term skill work is limited to repo-local skills that help maintain this repository itself.
+
+This near-term track does not include platform-facing agents, sub-agents, or platform asset skills under `platforms/`.
+
+Initial repo-local skill focus:
+
+- cross-doc consistency checking across the standard repository-maintenance documents
+- asset-boundary checking so new material lands in the correct root, `platforms/`, `templates/`, or `docs/` home
+
+Deferred repo-local skill backlog:
+
+- repo-doc normalization for turning discussion outcomes into the standard docs set
+- maintenance-change review for checking proposed repository updates against Phase 1 boundaries and repository scope
+- repository intake triage for deciding whether new maintenance material extends an existing asset or deserves a new home
+
 ## Long-Term Direction
 
 The long-term direction is a platform-neutral source model with explicit mapping layers:
