@@ -2,7 +2,7 @@
 
 ## Primary Objective
 
-This repository is a source/archive repository for cross-platform AI engineering configuration.
+This repository is a source/archive repository for cross-platform AI engineering configuration and reusable repository assets.
 
 It maintains the configuration assets, entry files, skills, rules, and supporting documentation that are intended to be deployed into other repositories or consumed by other AI coding tools. It also keeps a small set of repo-local entrypoints that exist only to maintain this repository itself.
 
@@ -31,6 +31,14 @@ These are the maintained content assets for other tools and repositories:
 - `platforms/cursor/.cursor/`
 
 These assets are content under maintenance. They are not the active root entrypoints for this repository.
+
+### Shared reusable templates
+
+These are tool-neutral assets that are intended to be copied into other repositories:
+
+- `templates/go-single-service-docs/`
+
+These templates are maintained content assets. They are not repo-maintenance docs and they are not tied to any single AI tool.
 
 ### Standard repository-maintenance documents
 
@@ -66,6 +74,7 @@ Phase 1 does not attempt to:
 - repository contract and governance documents
 - separation between repo-maintenance entrypoints and archived external assets
 - platform-specific homes under `platforms/`
+- shared reusable templates under `templates/`
 - cleanup of stale migration and obsolete root-level explanatory material
 
 ### Out of scope
@@ -79,6 +88,7 @@ Phase 1 does not attempt to:
 
 1. Root `AGENTS.md`, root `CLAUDE.md`, root `.cursor/`, and selected root `.codex/` assets describe maintenance of this repository only.
 2. Archived external assets live under `platforms/` and remain navigable there.
-3. Core repository docs no longer position the repository as a backend-only prompt collection.
-4. Standard docs distinguish active contract, deferred evolution, stable facts, stable structure, and dated decisions.
-5. Removed discussion-style notes do not retain unique design information outside the standard docs set.
+3. Shared reusable templates live under `templates/` and remain distinct from repo-maintenance docs and platform-specific assets.
+4. Core repository docs no longer position the repository as a backend-only prompt collection.
+5. Standard docs distinguish active contract, deferred evolution, stable facts, stable structure, and dated decisions.
+6. Removed discussion-style notes do not retain unique design information outside the standard docs set.

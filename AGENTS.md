@@ -14,15 +14,17 @@ This repository maintains archived/source AI configuration assets for multiple t
 
 - Root `AGENTS.md`, root `CLAUDE.md`, root `.cursor/`, and selected root `.codex/` assets are repo-maintenance entrypoints only.
 - `platforms/` stores the external assets this repository maintains for other repositories and tools.
+- `templates/` stores tool-neutral reusable assets that are meant to be copied into other repositories.
 - `docs/REPOSITORY-GOALS.md` defines the active repository contract.
 - `docs/EVOLUTION-GOALS.md` records post-Phase-1 follow-up work.
 - `docs/system-overview.md`, `docs/architecture.md`, and `docs/decisions.md` hold the normalized repository-maintenance knowledge that was previously gathered through discussion.
-- Untracked template material must be preserved unless the user explicitly asks to relocate or delete it.
+- Shared template material must remain separate from repo-maintenance docs unless the user explicitly asks to relocate or delete it.
 
 ## Working Rules
 
 - Keep governance and repo-maintenance docs English-first.
-- If content is meant to be consumed by another repository or tool, store it under `platforms/<tool>/`.
+- If content is platform-specific and meant to be consumed by another repository or tool, store it under `platforms/<tool>/`.
+- If content is tool-neutral and meant to be copied into another repository, store it under `templates/`.
 - Keep root tool-specific directories repo-specific and minimal.
 - Keep root `.codex/` limited to the smallest set of skills or config needed to maintain this repository.
 - Do not do backward-compatibility work unless the user explicitly asks for it.

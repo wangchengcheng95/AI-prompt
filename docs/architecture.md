@@ -6,12 +6,13 @@ This document records the stable maintenance model, mapping rules, and current-v
 
 ## Maintenance Model
 
-The repository uses a two-level architecture in the current state:
+The repository uses a three-part architecture in the current state:
 
 - repo-maintenance entrypoints at the repository root
 - archived external platform assets under `platforms/`
+- tool-neutral reusable templates under `templates/`
 
-Root entrypoints exist to operate on this repository itself. Archived platform assets are maintained content and are not the active runtime instructions for maintaining this repository.
+Root entrypoints exist to operate on this repository itself. Archived platform assets are maintained content and are not the active runtime instructions for maintaining this repository. Shared templates are maintained content assets intended to be copied into other repositories, but they are not tied to any single platform carrier.
 
 ## Content Model
 
@@ -29,6 +30,10 @@ Skills capture repeatable workflows or SOP-style task guidance. They are often m
 
 Agents or sub-agents capture role-specific behavior. This layer has the greatest platform variance and should be handled last when cross-platform normalization is introduced.
 
+### Templates
+
+Templates capture reusable repository assets that are meant to be copied into other repositories without being bound to a single AI tool. They should remain separate from both repo-maintenance docs and platform-specific carriers.
+
 ## Mapping Principles
 
 - Shared semantics should be maintained once and mapped into platform-native carriers.
@@ -36,6 +41,7 @@ Agents or sub-agents capture role-specific behavior. This layer has the greatest
 - `AGENTS.md` provides project-level baseline constraints.
 - Role-specific instructions belong in agent or sub-agent definitions rather than in the shared baseline.
 - Claude keeps a native shell entrypoint that can reference shared rules rather than being replaced by a raw `AGENTS.md` entry.
+- Tool-neutral reusable templates belong under `templates/`, not under `docs/` or `platforms/`.
 
 ## Current Versus Deferred Architecture
 
