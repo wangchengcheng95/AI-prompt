@@ -14,6 +14,13 @@ The repository uses a three-part architecture in the current state:
 
 Root entrypoints exist to operate on this repository itself. Archived platform assets are maintained content and are not the active runtime instructions for maintaining this repository. Shared templates are maintained content assets intended to be copied into other repositories, but they are not tied to any single platform carrier.
 
+Repo-maintenance execution also uses a two-layer control model:
+
+- root `AGENTS.md` for runtime maintenance rules
+- `docs/agent-iteration-contract.md` for the repo-local goal-to-ready-to-merge collaboration contract
+
+The rule entrypoint and the collaboration contract are intentionally separate so the repository can tighten execution behavior without turning the runtime rule file into a long planning document.
+
 ## Content Model
 
 The repository maintains three main cross-platform content types:
@@ -39,6 +46,7 @@ Templates capture reusable repository assets that are meant to be copied into ot
 - Shared semantics should be maintained once and mapped into platform-native carriers.
 - Platform-native entrypoints should remain native where that improves compatibility.
 - `AGENTS.md` provides project-level baseline constraints.
+- `docs/agent-iteration-contract.md` defines the repo-local maintenance loop from goal intake to ready-to-merge handoff.
 - Role-specific instructions belong in agent or sub-agent definitions rather than in the shared baseline.
 - Claude keeps a native shell entrypoint that can reference shared rules rather than being replaced by a raw `AGENTS.md` entry.
 - Tool-neutral reusable templates belong under `templates/`, not under `docs/` or `platforms/`.

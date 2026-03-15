@@ -17,12 +17,14 @@ This repository maintains archived/source AI configuration assets for multiple t
 - `templates/` stores tool-neutral reusable assets that are meant to be copied into other repositories.
 - `docs/REPOSITORY-GOALS.md` defines the active repository contract.
 - `docs/EVOLUTION-GOALS.md` records post-Phase-1 follow-up work.
+- `docs/agent-iteration-contract.md` defines the repo-local goal-to-ready-to-merge collaboration contract for Codex maintenance tasks.
 - `docs/system-overview.md`, `docs/architecture.md`, and `docs/decisions.md` hold the normalized repository-maintenance knowledge that was previously gathered through discussion.
 - Shared template material must remain separate from repo-maintenance docs unless the user explicitly asks to relocate or delete it.
 
 ## Working Rules
 
 - Keep governance and repo-maintenance docs English-first.
+- For repo-local Codex maintenance tasks, drive work toward a ready-to-merge handoff by following `docs/agent-iteration-contract.md`.
 - When discussing, proposing, or reviewing skills, agents, or sub-agents, explicitly state whether they are repo-local assets for maintaining this repository or archived external platform assets under `platforms/`.
 - If content is platform-specific and meant to be consumed by another repository or tool, store it under `platforms/<tool>/`.
 - If content is tool-neutral and meant to be copied into another repository, store it under `templates/`.
