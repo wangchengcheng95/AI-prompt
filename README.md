@@ -14,7 +14,9 @@ Phase 1 focuses on one outcome: reduce duplicated maintenance at the project-ent
 - `platforms/cursor/.cursor/` - archived external Cursor assets
 - `docs/REPOSITORY-GOALS.md` - active repository mission, scope, and success criteria
 - `docs/EVOLUTION-GOALS.md` - post-Phase-1 evolution goals
-- `docs/讨论.md` - archived discussion and rationale input
+- `docs/system-overview.md` - stable repository facts and asset categories
+- `docs/architecture.md` - stable maintenance model and mapping rules
+- `docs/decisions.md` - dated design decisions and narrowed conclusions
 
 ## Current Contract
 
@@ -26,4 +28,5 @@ Phase 1 focuses on one outcome: reduce duplicated maintenance at the project-ent
 
 - Read `docs/REPOSITORY-GOALS.md` for repository scope.
 - Read `docs/EVOLUTION-GOALS.md` for the next phases after Phase 1.
+- Read `docs/system-overview.md`, `docs/architecture.md`, and `docs/decisions.md` for normalized maintenance knowledge.
 - Go to `platforms/` when you are editing assets intended for other repositories or tools.

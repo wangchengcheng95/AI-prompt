@@ -12,17 +12,19 @@ This repository maintains archived/source AI configuration assets for multiple t
 
 ## Repository Boundaries
 
-- Root `AGENTS.md`, root `CLAUDE.md`, and root `.cursor/` are repo-maintenance entrypoints only.
+- Root `AGENTS.md`, root `CLAUDE.md`, root `.cursor/`, and selected root `.codex/` assets are repo-maintenance entrypoints only.
 - `platforms/` stores the external assets this repository maintains for other repositories and tools.
 - `docs/REPOSITORY-GOALS.md` defines the active repository contract.
 - `docs/EVOLUTION-GOALS.md` records post-Phase-1 follow-up work.
-- `docs/讨论.md` and untracked template material are rationale inputs and must be preserved unless the user explicitly asks to relocate or delete them.
+- `docs/system-overview.md`, `docs/architecture.md`, and `docs/decisions.md` hold the normalized repository-maintenance knowledge that was previously gathered through discussion.
+- Untracked template material must be preserved unless the user explicitly asks to relocate or delete it.
 
 ## Working Rules
 
 - Keep governance and repo-maintenance docs English-first.
 - If content is meant to be consumed by another repository or tool, store it under `platforms/<tool>/`.
 - Keep root tool-specific directories repo-specific and minimal.
+- Keep root `.codex/` limited to the smallest set of skills or config needed to maintain this repository.
 - Do not do backward-compatibility work unless the user explicitly asks for it.
 - Before creating a new asset or document, search for an existing home and extend it instead of duplicating it.
 - When moving archived assets, verify that internal references still point to valid locations inside their new platform home.

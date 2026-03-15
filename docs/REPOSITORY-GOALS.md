@@ -6,19 +6,22 @@ This repository is a source/archive repository for cross-platform AI engineering
 
 It maintains the configuration assets, entry files, skills, rules, and supporting documentation that are intended to be deployed into other repositories or consumed by other AI coding tools. It also keeps a small set of repo-local entrypoints that exist only to maintain this repository itself.
 
-## Repository Responsibilities
+## Active Repository Contract
 
-### 1. Repo-maintenance entrypoints
+### Repo-maintenance entrypoints
 
 These files and directories exist only to maintain this repository:
 
 - root `AGENTS.md`
 - root `CLAUDE.md`
 - root `.cursor/`
+- selected root `.codex/` assets that are explicitly kept for repo maintenance
 
-Codex maintenance is driven by root `AGENTS.md`. Phase 1 does not require additional repo-local `.codex/` assets.
+Codex maintenance is driven by root `AGENTS.md` together with the minimal repo-local `.codex/` assets that are intentionally kept for maintaining this repository.
 
-### 2. Archived external platform assets
+Root `AGENTS.md` is the rules entrypoint for maintaining this repository. It is not the single document that also owns repository positioning, sequencing, or evolution goals. Repository positioning lives in this document by design.
+
+### Archived external platform assets
 
 These are the maintained content assets for other tools and repositories:
 
@@ -29,13 +32,15 @@ These are the maintained content assets for other tools and repositories:
 
 These assets are content under maintenance. They are not the active root entrypoints for this repository.
 
-### 3. Governance and rationale documentation
+### Standard repository-maintenance documents
 
-Repository mission, sequencing, and rationale live in:
+The standard repository-maintenance documents under `docs/` are:
 
-- `docs/REPOSITORY-GOALS.md`
-- `docs/EVOLUTION-GOALS.md`
-- `docs/讨论.md`
+- `docs/REPOSITORY-GOALS.md` for the active repository contract
+- `docs/EVOLUTION-GOALS.md` for deferred future-facing direction
+- `docs/system-overview.md` for stable system facts
+- `docs/architecture.md` for stable structure and mapping rules
+- `docs/decisions.md` for dated design decisions
 
 ## Phase 1 Objective
 
@@ -68,12 +73,12 @@ Phase 1 does not attempt to:
 - automated adapters or code generation
 - semantic unification of all rules and skills across platforms
 - onboarding additional platforms beyond the current Cursor, Claude, and Codex assets
-- rewriting user-authored discussion archives unless explicitly requested
+- preserving discussion-style design notes when their surviving conclusions have been normalized into the standard docs
 
 ## Success Criteria
 
-1. Root `AGENTS.md`, root `CLAUDE.md`, and root `.cursor/` describe maintenance of this repository only.
+1. Root `AGENTS.md`, root `CLAUDE.md`, root `.cursor/`, and selected root `.codex/` assets describe maintenance of this repository only.
 2. Archived external assets live under `platforms/` and remain navigable there.
 3. Core repository docs no longer position the repository as a backend-only prompt collection.
-4. Post-Phase-1 work is recorded separately so follow-up decisions are not lost.
-5. Ambiguous user-authored rationale or template material is preserved until explicitly changed.
+4. Standard docs distinguish active contract, deferred evolution, stable facts, stable structure, and dated decisions.
+5. Removed discussion-style notes do not retain unique design information outside the standard docs set.
