@@ -1,0 +1,13 @@
+---
+alwaysApply: true
+description: Keep governance docs English-first and preserve user-authored rationale records
+---
+
+# Documentation Language
+
+## Rules
+
+- Governance and repo-maintenance documents are English-first.
+- Archived rationale records may remain in their original language.
+- Do not rewrite or delete user-authored discussion records unless the user explicitly asks for it.
+- Preserve untracked template or working material when ownership is unclear; ask before deleting it.

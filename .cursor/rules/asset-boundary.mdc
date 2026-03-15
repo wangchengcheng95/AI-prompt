@@ -1,0 +1,15 @@
+---
+alwaysApply: true
+description: Separate repo-maintenance entrypoints from archived external platform assets
+---
+
+# Asset Boundary
+
+## Rules
+
+- Root `AGENTS.md`, root `CLAUDE.md`, and root `.cursor/` are repo-maintenance entrypoints.
+- `platforms/<tool>/` stores external assets maintained by this repository.
+- Do not place distributable external platform assets in root tool-specific directories.
+- If content is meant for another repository or tool, move it under the appropriate `platforms/<tool>/` home.
+- Keep root tool-specific content minimal and repo-specific.
+- Phase 1 does not require a repo-local `.codex/` directory unless a future task explicitly adds one for repo maintenance.
