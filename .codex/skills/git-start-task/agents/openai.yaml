@@ -1,0 +1,4 @@
+interface:
+  display_name: "Git Start Task"
+  short_description: "Start a repo task from updated main."
+  default_prompt: "Use $git-start-task to switch to main, update it, and create a task branch for this repository work."

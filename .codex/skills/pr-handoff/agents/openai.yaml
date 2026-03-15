@@ -1,0 +1,4 @@
+interface:
+  display_name: "PR Handoff"
+  short_description: "Prepare and hand off a reviewable PR."
+  default_prompt: "Use $pr-handoff to push the task branch, prepare the PR text, and return a review-ready handoff."
