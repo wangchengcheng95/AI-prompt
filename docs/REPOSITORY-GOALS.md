@@ -40,6 +40,12 @@ These are tool-neutral assets that are intended to be copied into other reposito
 
 These templates are maintained content assets. They are not repo-maintenance docs and they are not tied to any single AI tool.
 
+### Local external reference workspaces
+
+This repository may also keep a versioned reference index under `references/` together with gitignored local checkouts of third-party repositories used for comparative study.
+
+The reference index is repo-maintenance support material. The third-party checkouts themselves are not maintained repository assets, are not part of `platforms/`, and are not distributable content of this repository.
+
 ### Standard repository-maintenance documents
 
 The standard repository-maintenance documents under `docs/` are:
@@ -78,6 +84,7 @@ Phase 1 does not attempt to:
 - separation between repo-maintenance entrypoints and archived external assets
 - platform-specific homes under `platforms/`
 - shared reusable templates under `templates/`
+- reference indexing for third-party comparison repositories under `references/`
 - cleanup of stale migration and obsolete root-level explanatory material
 
 ### Out of scope
