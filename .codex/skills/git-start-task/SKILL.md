@@ -15,10 +15,17 @@ Use this skill to make the task branch setup repeatable and safe before editing 
 1. Inspect the current worktree with `git status --short`.
 2. Stop if there are uncommitted changes that do not belong to the new task.
 3. Switch to `main`.
-4. Update `main` with `git pull --ff-only origin main`.
+4. Update `main` from `origin/main` using the repository's configured pull strategy.
 5. Create a focused branch name in short hyphen-case based on the task goal.
 6. Create and switch to the new branch with `git checkout -b <branch-name>`.
 7. Report the branch name and the starting commit to the user before making substantial edits.
+
+## Pull Strategy
+
+- Prefer `git config pull.rebase true` for this repository so plain `git pull` stays usable when local and remote `main` diverge.
+- If the repo is already configured, `git pull` is acceptable.
+- If Git reports divergent branches and no pull strategy is configured, prefer `git pull --rebase origin main`.
+- If rebase reports conflicts or drops a local commit unexpectedly, inspect the log and stop before continuing branch setup.
 
 ## Branch Naming
 
@@ -32,6 +39,7 @@ Stop and ask the user before continuing when:
 
 - the worktree contains unrelated or unclear local changes
 - `main` cannot be updated cleanly
+- rebasing `main` produces conflicts that require task-specific judgment
 - the task needs a branch name with project-specific tracking data that is not available
 - switching branches would interfere with user-owned in-progress work
 
