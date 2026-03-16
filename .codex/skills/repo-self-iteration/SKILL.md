@@ -1,6 +1,6 @@
 ---
 name: repo-self-iteration
-description: Intake a repo-local maintenance goal and drive it toward ready-to-merge by applying the repository collaboration contract, choosing accept/shrink/stop, then using git-start-task, git-commit, pr-handoff, and pr-operator at the right points. Use when Codex receives a concrete repository task and should run the default self-iteration loop instead of only giving advice.
+description: Intake a repo-local maintenance goal and drive it toward ready-to-merge by applying the repository collaboration contract, choosing accept/shrink/stop, then using git-start-task, git-commit, repo-doc-simplifier, pr-handoff, and pr-operator at the right points. Use when Codex receives a concrete repository task and should run the default self-iteration loop instead of only giving advice.
 ---
 # Repo Self Iteration
 
@@ -27,10 +27,11 @@ When the task is `accept` or `shrink`, follow this order:
 1. Use `$git-start-task` to start from updated `main` and create the task branch.
 2. Form a concise executable plan based on the accepted task slice.
 3. Implement the repository change.
-4. Run the most relevant verification available.
-5. Summarize the acceptance status, assumptions, and residual risks.
-6. Use `$git-commit` to create a focused commit.
-7. Use `$pr-handoff` to prepare the pull request handoff, and let `$pr-operator` perform the actual PR operations when needed.
+4. If the task changed a repo-maintenance Markdown file in the repository root or `docs/`, use `$repo-doc-simplifier` when the updated document has become longer, more repetitive, or otherwise needs compression.
+5. Run the most relevant verification available.
+6. Summarize the acceptance status, assumptions, and residual risks.
+7. Use `$git-commit` to create a focused commit.
+8. Use `$pr-handoff` to prepare the pull request handoff, and let `$pr-operator` perform the actual PR operations when needed.
 
 ## Interaction Budget
 
@@ -42,6 +43,7 @@ When the task is `accept` or `shrink`, follow this order:
 
 - Use `$git-start-task` for switching to `main`, updating it, and creating the task branch.
 - Use `$git-commit` for commit message formation and the commit itself.
+- Use `$repo-doc-simplifier` as a conditional cleanup step for repo-maintenance Markdown in the repository root or `docs/`, not for every Markdown file.
 - Use `$pr-handoff` for PR text and review-ready delivery.
 - Use `$pr-operator` for actual PR push, create, view, and edit operations when the handoff needs them.
 - Do not duplicate the detailed Git procedures from those skills here unless a gap is discovered.
