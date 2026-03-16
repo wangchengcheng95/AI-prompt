@@ -8,6 +8,7 @@
 ## Local Configuration
 
 - `sync-manifest.yaml` is the authoritative bundle and path mapping.
+- Copy `.codex/skills/prompt-sync/assets/sync-targets.local.yaml.example` to `sync-targets.local.yaml` before first use.
 - `sync-targets.local.yaml` is machine-local and resolves target aliases to absolute local filesystem paths.
 - Each target stores provenance in `.ai-prompt-sync/state.yaml`.
 
