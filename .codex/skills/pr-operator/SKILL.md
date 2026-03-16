@@ -8,8 +8,6 @@ description: Manage repo-local GitHub pull request operations with a bundled wra
 
 Own the actual GitHub pull request operations for this repository through the bundled wrapper `scripts/prctl`.
 
-Use this skill when the user wants a PR created, viewed, or edited, or when a task branch needs to be pushed as part of PR work.
-
 This skill complements `$pr-handoff`.
 
 - `$pr-handoff` owns the review-ready handoff and PR text preparation.
@@ -31,30 +29,17 @@ This skill complements `$pr-handoff`.
 
 1. Confirm whether the task is `push`, `create`, `view`, or `edit`.
 2. Validate the required inputs for that operation.
-3. Use the bundled `scripts/prctl` command instead of raw `gh` or ad hoc shell snippets.
+3. Use the bundled `scripts/prctl` command instead of raw `gh`.
 4. For create or edit, validate the PR title in Conventional Commits style.
 5. Return the resulting PR URL or the exact blocking failure plus the next manual step.
 
 ## Operations
 
-### Push
-
-- Use when the branch needs upstream tracking before PR work.
-- Run `./.codex/skills/pr-operator/scripts/prctl push --branch <branch-name>`.
-
-### Create
-
-- Check for an existing PR for the branch first with `find-head`.
-- Then create the PR with explicit base branch, head branch, title, and body file.
-
-### View
-
-- Use to confirm PR number, title, state, URL, base branch, or head branch.
-
-### Edit
-
-- Use to update only the PR title, body, or both.
-- Prefer this path over raw `gh pr edit` because the wrapper uses the lower-level API path that avoids older CLI compatibility issues.
+- `push`: add upstream tracking before PR work.
+- `find-head`: check whether the branch already has a PR.
+- `create`: open a PR with explicit base, head, title, and body file.
+- `view`: confirm PR number, title, state, URL, base branch, or head branch.
+- `edit`: update only title, body, or both. Prefer this over raw `gh pr edit` because the wrapper uses the lower-level API path that avoids older CLI compatibility issues.
 
 ## PR Title Rules
 

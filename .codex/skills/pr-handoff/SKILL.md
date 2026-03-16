@@ -10,7 +10,7 @@ Turn a completed task branch into a review-ready handoff for the user.
 
 Use this skill after implementation and verification are done and the branch is ready to be pushed and presented as a pull request candidate.
 
-When actual PR push, create, view, or edit operations are needed, hand those steps to `$pr-operator` rather than owning the wrapper script here.
+Hand actual PR push, create, view, and edit operations to `$pr-operator`.
 
 ## Workflow
 
@@ -45,7 +45,7 @@ Include:
 ## Environment Rules
 
 - Prefer creating the PR directly when the required tooling and authentication are available.
-- Prefer delegating actual PR operations to `$pr-operator`, which owns the bundled wrapper and keeps the workflow migratable as one skill.
+- Prefer delegating actual PR operations to `$pr-operator`.
 - Do not block handoff on missing `gh` or similar tooling if a branch can still be pushed.
 - If push or PR creation fails, surface the exact command result and the next manual step.
 - Do not merge the PR unless the user explicitly asks for that workflow.
