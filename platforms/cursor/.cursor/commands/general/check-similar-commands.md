@@ -28,10 +28,10 @@ Keywords: API, documentation, REST, endpoints, OpenAPI, Swagger, generate
 ### 2. **Specify Search Scope**
 
 Determine which directories to search:
-- `.cursor/backend-commands/` - Language-agnostic backend commands
-- `.cursor/go-backend-commands/` - Go-specific backend commands
-- `.cursor/user-commands/` - Project-agnostic workflow commands
-- `.cursor/devops-commands/` - DevOps and infrastructure commands
+- `.cursor/commands/backend/` - Language-agnostic backend commands
+- `.cursor/commands/go-backend/` - Go-specific backend commands
+- `.cursor/commands/general/` - Project-agnostic workflow commands
+- `.cursor/commands/devops/` - DevOps and infrastructure commands
 - All of the above (comprehensive search)
 
 ### 3. **Search by Keywords**
@@ -121,7 +121,7 @@ grep -r -i "api.*doc\|documentation.*api" .cursor/*/
 find .cursor/*commands/ -name "*api*.md" -o -name "*doc*.md"
 ```
 
-**Found**: `generate-api-docs.md` in `backend-commands/`
+**Found**: `generate-api-docs.md` in `commands/backend/`
 
 **Decision**: ❌ Command already exists, use existing command
 
@@ -141,9 +141,9 @@ find .cursor/*commands/ -name "*test*.md"
 ```
 
 **Found**:
-- `write-unit-tests.md` in `user-commands/`
-- `write-integration-tests.md` in `backend-commands/`
-- `run-all-tests-and-fix.md` in `user-commands/`
+- `write-unit-tests.md` in `commands/general/`
+- `write-integration-tests.md` in `commands/backend/`
+- `run-all-tests-and-fix.md` in `commands/general/`
 
 **Analysis**:
 - `write-unit-tests.md` - Creates tests (different)
@@ -167,7 +167,7 @@ grep -r -i "database.*optim\|query.*optim\|optim.*query" .cursor/*/
 find .cursor/*commands/ -name "*database*.md" -o -name "*query*.md" -o -name "*optim*.md"
 ```
 
-**Found**: `optimize-database-queries.md` in `backend-commands/`
+**Found**: `optimize-database-queries.md` in `commands/backend/`
 
 **Decision**: ❌ Command already exists
 
@@ -180,13 +180,13 @@ find .cursor/*commands/ -name "*database*.md" -o -name "*query*.md" -o -name "*o
 **Search**:
 ```bash
 # Search in Go-specific commands
-grep -r -i "error.*handl" .cursor/go-backend-commands/
+grep -r -i "error.*handl" .cursor/commands/go-backend/
 
 # Check file names
-find .cursor/go-backend-commands/ -name "*error*.md"
+find .cursor/commands/go-backend/ -name "*error*.md"
 ```
 
-**Found**: `add-error-handling.md` in `go-backend-commands/`
+**Found**: `add-error-handling.md` in `commands/go-backend/`
 
 **Decision**: ❌ Command already exists
 
@@ -205,7 +205,7 @@ grep -r -i "migration.*rollback\|rollback.*migration" .cursor/*/
 find .cursor/*commands/ -name "*migration*.md"
 ```
 
-**Found**: `database-migration.md` in `backend-commands/`
+**Found**: `database-migration.md` in `commands/backend/`
 
 **Analysis**:
 - Existing command covers creating migrations
