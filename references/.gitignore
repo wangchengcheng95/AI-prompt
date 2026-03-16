@@ -1,6 +1,7 @@
 *
 !.gitignore
 !README.md
+!openai-codex-docs.md
 !repos.manifest.tsv
 !external/
 external/*
