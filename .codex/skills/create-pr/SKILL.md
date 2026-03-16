@@ -29,10 +29,18 @@ This skill complements `$pr-handoff`.
 2. Review `git status --short` and stop if required changes are still unstaged or uncommitted.
 3. Ensure the branch exists on the remote and push with upstream tracking if needed.
 4. Verify `gh` is installed and authenticated for the target host.
-5. Reuse an existing PR title and body when available; otherwise derive them from the actual change.
+5. Reuse an existing PR title and body when available; otherwise derive them from the actual change and format the title in Conventional Commits style.
 6. Create the PR with `gh pr create`, preferring explicit `--base`, `--head`, `--title`, and `--body` arguments.
 7. Return the PR URL plus the exact title and body used.
 8. If PR creation is blocked, return the exact failure, the prepared title and body, and a manual creation path such as a compare URL.
+
+## PR Title Rules
+
+- Format the PR title as `<type>(<optional-scope>): <short summary>` or `<type>: <short summary>`.
+- Prefer `feat` for new repository capabilities, `fix` for bug fixes, and `docs` for documentation-only changes.
+- Use other standard types such as `refactor`, `test`, `build`, `ci`, `perf`, `style`, or `chore` only when they better match the actual change.
+- Use `!` only when the change introduces a real breaking contract or workflow change.
+- Keep the summary short, concrete, and aligned with the actual diff.
 
 ## Environment Rules
 
