@@ -1,6 +1,7 @@
 *
 !.gitignore
 !agents-writing-guides.md
+!skill-writing-guides.md
 !README.md
 !repos.manifest.tsv
 !external/
