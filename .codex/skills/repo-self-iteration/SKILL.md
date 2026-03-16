@@ -1,6 +1,6 @@
 ---
 name: repo-self-iteration
-description: Intake a repo-local maintenance goal and drive it toward ready-to-merge by applying the repository collaboration contract, choosing accept/shrink/stop, then using git-start-task, git-commit, and pr-handoff at the right points. Use when Codex receives a concrete repository task and should run the default self-iteration loop instead of only giving advice.
+description: Intake a repo-local maintenance goal and drive it toward ready-to-merge by applying the repository collaboration contract, choosing accept/shrink/stop, then using git-start-task, git-commit, pr-handoff, and pr-operator at the right points. Use when Codex receives a concrete repository task and should run the default self-iteration loop instead of only giving advice.
 ---
 # Repo Self Iteration
 
@@ -30,7 +30,7 @@ When the task is `accept` or `shrink`, follow this order:
 4. Run the most relevant verification available.
 5. Summarize the acceptance status, assumptions, and residual risks.
 6. Use `$git-commit` to create a focused commit.
-7. Use `$pr-handoff` to push the branch and prepare the pull request handoff.
+7. Use `$pr-handoff` to prepare the pull request handoff, and let `$pr-operator` perform the actual PR operations when needed.
 
 ## Interaction Budget
 
@@ -42,7 +42,8 @@ When the task is `accept` or `shrink`, follow this order:
 
 - Use `$git-start-task` for switching to `main`, updating it, and creating the task branch.
 - Use `$git-commit` for commit message formation and the commit itself.
-- Use `$pr-handoff` for push, PR text, and review-ready delivery.
+- Use `$pr-handoff` for PR text and review-ready delivery.
+- Use `$pr-operator` for actual PR push, create, view, and edit operations when the handoff needs them.
 - Do not duplicate the detailed Git procedures from those skills here unless a gap is discovered.
 
 ## Stop And Ask

@@ -26,7 +26,7 @@ This repository maintains archived/source AI configuration assets for multiple t
 - Keep governance and repo-maintenance docs English-first.
 - For repo-local Codex maintenance tasks, drive work toward a ready-to-merge handoff by following `docs/agent-iteration-contract.md`.
 - For repo-local goal-driven tasks, prefer using `$repo-self-iteration` as the default entry workflow.
-- Inside that workflow, prefer `$git-start-task` for branch setup, `$git-commit` for commit creation, and `$pr-handoff` for review handoff.
+- Inside that workflow, prefer `$git-start-task` for branch setup, `$git-commit` for commit creation, `$pr-handoff` for review handoff, and `$pr-operator` for actual PR operations.
 - When discussing, proposing, or reviewing skills, agents, or sub-agents, explicitly state whether they are repo-local assets for maintaining this repository or archived external platform assets under `platforms/`.
 - If content is platform-specific and meant to be consumed by another repository or tool, store it under `platforms/<tool>/`.
 - If content is tool-neutral and meant to be copied into another repository, store it under `templates/`.
