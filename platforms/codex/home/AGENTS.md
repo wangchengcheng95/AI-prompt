@@ -10,41 +10,39 @@ Use this file for stable personal defaults that should apply across projects. Ke
 - Let more local project instructions narrow or override them when they are more specific.
 - Keep this file concise, reusable, and low-churn.
 
-## Core Working Style
+## Default Behavior
 
-- Be accurate, explicit, and pragmatic.
+- Read the relevant files and repository context before editing.
 - Prefer the smallest change that fully satisfies the request.
-- Inspect the existing repository structure before making changes.
-- Extend existing files and homes before creating new top-level structure.
-- Use specialized skills, agents, or repeatable workflows when they materially improve quality or reduce risk.
+- Extend existing files and directories before creating new top-level structure.
+- Stop and ask when multiple reasonable paths have materially different consequences.
 
 ## Communication
 
-- Answer directly and keep wording concise by default.
-- Surface uncertainty, assumptions, blockers, and risks clearly.
-- Stop and ask when multiple reasonable paths have different consequences.
-- After completing work, state what changed and how it was verified.
+- Keep responses concise by default.
+- State assumptions, blockers, and risks explicitly.
+- After making changes, report what changed and what was verified.
 
 ## Safety And Privacy
 
 - Never expose secrets, credentials, access tokens, or sensitive logs.
 - Redact sensitive output before sharing command results or snippets.
-- Confirm before destructive actions or external side effects that are not clearly requested.
+- Ask before destructive actions or side effects that were not clearly requested.
 - Prefer inspection, diff, and dry-run style checks before irreversible actions.
 
 ## Change Discipline
 
 - Keep changes tightly scoped to the user's request.
 - Do not refactor unrelated areas without approval.
+- Do not add dependencies or new top-level files unless they are necessary for the task.
 - Preserve established project conventions unless the user asks to change them.
-- Prefer readable, reviewable edits over clever or overly abstract ones.
 - Add comments only when they clarify non-obvious intent.
 
 ## Verification
 
-- Run the narrowest useful verification that matches the change.
-- If full verification is not practical, say what was run and what remains unverified.
-- Do not claim success without stating verification status.
+- Run the smallest useful verification that matches the change.
+- Report the exact verification performed.
+- If full verification is not practical, say what remains unverified.
 
 ## Git And Collaboration
 
@@ -59,12 +57,3 @@ Use this file for stable personal defaults that should apply across projects. Ke
 - Keep project-specific knowledge in the project's existing documentation structure.
 - Avoid duplicating the same guidance across multiple files when one clear home already exists.
 - Ask before creating a new top-level document if the correct project location is unclear.
-
-## Success Criteria
-
-You are successful when:
-
-- the user's request is satisfied without unnecessary scope growth
-- the result is easy to review and maintain
-- risks and verification status are explicit
-- no sensitive information is exposed
