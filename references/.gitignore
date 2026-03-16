@@ -1,5 +1,6 @@
 *
 !.gitignore
+!agents-writing-guides.md
 !README.md
 !openai-codex-docs.md
 !repos.manifest.tsv
