@@ -9,15 +9,8 @@ alwaysApply: true
 - No `panic` (handle errors explicitly).
 - No global variables.
 
-## Formatting & API shape
-- `gofmt` is mandatory.
-- Use `goimports` when imports or package wiring change.
-- Prefer constructors for dependency and config injection.
-- Accept interfaces at the consumer boundary and return concrete structs by default.
-- Keep interfaces small and focused; define them close to their use site when possible.
-
 ## Layering & responsibilities
-- Follow `../common/architecture.mdc` for layer boundaries and dependency direction.
+- Follow `architecture.mdc` for layer boundaries and dependency direction.
 - Go-specific enforcement:
   - Keep business logic in **service** layer.
   - Handlers are transport orchestration only.
@@ -30,8 +23,6 @@ alwaysApply: true
 
 ## Error handling
 - Follow `engineering-doctrine.mdc` for error wrapping, typed errors, and “never ignore errors”.
-- Use `errors.Is` / `errors.As` for wrapped error checks instead of string matching.
-- Keep error strings lowercase and without trailing punctuation.
 
 ## Concurrency
 - No unmanaged goroutines; every goroutine must have a lifecycle owner.
@@ -45,14 +36,6 @@ alwaysApply: true
 - Prefer small, focused, testable functions.
 - Use dependency injection; avoid tight coupling.
 - Avoid hard-coded values; use config structs/env injection when appropriate.
-
-## Verification & tooling
-- Run the smallest relevant package-level verification first, then broader checks.
-- Backend validation should normally include:
-  - `go test -race -count=1 ./...`
-  - `go vet ./...`
-  - `staticcheck ./...` when available
-- For auth, crypto, shelling-out, filesystem, or SQL-heavy changes, also run `gosec ./...` when available or explicitly call out why it was not run.
 
 ## Code language standards
 - Identifiers (variables/functions/types/packages) must be in **English**.
