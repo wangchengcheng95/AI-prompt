@@ -6,14 +6,14 @@ description: Create an actual GitHub pull request for a repo-local task branch u
 
 ## Overview
 
-Create an actual GitHub pull request for a repo-local task branch with `gh`.
+Create an actual GitHub pull request for a repo-local task branch with the repo wrapper `scripts/prctl`.
 
 Use this skill after implementation, verification, commit creation, and branch push are done, or after `$pr-handoff` has already prepared the review-ready title and summary.
 
 This skill complements `$pr-handoff`.
 
 - `$pr-handoff` owns the review-ready handoff.
-- `$create-pr` owns the final `gh pr create` step when the environment supports it.
+- `$create-pr` owns the final PR creation step when the environment supports it.
 
 ## Preconditions
 
@@ -27,10 +27,10 @@ This skill complements `$pr-handoff`.
 
 1. Confirm the current branch, remote, and base branch target.
 2. Review `git status --short` and stop if required changes are still unstaged or uncommitted.
-3. Ensure the branch exists on the remote and push with upstream tracking if needed.
+3. Ensure the branch exists on the remote and push with upstream tracking if needed, preferably through `scripts/prctl push`.
 4. Verify `gh` is installed and authenticated for the target host.
 5. Reuse an existing PR title and body when available; otherwise derive them from the actual change and format the title in Conventional Commits style.
-6. Create the PR with `gh pr create`, preferring explicit `--base`, `--head`, `--title`, and `--body` arguments.
+6. Check for an existing PR for the branch with `scripts/prctl find-head`, then create the PR with `scripts/prctl create`.
 7. Return the PR URL plus the exact title and body used.
 8. If PR creation is blocked, return the exact failure, the prepared title and body, and a manual creation path such as a compare URL.
 
@@ -45,7 +45,8 @@ This skill complements `$pr-handoff`.
 ## Environment Rules
 
 - Prefer using already-prepared handoff text instead of inventing new framing.
-- Prefer `gh` for PR creation and avoid browser-only steps when CLI creation works.
+- Prefer `scripts/prctl` over raw `gh` commands so approvals can be scoped to one stable entrypoint.
+- Avoid browser-only steps when CLI creation works.
 - If `gh` is missing, unauthenticated, or network-blocked, surface the exact command result and the next manual step.
 - Do not merge the PR, auto-approve it, or modify branch protection settings.
 - Do not guess reviewers, labels, milestones, or draft state unless the user explicitly asks for them or repository conventions make them unambiguous.
@@ -53,7 +54,7 @@ This skill complements `$pr-handoff`.
 ## Suggested Command Shape
 
 ```bash
-gh pr create --base <base-branch> --head <branch-name> --title "<pr-title>" --body "<pr-body>"
+./scripts/prctl create --base <base-branch> --head <branch-name> --title "<pr-title>" --body-file <pr-body-file>
 ```
 
 ## Stop And Ask

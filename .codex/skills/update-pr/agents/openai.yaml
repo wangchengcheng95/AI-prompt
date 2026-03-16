@@ -1,0 +1,4 @@
+interface:
+  display_name: "Update PR"
+  short_description: "Update a GitHub PR via prctl."
+  default_prompt: "Use $update-pr to change the title or body of an existing pull request through scripts/prctl and confirm the final PR state."
