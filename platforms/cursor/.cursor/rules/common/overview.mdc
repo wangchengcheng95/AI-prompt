@@ -1,0 +1,23 @@
+---
+description: Shared backend rules overview (priority, conflict resolution, change presentation)
+alwaysApply: true
+---
+
+# Shared Backend Rules Overview
+
+## Goals
+- Make Cursor behave like a reliable backend engineering agent: safe, correct, pragmatic, and easy to review.
+- Keep rules actionable, non-conflicting, and minimal.
+
+## Priority (when rules conflict)
+```
+Safety > Correctness > Maintainability > Performance > Convenience
+```
+
+## Conflict resolution
+- More specific rule wins over generic rule.
+- If still unclear, stop and ask with a concrete option set and the minimal required context.
+
+## Change presentation
+- Multi-file changes: present diffs file-by-file.
+- Within one file: provide the full final edit for that file instead of multi-step partial edits.

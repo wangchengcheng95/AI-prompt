@@ -12,7 +12,8 @@ alwaysApply: true
 - No global mutable state.
 
 ## Layering & responsibilities
-- Follow `architecture.mdc` for layer boundaries and dependency direction.
+- Follow `../common/architecture.mdc` for shared layer boundaries and dependency direction.
+- Follow `architecture-python.mdc` for Python-specific repository and framework guidance.
 - Python-specific enforcement:
   - Keep business logic in **service** layer.
   - Handlers/views are transport orchestration only.

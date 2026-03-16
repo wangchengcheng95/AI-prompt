@@ -1,0 +1,14 @@
+---
+description: Go backend rules overview and composition
+alwaysApply: true
+---
+
+# Go Backend Rules Overview
+
+## Goals
+- Apply the shared backend rule baselines together with Go-specific engineering constraints.
+
+## Applicability
+- **Always**: `../common/overview`, `../common/architecture`, `../common/testing`, `ai-boundary`, `engineering-doctrine`, `go-backend`, `memory-management`, `testing-go`.
+- **Optional (opt-in)**: `design-docs`, `english-prompt`, `plan-mode-todos`.
+- **When reviewing or explaining**: reference current implementation and provide summaries if it improves correctness and reviewability.

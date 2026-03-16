@@ -17,7 +17,7 @@ alwaysApply: true
 - Keep interfaces small and focused; define them close to their use site when possible.
 
 ## Layering & responsibilities
-- Follow `architecture.mdc` for layer boundaries and dependency direction.
+- Follow `../common/architecture.mdc` for layer boundaries and dependency direction.
 - Go-specific enforcement:
   - Keep business logic in **service** layer.
   - Handlers are transport orchestration only.

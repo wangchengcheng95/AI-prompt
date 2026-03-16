@@ -1,0 +1,23 @@
+---
+description: Python-specific testing rules
+alwaysApply: true
+---
+
+# Python-Specific Testing
+
+## Test structure
+- Use `pytest` as the test framework.
+- Use `pytest.fixture` for test dependencies.
+- Use parametrized tests for multiple cases.
+
+## Async testing
+- Use `pytest-asyncio` for async test functions.
+- Test async error handling and cancellation.
+
+## Parallelism and setup
+- Use fixtures for setup and teardown.
+- Use `pytest-xdist` for parallel execution when safe.
+
+## Assertions
+- Use `pytest.raises()` for exception testing.
+- Prefer descriptive assertion messages when the intent is not obvious.

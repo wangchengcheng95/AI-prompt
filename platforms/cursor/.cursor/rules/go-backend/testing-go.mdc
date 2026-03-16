@@ -1,36 +1,28 @@
 ---
-description: Testing (backend & frontend)
+description: Go-specific testing rules
 alwaysApply: true
 ---
-# Testing
 
-## Backend (Go)
-- Prefer unit tests over integration tests.
+# Go-Specific Testing
+
+## Go testing
 - Use table-driven tests for multiple cases.
 - Use subtests to keep scenarios isolated and easy to target.
-- Cover success + failure paths; assert error wrapping/context.
-- Tests must be deterministic: no network/external services in unit tests.
+- Assert error wrapping and context where relevant.
 - Start with targeted package tests when the change radius is small.
 - Full backend verification should normally run with `go test -race -count=1 ./...`.
 - Use `go test -cover ./...` when adding or changing backend behavior, or explain the coverage gap.
 - Consider fuzz tests for parsers, decoders, and validation-heavy inputs.
 - Add benchmarks for hot paths instead of guessing about performance.
 
-### Concurrency tests
+## Concurrency tests
 - Use `-race` in CI.
 - No timing-based assertions; synchronize explicitly.
 - Use `go test -count=N` to detect flakes.
-
-### Mocking
-- Mock external dependencies at **repository boundary** only.
-- Prefer real implementations over mocks when practical.
-- Document mock behavior expectations.
 
 ## Frontend
 - Use React Testing Library.
 - Test user-visible behavior; avoid implementation details.
 
-## General
-- Tests must be independent; avoid shared mutable state.
+## Extra guidance
 - Use `t.Parallel()` where safe to detect hidden dependencies.
-- Use clear, specific assertions.

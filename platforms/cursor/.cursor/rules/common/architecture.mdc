@@ -1,0 +1,23 @@
+---
+description: Shared backend architecture baseline
+alwaysApply: true
+---
+
+# Shared Backend Architecture
+
+This is a business-oriented application.
+
+## Architecture principles
+- Clear separation of layers.
+- No cross-layer access.
+- Dependencies must point inward.
+
+## Backend layers
+- handler/view: HTTP or transport layer only
+- service: business logic
+- repository: data access
+
+## Rules
+- Business logic must not be in handlers or views.
+- I/O code must not contain business rules.
+- Handlers call services; services call repositories.
