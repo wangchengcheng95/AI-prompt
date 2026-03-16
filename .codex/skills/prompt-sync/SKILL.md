@@ -9,12 +9,14 @@ description: Preview and run manifest-driven prompt asset sync and backflow for 
 
 Use this skill to operate the repo-local prompt sync system for this repository.
 
+The skill follows the Codex skill convention of keeping operator guidance under the skill directory, while the sync system itself remains repo-local infrastructure.
+
 The system treats this repository as the only upstream and uses explicit bundle mappings from `sync-manifest.yaml` together with local target definitions from `sync-targets.local.yaml`.
 
 ## Workflow
 
 1. Read `sync-manifest.yaml` to identify the bundle, managed target paths, and backflow destination rules.
-2. Read `sync-targets.local.yaml` to resolve the local target name to an absolute path and tool/type metadata.
+2. Copy `assets/sync-targets.local.yaml.example` to `sync-targets.local.yaml`, then read `sync-targets.local.yaml` to resolve the local target name to an absolute path and tool/type metadata.
 3. Use `python3 scripts/prompt_sync.py preview-export ...` or `preview-import ...` before any write.
 4. Refuse unmanaged paths and stop on `drift-local`, `conflict`, or `missing-target`.
 5. Use `export` or `import-backflow` only when the preview output contains only safe changes.
@@ -50,4 +52,4 @@ The system treats this repository as the only upstream and uses explicit bundle 
 - `unmanaged`: requested path is outside manifest-managed targets
 - `missing-target`: requested target or file does not exist
 
-Load [references/workflow.md](references/workflow.md) when you need the canonical bundle list, target-state location, or operator guidance for the three supported user scenarios.
+Load [references/workflow.md](references/workflow.md) when you need the canonical bundle list, target-state location, example target config path, or operator guidance for the three supported user scenarios.
