@@ -1,4 +1,0 @@
-interface:
-  display_name: "Create PR"
-  short_description: "Create a GitHub PR with gh."
-  default_prompt: "Use $create-pr to create the actual GitHub pull request for the current repo-local task branch with gh, or return the prepared fallback path if creation is blocked."

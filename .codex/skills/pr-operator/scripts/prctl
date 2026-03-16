@@ -5,15 +5,15 @@ set -euo pipefail
 usage() {
   cat <<'EOF'
 Usage:
-  scripts/prctl push --branch <branch>
-  scripts/prctl find-head --head <branch>
-  scripts/prctl create --base <base> --head <branch> --title <title> --body-file <path> [--draft]
-  scripts/prctl edit --pr <number> [--title <title>] [--body-file <path>]
-  scripts/prctl view --pr <number>
+  .codex/skills/pr-operator/scripts/prctl push --branch <branch>
+  .codex/skills/pr-operator/scripts/prctl find-head --head <branch>
+  .codex/skills/pr-operator/scripts/prctl create --base <base> --head <branch> --title <title> --body-file <path> [--draft]
+  .codex/skills/pr-operator/scripts/prctl edit --pr <number> [--title <title>] [--body-file <path>]
+  .codex/skills/pr-operator/scripts/prctl view --pr <number>
 
 Behavior:
-  - Wrap the small set of git/gh commands used for repo-local pull request work
-  - Keep approval scope narrow by routing PR operations through one stable entrypoint
+  - Wrap the small set of git and gh commands used for repo-local pull request work
+  - Keep PR operations bundled with the skill so the workflow migrates as one unit
 EOF
 }
 

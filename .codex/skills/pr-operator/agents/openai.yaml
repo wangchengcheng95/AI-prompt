@@ -1,0 +1,4 @@
+interface:
+  display_name: "PR Operator"
+  short_description: "Push, create, view, or edit GitHub PRs."
+  default_prompt: "Use $pr-operator to run the repo-local pull request operations through its bundled wrapper script, including branch push, PR creation, PR viewing, or title/body updates."
