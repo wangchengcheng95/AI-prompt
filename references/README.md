@@ -7,7 +7,7 @@ The checked-out repositories under `references/external/` are intentionally giti
 ## Layout
 
 - `references/README.md`: versioned reference index and usage notes
-- `references/openai-codex-docs.md`: official OpenAI Codex documentation links used as maintenance references
+- `references/agents-writing-guides.md`: guidance links for writing or revising `AGENTS.md` assets
 - `references/repos.manifest.tsv`: machine-readable reference repository list for the sync script
 - `references/external/`: local gitignored checkouts of third-party repositories
 
@@ -25,10 +25,10 @@ The checked-out repositories under `references/external/` are intentionally giti
 
 ## Official Documentation Links
 
-### OpenAI Codex
+### AGENTS.md Writing Guidance
 
-- Link index: `references/openai-codex-docs.md`
-- Why it is tracked here: official product documentation reference for repo-maintenance work on Codex-facing assets
+- Link index: `references/agents-writing-guides.md`
+- Why it is tracked here: stable reference set for writing or reviewing `AGENTS.md` assets across platforms
 
 ## Sync Script
 
