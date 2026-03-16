@@ -16,9 +16,17 @@ Use this skill after implementation and verification are done and the branch is 
 2. Review `git status --short` and stop if required task changes are still unstaged or uncommitted.
 3. Capture the branch name and current commit hash.
 4. Push the branch with upstream tracking if it is not already on the remote.
-5. Prepare a concise PR title and body based on the actual change.
+5. Prepare a concise PR title and body based on the actual change, using a Conventional Commits style title.
 6. Create the PR if the environment supports it.
 7. If automatic PR creation is unavailable, return a PR link or creation path plus the prepared title and body.
+
+## PR Title Rules
+
+- Format the PR title as `<type>(<optional-scope>): <short summary>` or `<type>: <short summary>`.
+- Prefer `feat` for new repository capabilities, `fix` for bug fixes, and `docs` for documentation-only changes.
+- Use other standard types such as `refactor`, `test`, `build`, `ci`, `perf`, `style`, or `chore` only when they better match the actual change.
+- Use `!` only when the change introduces a real breaking contract or workflow change.
+- Keep the summary short, concrete, and aligned with the actual diff.
 
 ## Handoff Content
 
