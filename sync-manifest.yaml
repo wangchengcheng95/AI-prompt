@@ -1,0 +1,33 @@
+bundles:
+  codex-home:
+    kind: user-home
+    conflict_policy: preview_stop
+    sources:
+      - path: platforms/codex/home/AGENTS.md
+        destination: AGENTS.md
+    default_targets:
+      - tool: codex
+        type: workspace
+    managed_paths:
+      - AGENTS.md
+    backflow:
+      enabled: true
+      default_destination: platforms/codex/home/AGENTS.md
+
+  codex-platform-core:
+    kind: repo-platform
+    conflict_policy: preview_stop
+    sources:
+      - path: platforms/codex/AGENTS.md
+        destination: AGENTS.md
+      - path: platforms/codex/.codex
+        destination: .codex
+    default_targets:
+      - tool: codex
+        type: repo
+    managed_paths:
+      - AGENTS.md
+      - .codex
+    backflow:
+      enabled: true
+      default_destination_root: platforms/codex

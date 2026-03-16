@@ -59,6 +59,12 @@ Templates capture reusable repository assets that are meant to be copied into ot
 - Tool-neutral reusable templates belong under `templates/`, not under `docs/` or `platforms/`.
 - Third-party reference checkouts belong under `references/`, not under `platforms/` or root tool directories.
 
+## Local Sync Control
+
+The repository may use a repo-local sync control plane to copy archived external assets from `platforms/` into local sibling workspaces or repositories and to backflow selected managed changes into this repository.
+
+This sync layer is maintenance infrastructure for this repository itself, not an archived external platform asset. Its mappings should remain explicit, preview-first, and scoped to manifest-managed paths. Machine-local target paths should stay outside Git, while per-target sync provenance may be written into the target itself so drift and conflict checks remain local and auditable.
+
 ## Current Versus Deferred Architecture
 
 ### Current

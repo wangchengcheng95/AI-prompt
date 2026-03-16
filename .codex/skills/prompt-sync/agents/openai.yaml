@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prompt Sync"
+  short_description: "Sync and backflow prompt assets"
+  default_prompt: "Use $prompt-sync to preview or run manifest-driven prompt sync and backflow tasks."
