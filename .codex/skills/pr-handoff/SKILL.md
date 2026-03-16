@@ -10,12 +10,14 @@ Turn a completed task branch into a review-ready handoff for the user.
 
 Use this skill after implementation and verification are done and the branch is ready to be pushed and presented as a pull request candidate.
 
+Hand actual PR push, create, view, and edit operations to `$pr-operator`.
+
 ## Workflow
 
 1. Confirm the current branch is the intended task branch, not `main`.
 2. Review `git status --short` and stop if required task changes are still unstaged or uncommitted.
 3. Capture the branch name and current commit hash.
-4. Push the branch with upstream tracking if it is not already on the remote.
+4. Push the branch with upstream tracking if it is not already on the remote, preferably through `$pr-operator`.
 5. Prepare a concise PR title and body based on the actual change, using a Conventional Commits style title.
 6. Create the PR if the environment supports it.
 7. If automatic PR creation is unavailable, return a PR link or creation path plus the prepared title and body.
@@ -43,6 +45,7 @@ Include:
 ## Environment Rules
 
 - Prefer creating the PR directly when the required tooling and authentication are available.
+- Prefer delegating actual PR operations to `$pr-operator`.
 - Do not block handoff on missing `gh` or similar tooling if a branch can still be pushed.
 - If push or PR creation fails, surface the exact command result and the next manual step.
 - Do not merge the PR unless the user explicitly asks for that workflow.
