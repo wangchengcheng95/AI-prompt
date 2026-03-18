@@ -21,6 +21,10 @@ Root entrypoints exist to operate on this repository itself. Archived platform a
 
 Reference checkouts under `references/` are not maintained outputs of this repository. They exist only as local comparison material and must not be treated as `platforms/` assets or template content.
 
+These reference checkouts may be used to study useful third-party patterns such as skills, hooks, sub-agents, and related platform-native structure before adapting selected ideas into maintained outputs under `platforms/`.
+
+That study flow is comparative rather than extractive. Agents should treat `references/external/` as background material for learning and synthesis, not as content to copy wholesale into this repository's maintained platform assets.
+
 Repo-maintenance execution also uses a two-layer control model:
 
 - root `AGENTS.md` for runtime maintenance rules

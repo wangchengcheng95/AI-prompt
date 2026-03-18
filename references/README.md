@@ -4,12 +4,15 @@ This directory records which third-party repositories are useful comparative ref
 
 The checked-out repositories under `references/external/` are intentionally gitignored. They are local study material only. They are not maintained assets of this repository, and they do not belong under `platforms/`.
 
+The current intent of this area is to support comparative study while building or revising maintained assets under `platforms/`. In practice, that means reviewing useful third-party skills, hooks, sub-agents, and adjacent configuration patterns, then selectively adapting the underlying ideas into this repository's own platform outputs.
+
 ## Layout
 
 - `references/README.md`: versioned reference index and usage notes
 - `references/agents-writing-guides.md`: guidance links for writing or revising `AGENTS.md` assets
 - `references/repos.manifest.tsv`: machine-readable reference repository list for the sync script
 - `references/external/`: local gitignored checkouts of third-party repositories
+- `references/external/README.md`: path-local guidance for agents reading the external checkouts
 
 ## Reference Repositories
 
@@ -17,11 +20,11 @@ The checked-out repositories under `references/external/` are intentionally giti
 
 - Upstream: <https://github.com/affaan-m/everything-claude-code>
 - Local checkout path: `references/external/everything-claude-code`
-- Why it is tracked here: comparative reference for cross-tool AI engineering assets, especially Go backend `rules`, `agents`, and `skills`
+- Why it is tracked here: comparative reference for cross-tool AI engineering assets that can inform maintained outputs under `platforms/`
 - Current usage focus:
-  - compare Go backend rule structure and enforcement detail
-  - compare Go-focused agent roles such as reviewer and build resolver
-  - compare skill coverage for Go patterns and testing workflows
+  - compare third-party skill, hook, and sub-agent patterns before adapting repo-owned platform assets
+  - compare platform-native packaging and layout choices that may translate well into `platforms/`
+  - extract stable ideas and workflows rather than copying upstream assets wholesale
 
 ## Official Documentation Links
 
@@ -66,3 +69,4 @@ git -C references/external/everything-claude-code pull --ff-only origin main
 - Pulling this repository does not automatically clone or update the referenced upstream repositories.
 - Use `scripts/sync-references.sh` when setting up a new environment or refreshing local reference checkouts.
 - If later automation is desired, add an explicit wrapper or hook around the sync script rather than moving these checkouts into `platforms/`.
+- When using a checkout under `references/external/`, prefer summarizing reusable ideas into maintained `platforms/` assets rather than treating the checkout itself as distributable repository content.
