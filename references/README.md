@@ -26,6 +26,16 @@ The current intent of this area is to support comparative study while building o
   - compare platform-native packaging and layout choices that may translate well into `platforms/`
   - extract stable ideas and workflows rather than copying upstream assets wholesale
 
+### `gstack`
+
+- Upstream: <https://github.com/garrytan/gstack>
+- Local checkout path: `references/external/gstack`
+- Why it is tracked here: comparative reference for Claude Code skill packaging, role-oriented workflows, and review or QA command design that may inform maintained outputs under `platforms/`
+- Current usage focus:
+  - compare repo-distributed skill layouts and setup patterns for local tool installation
+  - study role-based slash-command workflows for planning, review, QA, and release handoff
+  - extract reusable ideas about orchestration and guardrails without treating the upstream checkout as a maintained asset
+
 ## Official Documentation Links
 
 ### AGENTS.md Writing Guidance
@@ -47,6 +57,10 @@ Sync only one reference:
 bash scripts/sync-references.sh --only everything-claude-code
 ```
 
+```bash
+bash scripts/sync-references.sh --only gstack
+```
+
 The script reads `references/repos.manifest.tsv`, clones a repository if it is missing, and otherwise updates it with a fast-forward-only pull.
 
 ## Clone Or Update Manually
@@ -57,10 +71,18 @@ Clone if missing:
 git clone https://github.com/affaan-m/everything-claude-code.git references/external/everything-claude-code
 ```
 
+```bash
+git clone https://github.com/garrytan/gstack.git references/external/gstack
+```
+
 Update an existing checkout:
 
 ```bash
 git -C references/external/everything-claude-code pull --ff-only origin main
+```
+
+```bash
+git -C references/external/gstack pull --ff-only origin main
 ```
 
 ## Notes
