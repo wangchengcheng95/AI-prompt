@@ -39,6 +39,7 @@ These assets are content under maintenance. They are not the active root entrypo
 These are tool-neutral assets that are intended to be copied into other repositories:
 
 - `templates/go-single-service-docs/`
+- `templates/progressive-disclosure/`
 
 These templates are maintained content assets. They are not repo-maintenance docs and they are not tied to any single AI tool.
 

@@ -12,7 +12,7 @@ description: Keep repository maintenance docs concise and high signal
 - Remove duplicated wording when the same rule already exists in a clearer location.
 - Keep README and governance docs focused on repository purpose, structure, and decision boundaries.
 - When replacing obsolete material, delete it instead of leaving parallel explanations behind.
-- Layer 1 (always-on): AGENTS.md, README.md, 00-overview.mdc — stay under 60 lines total, no background knowledge
+- Layer 1 (always-on): root entry files (AGENTS.md, CLAUDE.md, README.md, 00-overview.mdc) — stay under 60 lines total, no background knowledge
 - Layer 2 (task-time): agent-iteration-contract.md, skill files — referenced when executing tasks
 - Layer 3 (reference): docs/REPOSITORY-GOALS.md and other docs/ files — consulted when needed
 - Do not promote layer 3 content into layer 1 files.
