@@ -66,6 +66,12 @@ This document records confirmed design decisions and why they replaced, narrowed
 - Why: The repository already keeps its governance and maintenance documentation English-first, and commit history should stay aligned with that stable operating language instead of switching with the chat language.
 - Impact: Repo-local commit workflows, including the local `git-commit` skill, should generate English commit subjects by default.
 
+### 2026-03-19 Claude repo-local migration stops at skills
+
+- Decision: Root `.claude/` should gain repo-local workflow skills, but it should not invent repo-local Claude agents just to mirror Codex or Cursor.
+- Why: Claude Code reads `CLAUDE.md` natively and does not use `.mdc` rule files or `agents/openai.yaml` shells. Rules are expressed directly in `CLAUDE.md`. The high-value layer is workflow skills, which are fully portable.
+- Impact: Claude can maintain this repository through `CLAUDE.md` rules and `.claude/skills/` now. The `agents/openai.yaml` shells from `.codex/` have no Claude equivalent and were intentionally omitted.
+
 ### 2026-03-19 Cursor repo-local migration stops at rules and skills
 
 - Decision: Root `.cursor/` should gain repo-local maintenance rules and workflow skills, but it should not invent repo-local Cursor agents or sub-agents just to mirror Codex.

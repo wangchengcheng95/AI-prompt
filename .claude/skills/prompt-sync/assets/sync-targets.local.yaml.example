@@ -1,0 +1,12 @@
+targets:
+  local-codex-home:
+    path: /absolute/path/to/your/local/workspace
+    type: workspace
+    tool: codex
+    notes: Syncs platforms/codex/home/AGENTS.md into AGENTS.md at the target root.
+
+  example-project:
+    path: /absolute/path/to/your/project-repo
+    type: repo
+    tool: codex
+    notes: Syncs Codex platform assets into the project's native AGENTS.md and .codex paths.

@@ -12,7 +12,7 @@ This repository maintains archived/source AI configuration assets for multiple t
 
 ## Repository Boundaries
 
-- Root `AGENTS.md`, root `CLAUDE.md`, root `.cursor/`, and selected root `.codex/` assets are repo-maintenance entrypoints only.
+- Root `AGENTS.md`, root `CLAUDE.md`, root `.claude/`, root `.cursor/`, and selected root `.codex/` assets are repo-maintenance entrypoints only.
 - `platforms/` stores the external assets this repository maintains for other repositories and tools.
 - `templates/` stores tool-neutral reusable assets that are meant to be copied into other repositories.
 - `docs/REPOSITORY-GOALS.md` defines the active repository contract.
