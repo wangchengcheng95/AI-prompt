@@ -129,6 +129,10 @@
 
 这个 PR 的作用更像“保存已确认中间结论和配套改动”，而不是宣称对 `.agents/skills` 的研究已经完成。
 
+## Todo List
+
+- Future follow-up: consider carrying the "do not commit machine-specific absolute filesystem paths" constraint into `platforms/codex/home/AGENTS.md`, but do not make that platform-asset change in this task.
+
 ## 尚未完成的原始目标
 
 以下事项仍然没有完成：
