@@ -38,6 +38,8 @@ This repository maintains archived/source AI configuration assets for multiple t
 - Do not do backward-compatibility work unless the user explicitly asks for it.
 - Before creating a new asset or document, search for an existing home and extend it instead of duplicating it.
 - When moving archived assets, verify that internal references still point to valid locations inside their new platform home.
+- Do not commit machine-specific absolute filesystem paths such as `/root/github/...` or `/workspace/...` into repository-authored content unless the user explicitly asks for environment-specific debugging material.
+- In committed Markdown or other repo-authored docs, prefer repo-relative links and repo-relative paths over local absolute paths.
 - Ask before deleting discussion records, templates, or other user-authored material whose ownership is unclear.
 
 ## Output Expectations
