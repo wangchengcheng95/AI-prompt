@@ -1,0 +1,113 @@
+schema_version: 1
+last_updated: 2026-03-19
+source_of_truth: local
+github_mirroring: optional
+
+tasks:
+  - id: ecc-skill-research
+    title: "ECC .agents/skills research and reuse triage"
+    status: active
+    priority: high
+    kind: research
+    doc: docs/tasks/ecc-skill-research/README.md
+    branch: docs-ecc-agent-skills-notes
+    issue: null
+    pr: https://github.com/wangchengcheng95/AI-prompt/pull/12
+    next_step: "Continue second-round analysis for deep-research, market-research, api-design, and dmux-workflows, then decide reuse boundaries."
+    last_updated: 2026-03-19
+
+  - id: cross-doc-consistency-check
+    title: "Repo-local cross-doc consistency checking workflow"
+    status: proposed
+    priority: high
+    kind: skill
+    doc: docs/tasks/cross-doc-consistency-check/README.md
+    branch: null
+    issue: null
+    pr: null
+    next_step: "Define the minimum check surface across REPOSITORY-GOALS, architecture, system-overview, decisions, and agent-iteration-contract before implementing any repo-local checker."
+    last_updated: 2026-03-19
+
+  - id: asset-boundary-check
+    title: "Repo-local asset boundary checking workflow"
+    status: proposed
+    priority: high
+    kind: skill
+    doc: docs/tasks/asset-boundary-check/README.md
+    branch: null
+    issue: null
+    pr: null
+    next_step: "Define the minimum rules for routing new material into root entrypoints, docs, templates, references, or platforms before implementing any checker."
+    last_updated: 2026-03-19
+
+  - id: pr-workflow-token-efficiency
+    title: "Reduce token overhead in repo-local PR interaction workflow"
+    status: proposed
+    priority: high
+    kind: skill
+    doc: docs/tasks/pr-workflow-token-efficiency/README.md
+    branch: null
+    issue: null
+    pr: null
+    next_step: "Measure where token cost currently comes from across pr-handoff and pr-operator, then define a low-token default path that preserves deterministic PR operations."
+    last_updated: 2026-03-19
+
+  - id: codex-home-agents-path-constraint
+    title: "Carry repo path-portability rule into platforms/codex/home/AGENTS.md"
+    status: proposed
+    priority: medium
+    kind: documentation
+    doc: docs/tasks/codex-home-agents-path-constraint/README.md
+    branch: null
+    issue: null
+    pr: null
+    next_step: "Review platforms/codex/home/AGENTS.md and decide whether the repo-local no-absolute-path rule should be copied as a stable platform-asset constraint."
+    last_updated: 2026-03-19
+
+  - id: custom-user-agents-md
+    title: "Custom user-level Codex AGENTS asset"
+    status: done
+    priority: medium
+    kind: documentation
+    doc: docs/tasks/custom-user-agents-md/README.md
+    branch: custom-user-agents-md
+    issue: null
+    pr: null
+    next_step: "Review platforms/codex/home/AGENTS.md only if one more wording pass or an additional durable constraint is needed."
+    last_updated: 2026-03-19
+
+  - id: repo-doc-normalization
+    title: "Repo-doc normalization workflow"
+    status: deferred
+    priority: medium
+    kind: skill
+    doc: docs/tasks/repo-doc-normalization/README.md
+    branch: null
+    issue: null
+    pr: null
+    next_step: "Return after the higher-priority consistency and boundary-check workflows are better defined."
+    last_updated: 2026-03-19
+
+  - id: maintenance-change-review
+    title: "Maintenance change review workflow"
+    status: deferred
+    priority: medium
+    kind: skill
+    doc: docs/tasks/maintenance-change-review/README.md
+    branch: null
+    issue: null
+    pr: null
+    next_step: "Return after the repository boundary model and task intake loop need stronger pre-merge review enforcement."
+    last_updated: 2026-03-19
+
+  - id: repository-intake-triage
+    title: "Repository intake triage workflow"
+    status: deferred
+    priority: medium
+    kind: skill
+    doc: docs/tasks/repository-intake-triage/README.md
+    branch: null
+    issue: null
+    pr: null
+    next_step: "Return after repeated maintenance tasks show that new-material placement decisions still need a dedicated intake workflow."
+    last_updated: 2026-03-19
