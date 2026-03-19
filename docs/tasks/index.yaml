@@ -1,0 +1,29 @@
+schema_version: 1
+last_updated: 2026-03-19
+source_of_truth: local
+github_mirroring: optional
+
+tasks:
+  - id: ecc-skill-research
+    title: "ECC .agents/skills research and reuse triage"
+    status: active
+    priority: high
+    kind: research
+    doc: docs/tasks/ecc-skill-research/README.md
+    branch: docs-ecc-agent-skills-notes
+    issue: null
+    pr: https://github.com/wangchengcheng95/AI-prompt/pull/12
+    next_step: "Continue second-round analysis for deep-research, market-research, api-design, and dmux-workflows, then decide reuse boundaries."
+    last_updated: 2026-03-19
+
+  - id: custom-user-agents-md
+    title: "Custom user-level Codex AGENTS asset"
+    status: done
+    priority: medium
+    kind: documentation
+    doc: docs/tasks/custom-user-agents-md/README.md
+    branch: custom-user-agents-md
+    issue: null
+    pr: null
+    next_step: "Review platforms/codex/home/AGENTS.md only if one more wording pass or an additional durable constraint is needed."
+    last_updated: 2026-03-19

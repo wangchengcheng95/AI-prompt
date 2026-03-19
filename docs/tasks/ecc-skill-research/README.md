@@ -1,3 +1,19 @@
+---
+task_id: ecc-skill-research
+title: ECC Skill 研究任务
+status: active
+priority: high
+kind: research
+branch: docs-ecc-agent-skills-notes
+issue: null
+pr: https://github.com/wangchengcheng95/AI-prompt/pull/12
+last_updated: 2026-03-19
+next_step: 继续第二轮高优先级 skill 研究，优先 deep-research、market-research、api-design、dmux-workflows，并明确筛选标准与归属边界。
+promotion_targets:
+  - platforms/codex/
+  - docs/EVOLUTION-GOALS.md
+---
+
 # ECC Skill 研究任务
 
 这个任务目录用于记录围绕 `references/external/everything-claude-code/.agents/skills/` 展开的研究背景、中间结论与后续入口。
