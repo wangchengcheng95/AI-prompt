@@ -1,0 +1,4 @@
+interface:
+  display_name: "Verifier"
+  short_description: "Evidence-first staged verification"
+  default_prompt: "Use $verifier to verify this change with staged checks, concrete evidence, and risk review."

@@ -41,3 +41,15 @@ This document records confirmed design decisions and why they replaced, narrowed
 - Decision: Repo-local Codex self-iteration should first be defined as a documented goal-to-ready-to-merge collaboration contract rather than as a dedicated skill, agent, or fixed template system.
 - Why: The repository needs a stable execution boundary for intake, scope control, branch and commit expectations, and pull request handoff before deciding whether repeated behavior deserves stronger abstraction.
 - Impact: Root `AGENTS.md` can stay concise, `docs/agent-iteration-contract.md` can hold the stable loop, and later skill or agent extraction can remain optional.
+
+### 2026-03-19 Multi-session task context lives under docs/tasks
+
+- Decision: Cross-session repo-maintenance task context should live under `docs/tasks/` instead of `docs/tmp/`.
+- Why: `docs/tmp/` suggests disposable scratch work, while unfinished task research and handoff notes need a versioned, resumable home with clearer lifecycle semantics.
+- Impact: `docs/tasks/` becomes the standard place for task workspaces; stable conclusions must still be promoted into standard docs or maintained assets when confirmed.
+
+### 2026-03-19 Repo-authored docs avoid machine-specific absolute paths
+
+- Decision: Repository-authored docs and task workspaces should not commit machine-specific absolute filesystem paths such as `/root/github/...` or `/workspace/...`.
+- Why: These paths break portability across local clones, CI, GitHub rendering, and future sessions in different environments.
+- Impact: Committed docs should use repo-relative links and repo-relative paths by default; environment-specific absolute paths are only acceptable when the user explicitly asks for debugging material tied to one machine.

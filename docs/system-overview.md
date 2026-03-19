@@ -25,6 +25,7 @@ The repository maintains these asset categories:
 - agent or sub-agent definitions where the platform supports them
 - tool-neutral reusable templates for downstream repositories
 - governance and repository-maintenance documentation
+- task workspaces for multi-session repo-maintenance handoff context
 
 The repository does not treat every category equally. Shared rules and high-frequency skills are the highest-leverage cross-platform assets. Agent and sub-agent definitions are more platform-specific and therefore less suitable for early unification.
 
@@ -33,5 +34,6 @@ The repository does not treat every category equally. Shared rules and high-freq
 - Root entrypoints remain repo-specific.
 - Archived external assets live under `platforms/`.
 - Shared reusable templates live under `templates/`.
+- Multi-session repo-maintenance task context may live under `docs/tasks/` until its stable conclusions are promoted.
 - Shared semantics matter more than textual similarity between platforms.
 - Phase 1 optimizes for reduced duplicated maintenance, not for immediate generation or full semantic normalization.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Doc Simplifier"
+  short_description: "Simplify repo or platform Markdown"
+  default_prompt: "Use $repo-doc-simplifier to compress this Markdown document without changing commands, paths, scope, or downstream meaning."
