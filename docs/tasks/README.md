@@ -12,6 +12,36 @@ Use this area when a task needs to survive across:
 
 This directory is for task context, not for stable repository policy.
 
+## Active Task Index
+
+Open one of these entrypoints first when resuming ongoing task work:
+
+### Active
+
+- `ai-friendly-repo`
+  - Entry: `docs/tasks/ai-friendly-repo/README.md`
+  - State: active
+  - Branch: `docs-ai-friendly-repo-positioning`
+  - PR: `#15`
+  - Resume here when working on AI-friendly repository structure, indexing, or promotion-flow rules.
+
+### Ongoing Research Context
+
+- `ecc-skill-research`
+  - Entry: `docs/tasks/ecc-skill-research/README.md`
+  - State: research context retained
+  - Branch/PR: see the task README and current Git state
+  - Resume here when continuing the external skill research thread or the `verifier` evolution context tied to it.
+
+### Historical Context
+
+- `custom-user-agents-md`
+  - Entry: `docs/tasks/custom-user-agents-md/2026-03-18-custom-user-agents-md.md`
+  - State: historical context retained
+  - Notes: this task predates the preferred `README.md` entrypoint shape
+
+When a task becomes active, add it to this index. When it becomes stable history, move it to the historical section rather than deleting the context immediately.
+
 ## What Belongs Here
 
 Use `docs/tasks/` for materials such as:
@@ -42,6 +72,8 @@ For each task, prefer one directory:
 
 Use `README.md` as the task entrypoint. It should make the next session cheap to resume.
 
+If a task still uses an older non-`README.md` entrypoint, record that explicitly in the active task index until the task is normalized or retired.
+
 Optional supporting files may sit beside it, for example:
 
 - research notes
@@ -54,6 +86,7 @@ Optional supporting files may sit beside it, for example:
 Each task workspace `README.md` should usually include:
 
 - original goal
+- current slice
 - current status
 - branch and PR
 - confirmed findings
@@ -64,9 +97,10 @@ Each task workspace `README.md` should usually include:
 ## Lifecycle
 
 1. Create a task workspace when the work is likely to span more than one session or PR-sized slice.
-2. Keep the task `README.md` current as conclusions or scope change.
-3. Promote stable conclusions into standard docs or maintained assets as they become real repository knowledge.
-4. Remove or archive the task workspace only after it no longer holds unique context needed for future work.
+2. Add or update the task in the active task index when its working status changes.
+3. Keep the task `README.md` current as conclusions or scope change.
+4. Promote stable conclusions into standard docs or maintained assets as they become real repository knowledge.
+5. Remove or archive the task workspace only after it no longer holds unique context needed for future work.
 
 ## Naming
 
