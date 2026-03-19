@@ -23,6 +23,7 @@ Keep Phase 1 focused on reducing duplicated maintenance at the project-entry lev
 - Platform-specific content → `platforms/<tool>/`; tool-neutral content → `templates/`
 - No backward-compatibility work unless explicitly requested
 - When moving archived assets, verify internal references still resolve
+- Doc layering: layer 1 (always-on) = AGENTS.md + README.md, stay minimal, no background knowledge; layer 2 (task-time) = agent-iteration-contract.md + skill files; layer 3 (reference) = docs/ files. Do not promote layer 3 content into layer 1.
 
 ## Read More
 
