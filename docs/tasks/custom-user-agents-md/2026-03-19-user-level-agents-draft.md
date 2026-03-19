@@ -1,14 +1,8 @@
-# Codex User-Level Instructions
+# Draft User-Level AGENTS.md
 
-This archived file corresponds to the runtime user-level Codex instruction file at `~/.codex/AGENTS.md`.
+This draft was promoted into the formal archived Codex user-level asset at `platforms/codex/home/AGENTS.md`.
 
-Use this file for stable cross-project engineering defaults. Keep repository-specific architecture, workflows, commands, and coding rules in each project's own `AGENTS.md`.
-
-## Scope
-
-- Apply these instructions as a global baseline across projects.
-- Let more local project instructions narrow or override them when they are more specific.
-- Keep this file concise, reusable, and low-churn.
+This file is a draft of a user-level `AGENTS.md`. It is meant to define stable cross-repository defaults and should be overridden by project-level or path-local instructions when they provide better local guidance.
 
 ## Decision Protocol
 
@@ -25,7 +19,6 @@ Use this file for stable cross-project engineering defaults. Keep repository-spe
 ## Security And Verification Defaults
 
 - Treat systems as security-sensitive by default unless project-level or path-local instructions clearly define a narrower risk model.
-- Never expose secrets, credentials, access tokens, or sensitive logs. Redact sensitive output before sharing command results or snippets.
 - Surface material risks explicitly, especially around trust boundaries, authentication, authorization, input handling, data exposure, secrets, protocol changes, concurrency, and failure modes.
 - Match verification depth to task risk. Strengthen verification for interface, boundary, storage, permission, protocol, concurrency, and hostile-input changes.
 - If an expected verification step cannot run, say what was not verified and what risk remains.
