@@ -7,7 +7,7 @@ description: Search existing homes before creating new repository assets or docs
 
 ## Rules
 
-- Before creating a new rule, doc, or asset, search `platforms/`, `docs/`, and root `.cursor/` for an existing home.
+- Before creating a new rule, doc, or asset, search `platforms/`, `docs/`, root `.cursor/`, and the selected repo-local assets under root `.codex/` for an existing home.
 - Prefer extending an existing asset over creating a near-duplicate.
 - Placement rule:
   - repo-maintenance content belongs at the root entrypoints

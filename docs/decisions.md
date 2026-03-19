@@ -65,3 +65,9 @@ This document records confirmed design decisions and why they replaced, narrowed
 - Decision: Repo-local maintenance commits in this repository should use English commit subjects.
 - Why: The repository already keeps its governance and maintenance documentation English-first, and commit history should stay aligned with that stable operating language instead of switching with the chat language.
 - Impact: Repo-local commit workflows, including the local `git-commit` skill, should generate English commit subjects by default.
+
+### 2026-03-19 Cursor repo-local migration stops at rules and skills
+
+- Decision: Root `.cursor/` should gain repo-local maintenance rules and workflow skills, but it should not invent repo-local Cursor agents or sub-agents just to mirror Codex.
+- Why: The repository already treats rules and skills as the higher-leverage shared layer, while there are currently no repo-local Codex sub-agents to migrate.
+- Impact: Cursor can maintain this repository through repo-local rules and skills now, while dedicated repo-local Cursor agents remain optional future work.

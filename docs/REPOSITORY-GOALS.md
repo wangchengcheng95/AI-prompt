@@ -19,7 +19,7 @@ These files and directories exist only to maintain this repository:
 - root `.cursor/`
 - selected root `.codex/` assets that are explicitly kept for repo maintenance
 
-Codex maintenance is driven by root `AGENTS.md` together with the minimal repo-local `.codex/` assets that are intentionally kept for maintaining this repository.
+Repo-local maintenance may be driven through the active root entrypoints, including root `AGENTS.md`, root `.cursor/`, and the minimal repo-local `.codex/` assets that are intentionally kept for maintaining this repository.
 
 Root `AGENTS.md` is the rules entrypoint for maintaining this repository. It is not the single document that also owns repository positioning, sequencing, or evolution goals. Repository positioning lives in this document by design.
 
@@ -105,5 +105,5 @@ Phase 1 does not attempt to:
 3. Shared reusable templates live under `templates/` and remain distinct from repo-maintenance docs and platform-specific assets.
 4. Core repository docs no longer position the repository as a backend-only prompt collection.
 5. Standard docs distinguish active contract, deferred evolution, stable facts, stable structure, and dated decisions.
-6. Repo-local Codex maintenance can be driven from a user goal to a ready-to-merge handoff with a documented collaboration contract.
+6. Repo-local maintenance can be driven from a user goal to a ready-to-merge handoff with a documented collaboration contract through the active root entrypoints.
 7. Removed discussion-style notes do not retain unique design information outside the standard docs set.

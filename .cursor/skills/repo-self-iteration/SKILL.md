@@ -1,7 +1,8 @@
 ---
 name: repo-self-iteration
-description: Intake a repo-local maintenance goal and drive it toward ready-to-merge by applying the repository collaboration contract, choosing accept/shrink/stop, then using git-start-task, git-commit, repo-doc-simplifier, pr-handoff, and pr-operator at the right points. Use when Codex receives a concrete repository task and should run the default self-iteration loop instead of only giving advice.
+description: Intake a repo-local maintenance goal and drive it toward ready-to-merge by applying the repository collaboration contract, choosing accept, shrink, or stop, then using git-start-task, git-commit, repo-doc-simplifier, pr-handoff, and pr-operator at the right points. Use when Cursor receives a concrete repository task and should run the default self-iteration loop instead of only giving advice.
 ---
+
 # Repo Self Iteration
 
 ## Overview
