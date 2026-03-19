@@ -64,6 +64,18 @@ tasks:
     next_step: "Measure where token cost currently comes from across pr-handoff and pr-operator, then define a low-token default path that preserves deterministic PR operations."
     last_updated: 2026-03-19
 
+  - id: cursor-repo-maintenance-followups
+    title: "Cursor repo-local maintenance follow-ups"
+    status: proposed
+    priority: medium
+    kind: documentation
+    doc: docs/tasks/cursor-repo-maintenance-followups/README.md
+    branch: null
+    issue: null
+    pr: null
+    next_step: "Review the recorded migration findings, then decide whether the next slice should add a Cursor quickstart, real Cursor-side trigger validation, or a dedicated repo-local agent shell."
+    last_updated: 2026-03-19
+
   - id: codex-home-agents-path-constraint
     title: "Carry repo path-portability rule into platforms/codex/home/AGENTS.md"
     status: proposed
