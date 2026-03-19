@@ -40,6 +40,18 @@ tasks:
     next_step: "Define the minimum rules for routing new material into root entrypoints, docs, templates, references, or platforms before implementing any checker."
     last_updated: 2026-03-19
 
+  - id: pr-workflow-token-efficiency
+    title: "Reduce token overhead in repo-local PR interaction workflow"
+    status: proposed
+    priority: high
+    kind: skill
+    doc: docs/tasks/pr-workflow-token-efficiency/README.md
+    branch: null
+    issue: null
+    pr: null
+    next_step: "Measure where token cost currently comes from across pr-handoff and pr-operator, then define a low-token default path that preserves deterministic PR operations."
+    last_updated: 2026-03-19
+
   - id: codex-home-agents-path-constraint
     title: "Carry repo path-portability rule into platforms/codex/home/AGENTS.md"
     status: proposed
