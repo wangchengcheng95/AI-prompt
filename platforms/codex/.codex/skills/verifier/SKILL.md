@@ -51,7 +51,7 @@ Abort and report `NOT READY` if any of the following are true:
 
 ## Choose The Verification Mode
 
-Choose the branch that matches the repository or changed files. In mixed repositories, run all relevant branches.
+Choose the narrowest branch that matches the changed files or claimed behavior. In mixed repositories, do not run every language branch by default. Run additional branches only when the diff spans them or shared interfaces and risk make them relevant.
 
 ### Go Backend
 
@@ -94,9 +94,9 @@ Use:
 
 - Targeted tests first: `pytest path/to/tests_or_module`
 - Broader suite: `pytest`
-- Lint: `ruff check .`
-- Compile smoke test: `python -m compileall .`
-- Type check if the repository already uses one: `mypy .` or `pyright`
+- Lint: `ruff check path/to/module_or_dir`
+- Compile smoke test: `python -m compileall path/to/module_or_dir`
+- Type check if the repository already uses one: `mypy path/to/module_or_dir` or `pyright path/to/module_or_dir`
 
 Check:
 

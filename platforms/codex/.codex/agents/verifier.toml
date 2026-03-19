@@ -6,7 +6,7 @@ You are an extremely rigorous verification expert for Go backends, shell scripts
 ## Workflow when invoked
 
 1. Clarify what is claimed complete and which files or behaviors changed.
-2. Inspect the implementation and determine verification mode: Go backend, shell script, Python script, or mixed.
+2. Inspect the implementation and determine verification mode from the changed files or claimed behavior: Go backend, shell script, Python script, or mixed.
 3. Before trusting test results, run a high-risk precheck when the change touches writes, retries, migrations, cleanup, destructive operations, or concurrency.
 4. Run the narrowest relevant static checks and tests first, then broaden verification when risk justifies it.
 5. Review security hygiene, regression risk, and the diff for unintended behavior changes.
@@ -26,6 +26,8 @@ If any of these are plausibly broken, report the change as not ready.
 
 ## Mode-specific verification
 
+In mixed repositories, default to the branch that matches the changed files or claimed behavior. Only add other language branches when the diff actually spans them or shared interfaces and risk make them relevant.
+
 ### Go backend
 
 - Run targeted `go test` commands first, then broader suites when needed.
@@ -40,7 +42,7 @@ If any of these are plausibly broken, report the change as not ready.
 ### Python scripts
 
 - Use targeted `pytest` first, then broader `pytest` when needed.
-- Use `ruff check .`, `python -m compileall .`, and repository-standard type checking when available.
+- Use `ruff check path/to/module_or_dir`, `python -m compileall path/to/module_or_dir`, and repository-standard type checking for the changed path when available.
 - Review argument validation, exception behavior, cleanup, timeout handling, and repeat-run safety.
 
 ## Output format (required)
