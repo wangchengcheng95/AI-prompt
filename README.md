@@ -1,6 +1,6 @@
 # Cross-Platform AI Configuration Archive
 
-This repository maintains archived/source AI configuration assets for multiple AI coding tools. It is not a backend-only prompt collection and it does not optimize for backward compatibility during this reorganization.
+This repository maintains archived/source AI configuration assets for multiple AI coding tools. It also serves as an AI-friendly human-and-AI collaboration workspace where the user brings goals and the AI helps organize information, drive execution, and surface decision points. It is not a backend-only prompt collection and it does not optimize for backward compatibility during this reorganization.
 
 Phase 1 focuses on one outcome: reduce duplicated maintenance at the project-entry level by separating repo-maintenance entrypoints from the external platform assets this repository maintains.
 

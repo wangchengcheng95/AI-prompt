@@ -6,6 +6,8 @@ This repository is a source/archive repository for cross-platform AI engineering
 
 It maintains the configuration assets, entry files, skills, rules, and supporting documentation that are intended to be deployed into other repositories or consumed by other AI coding tools. It also keeps a small set of repo-local entrypoints that exist only to maintain this repository itself.
 
+This repository is also an AI-friendly collaboration workspace for the user and the AI maintaining it together: the user brings goals, the AI organizes and indexes repository knowledge, proposes options, executes bounded work, and asks for user decisions when needed.
+
 ## Active Repository Contract
 
 ### Repo-maintenance entrypoints

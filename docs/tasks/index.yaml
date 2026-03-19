@@ -4,6 +4,18 @@ source_of_truth: local
 github_mirroring: optional
 
 tasks:
+  - id: ai-friendly-repo
+    title: "Make the repository more AI-friendly for human-and-AI collaboration"
+    status: active
+    priority: high
+    kind: documentation
+    doc: docs/tasks/ai-friendly-repo/README.md
+    branch: docs-ai-friendly-repo-positioning
+    issue: null
+    pr: https://github.com/wangchengcheng95/AI-prompt/pull/15
+    next_step: "Decide whether the next slice should add a repository-level start-here index or formalize promotion guidance from task workspaces into stable docs."
+    last_updated: 2026-03-19
+
   - id: ecc-skill-research
     title: "ECC .agents/skills research and reuse triage"
     status: active
