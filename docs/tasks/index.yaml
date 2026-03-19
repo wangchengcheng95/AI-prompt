@@ -6,14 +6,14 @@ github_mirroring: optional
 tasks:
   - id: add-claude-skills
     title: "Migrate repo-local Codex maintenance skills to Claude"
-    status: active
+    status: done
     priority: high
     kind: skill
-    doc: null
+    doc: docs/tasks/add-claude-skills/README.md
     branch: add-claude-skills
     issue: null
-    pr: null
-    next_step: "Review and merge PR."
+    pr: https://github.com/wangchengcheng95/AI-prompt/pull/18
+    next_step: "Merge PR."
     last_updated: 2026-03-19
 
   - id: ai-friendly-repo
