@@ -1,9 +1,9 @@
 # `verification-loop` 与 `verification-phase` 对比及融合建议
 
-这是一份临时讨论笔记，用于比较以下两个外部参考 skill，并判断后续是否值得沉淀为本仓库可复用的技能资产：
+这是一份临时讨论笔记，用于比较以下两类输入，并判断后续是否值得沉淀为本仓库可复用的技能资产：
 
-- `references/external/everything-claude-code/.agents/skills/verification-loop/SKILL.md`
-- `references/external/skills/verification-phase/SKILL.md`
+- 可复现来源：`references/external/everything-claude-code/.agents/skills/verification-loop/SKILL.md`
+- 本轮已摘要的 `verification-phase` 风格检查模式；当前仓库没有把它的原始来源纳入 `references/repos.manifest.tsv`，因此本文保留的是自包含结论，而不是对某个 repo-managed path 的逐段摘录
 
 ## 一句话判断
 

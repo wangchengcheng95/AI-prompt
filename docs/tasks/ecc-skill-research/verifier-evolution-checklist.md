@@ -1,6 +1,6 @@
 # `platforms/codex` 现有 `verifier` 演化清单
 
-这是一份临时设计清单，用于指导 `platforms/codex/.codex/skills/verifier/SKILL.md` 后续如何演化，以吸收外部参考中的 `verification-loop` 与 `verification-phase` 的长处，同时保持与当前 `platforms/codex` 资产的一致性。
+这是一份临时设计清单，用于指导 `platforms/codex/.codex/skills/verifier/SKILL.md` 后续如何演化，以吸收可复现的 `verification-loop` 参考和本轮已摘要的 `verification-phase` 风格检查模式的长处，同时保持与当前 `platforms/codex` 资产的一致性。
 
 ## 目标
 

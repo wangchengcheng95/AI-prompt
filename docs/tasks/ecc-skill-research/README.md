@@ -31,7 +31,7 @@
 
 ### 1. 全量技能归类与复用优先级
 
-- [skill-summary.md](/root/github/AI-prompt/docs/tasks/ecc-skill-research/skill-summary.md)
+- [skill-summary.md](./skill-summary.md)
 
 当前结论：
 
@@ -47,7 +47,7 @@
 
 ### 2. `verification-loop` 与 `verification-phase` 的对比
 
-- [verification-skill-comparison.md](/root/github/AI-prompt/docs/tasks/ecc-skill-research/verification-skill-comparison.md)
+- [verification-skill-comparison.md](./verification-skill-comparison.md)
 
 当前结论：
 
@@ -57,7 +57,7 @@
 
 ### 3. `platforms/codex` 现有 `verifier` 的演化清单
 
-- [verifier-evolution-checklist.md](/root/github/AI-prompt/docs/tasks/ecc-skill-research/verifier-evolution-checklist.md)
+- [verifier-evolution-checklist.md](./verifier-evolution-checklist.md)
 
 当前结论：
 
@@ -85,7 +85,7 @@
 本轮之所以进入 `verifier`，是因为：
 
 - `verification-loop` 是高优先级候选 skill
-- 它和 `references/external/skills/verification-phase` 有明显互补关系
+- 它和本轮已摘要的 `verification-phase` 风格检查模式有明显互补关系
 - `platforms/codex` 里已经存在同类资产 `verifier`
 
 所以才收敛出“扩展现有 `verifier`，而不是新增平行 skill”的判断。
@@ -101,21 +101,21 @@
 
 ### 4. 修改 skill 时应强制参考官方 `skill-creator`
 
-本轮已经把这条约束写入根级 [AGENTS.md](/root/github/AI-prompt/AGENTS.md)：
+本轮已经把这条约束写入根级 [AGENTS.md](../../../AGENTS.md)：
 
 - 修改或创建任何 `SKILL.md` 时，先使用 `$skill-creator`
-- 再参考 [skill-writing-guides.md](/root/github/AI-prompt/references/skill-writing-guides.md)
+- 再参考 [skill-writing-guides.md](../../../references/skill-writing-guides.md)
 
 ## 本轮顺手完成的代码与文档变更
 
 以下变更是讨论过程中的直接产物：
 
-- 更新根级 [AGENTS.md](/root/github/AI-prompt/AGENTS.md)，把 `skill-creator` 提升为强约束
-- 重写 [repo-doc-simplifier/SKILL.md](/root/github/AI-prompt/.codex/skills/repo-doc-simplifier/SKILL.md)，支持 `repo-maintenance` 与 `platform-asset` 双模式
-- 生成 [repo-doc-simplifier/openai.yaml](/root/github/AI-prompt/.codex/skills/repo-doc-simplifier/agents/openai.yaml)
-- 演化 [verifier/SKILL.md](/root/github/AI-prompt/platforms/codex/.codex/skills/verifier/SKILL.md)
-- 同步 [verifier.toml](/root/github/AI-prompt/platforms/codex/.codex/agents/verifier.toml)
-- 生成 [verifier/openai.yaml](/root/github/AI-prompt/platforms/codex/.codex/skills/verifier/agents/openai.yaml)
+- 更新根级 [AGENTS.md](../../../AGENTS.md)，把 `skill-creator` 提升为强约束
+- 重写 [repo-doc-simplifier/SKILL.md](../../../.codex/skills/repo-doc-simplifier/SKILL.md)，支持 `repo-maintenance` 与 `platform-asset` 双模式
+- 生成 [repo-doc-simplifier/openai.yaml](../../../.codex/skills/repo-doc-simplifier/agents/openai.yaml)
+- 演化 [verifier/SKILL.md](../../../platforms/codex/.codex/skills/verifier/SKILL.md)
+- 同步 [verifier.toml](../../../platforms/codex/.codex/agents/verifier.toml)
+- 生成 [verifier/openai.yaml](../../../platforms/codex/.codex/skills/verifier/agents/openai.yaml)
 
 这些变更已经被整理进当前 PR，但它们只是本轮研究过程中的已确认输出，不代表原始研究目标已经结束。
 
@@ -151,10 +151,10 @@
 新会话、新分支继续时，建议按以下顺序推进：
 
 1. 先读这个任务目录下的 4 份文档：
-   - [README.md](/root/github/AI-prompt/docs/tasks/ecc-skill-research/README.md)
-   - [skill-summary.md](/root/github/AI-prompt/docs/tasks/ecc-skill-research/skill-summary.md)
-   - [verification-skill-comparison.md](/root/github/AI-prompt/docs/tasks/ecc-skill-research/verification-skill-comparison.md)
-   - [verifier-evolution-checklist.md](/root/github/AI-prompt/docs/tasks/ecc-skill-research/verifier-evolution-checklist.md)
+   - [README.md](./README.md)
+   - [skill-summary.md](./skill-summary.md)
+   - [verification-skill-comparison.md](./verification-skill-comparison.md)
+   - [verifier-evolution-checklist.md](./verifier-evolution-checklist.md)
 2. 明确下一轮是否继续研究 `verification-loop` 之外的高优先级 skill。
 3. 如果继续全局研究，优先从以下 4 个方向继续：
    - `deep-research`
