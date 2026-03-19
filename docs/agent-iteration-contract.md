@@ -92,6 +92,8 @@ When the repo-local Git skills are available, prefer using:
 - `$git-commit` for commit creation
 - `$pr-handoff` for push and pull request handoff
 
+Skills live under `.claude/skills/` for Claude Code and `.cursor/skills/` for Cursor.
+
 ## Delivery Contract
 
 For a task to be considered complete for handoff, the agent should provide:
