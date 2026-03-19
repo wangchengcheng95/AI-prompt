@@ -25,13 +25,15 @@ Prefer the smallest useful slice that can still be reviewed as a normal pull req
 When the task is `accept` or `shrink`, follow this order:
 
 1. Use `$git-start-task` to start from updated `main` and create the task branch.
-2. Form a concise executable plan based on the accepted task slice.
-3. Implement the repository change.
-4. If the task changed a repo-maintenance Markdown file in the repository root or `docs/`, use `$repo-doc-simplifier` when the updated document has become longer, more repetitive, or otherwise needs compression.
-5. Run the most relevant verification available.
-6. Summarize the acceptance status, assumptions, and residual risks.
-7. Use `$git-commit` to create a focused commit.
-8. Use `$pr-handoff` to prepare the pull request handoff, and let `$pr-operator` perform the actual PR operations when needed.
+2. If the work is likely to span multiple sessions, multiple commits, or a follow-up PR-sized slice, register or refresh it under `docs/tasks/` before continuing.
+3. Form a concise executable plan based on the accepted task slice.
+4. Implement the repository change.
+5. If the task changed a repo-maintenance Markdown file in the repository root or `docs/`, use `$repo-doc-simplifier` when the updated document has become longer, more repetitive, or otherwise needs compression.
+6. Run the most relevant verification available.
+7. Summarize the acceptance status, assumptions, and residual risks.
+8. Use `$git-commit` to create a focused commit.
+9. Refresh the tracked task state and next step in `docs/tasks/` before handoff when the task remains active, blocked, deferred, or spawns follow-up work.
+10. Use `$pr-handoff` to prepare the pull request handoff, and let `$pr-operator` perform the actual PR operations when needed.
 
 ## Interaction Budget
 
@@ -43,6 +45,7 @@ When the task is `accept` or `shrink`, follow this order:
 
 - Use `$git-start-task` for switching to `main`, updating it, and creating the task branch.
 - Use `$git-commit` for commit message formation and the commit itself.
+- Use `docs/tasks/` for versioned task workspaces when the work is likely to span multiple sessions, multiple commits, or a follow-up PR-sized slice.
 - Use `$repo-doc-simplifier` as a conditional cleanup step for repo-maintenance Markdown in the repository root or `docs/`, not for every Markdown file.
 - Use `$pr-handoff` for PR text and review-ready delivery.
 - Use `$pr-operator` for actual PR push, create, view, and edit operations when the handoff needs them.
@@ -66,5 +69,6 @@ Return a ready-to-merge handoff that includes:
 - the plan actually followed
 - verification and outcome
 - commit identifier
+- updated `docs/tasks/` state when the task was tracked there
 - PR title and summary
 - risks, assumptions, and any remaining manual steps

@@ -35,12 +35,14 @@ Run the smallest relevant checks for the scope you changed:
 
 - Inventory the repo-local skill sets:
   `rg --files .codex/skills .cursor/skills`
-- Search for path leakage from migrated Cursor assets back to Codex:
-  `rg -n "\.codex/" .cursor`
+- Search the target paths you actually migrated for stale Codex runtime references:
+  `rg -n "\.codex/" <target-paths-you-migrated>`
 - Check for whitespace and patch hygiene:
   `git diff --check`
 - When scripts were migrated, verify permissions and path assumptions:
   `find .cursor/skills -path '*/scripts/*' -type f -maxdepth 4`
+
+Treat a hit as actionable only when it leaves a Cursor-executed asset pointing at a Codex-local runtime path. Ignore intentional references that describe source scope, repo boundaries, or the migration protocol itself.
 
 Add a real Cursor-side smoke test when the environment allows it. Repository-only checks are not a substitute for runtime trigger validation.
 

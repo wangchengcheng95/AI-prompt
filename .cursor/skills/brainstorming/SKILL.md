@@ -35,8 +35,9 @@ Start by understanding the current project context, then ask questions one at a 
 ## After the Design
 
 **Documentation:**
-- Write the validated design to `docs/plans/YYYY-MM-DD-<topic>-design.md`
-- Commit the design document to git
+- If the design needs versioned handoff, cross-session continuation, or follow-up implementation tracking, write it under `docs/tasks/<task-id>/README.md` and refresh `docs/tasks/index.yaml`.
+- Otherwise, extend the smallest existing repo-maintenance doc home that already fits the design instead of creating a new `docs/plans/` area.
+- Commit the design document only when one was actually created.
 
 **Implementation (if continuing):**
 - Ask: "Ready to set up for implementation?"
