@@ -26,6 +26,8 @@ Turn the task workspace into an executable entrypoint for the next phase:
 - This task workspace is now the aggregation point for both the theme and the next execution slices.
 - The next recommended implementation focus is indexing and promotion rules, not directory restructuring.
 - `docs/tasks/README.md` now includes an active task index so AI task discovery no longer depends on directory scanning alone.
+- `docs/tasks/README.md` now also defines the minimum contract and update triggers for active task READMEs.
+- `docs/tasks/ecc-skill-research/README.md` has been normalized at the top of the file so indexed recovery does not depend on scanning the whole historical narrative.
 
 ## Working Definition
 
@@ -114,7 +116,7 @@ Use this draft rule until a stronger version is validated:
 ## Follow-Up Work To Land Later
 
 - Build a first repository navigation index if current entrypoints remain too implicit.
-- Define the minimum required fields for every ongoing task workspace README.
+- Apply the active task README contract to other relevant ongoing task workspaces when needed.
 - Validate the draft promotion rules through repeated real tasks.
 - Evaluate whether repository-level indexes, decision ledgers, or promotion rules should be added after repeated use proves they help.
 
@@ -134,6 +136,6 @@ Use this draft rule until a stronger version is validated:
 
 - Re-open this task workspace first when continuing the AI-friendly repository thread.
 - Decide whether the next slice is:
-  - normalize the minimum README shape for active tasks
   - extend indexing beyond `docs/tasks/` if repository root discovery is still too implicit
+  - decide whether a repository-level start-here index is now justified
   - formalize the draft promotion guidance after one or two more real uses

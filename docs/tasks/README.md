@@ -94,6 +94,54 @@ Each task workspace `README.md` should usually include:
 - next session entrypoint
 - promotion targets for stable conclusions
 
+## Active Task README Contract
+
+For any task that appears in the active task index, prefer these top-level sections in this order:
+
+1. `Status`
+2. `Original Goal`
+3. `Current Slice`
+4. `Current Status`
+5. `Confirmed Findings`
+6. `Open Questions`
+7. `Promotion Targets`
+8. `Next Session Entrypoint`
+
+The section titles do not need to be the only sections in the file, but these fields should be easy to find near the top so an AI can resume work without scanning the entire document first.
+
+## Field Intent
+
+- `Status`
+  - record the task state, current branch, PR, and last-updated date
+- `Original Goal`
+  - preserve the longer-running task identity even when the current slice changes
+- `Current Slice`
+  - state the exact bounded scope for the current phase or next implementation step
+- `Current Status`
+  - summarize what has already been achieved and what remains true right now
+- `Confirmed Findings`
+  - capture validated conclusions that should not need to be rediscovered next session
+- `Open Questions`
+  - expose unresolved choices, missing information, or scope decisions
+- `Promotion Targets`
+  - say where stable conclusions should move when they stop being task-local
+- `Next Session Entrypoint`
+  - tell the next session what to open first and what decision or slice should come next
+
+## Update Triggers
+
+Update an active task README when any of the following changes:
+
+- the task state changes, such as `active`, `blocked`, `research context retained`, or `historical context retained`
+- the working branch or PR changes
+- the current slice changes
+- a new durable finding is confirmed
+- an open question is resolved, replaced, or newly discovered
+- the next best resume point changes
+- a conclusion becomes stable enough to promote into the standard docs set or a maintained asset
+
+When updating the README, prefer editing the summary sections first and leaving longer historical notes below them.
+
 ## Lifecycle
 
 1. Create a task workspace when the work is likely to span more than one session or PR-sized slice.

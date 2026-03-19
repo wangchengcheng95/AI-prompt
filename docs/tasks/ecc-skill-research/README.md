@@ -2,6 +2,60 @@
 
 这个任务目录用于记录围绕 `references/external/everything-claude-code/.agents/skills/` 展开的研究背景、中间结论与后续入口。
 
+## Status
+
+- State: research context retained
+- Branch: `docs-ecc-agent-skills-notes`
+- PR: [#12](https://github.com/wangchengcheng95/AI-prompt/pull/12)
+- Last updated: 2026-03-19
+
+## Original Goal
+
+研究 `references/external/everything-claude-code/.agents/skills/` 中的 skill 都在做什么，并判断哪些更适合作为外部参考保留，哪些值得沉淀为本仓库后续可复用的长期资产。
+
+## Current Slice
+
+当前这个任务 README 主要承担研究上下文聚合和跨 session 恢复入口，而不是继续扩展本轮实现范围。
+
+本任务当前更适合支持以下后续动作：
+
+- 恢复对 `.agents/skills` 其余高优先级候选 skill 的研究
+- 延续已形成的筛选标准和归属判断
+- 将新结论与现有 `verifier` 演化背景区分开
+
+## Current Status
+
+- 已完成对归档快照中 skill 的一次全量初筛和优先级判断。
+- 已围绕 `verification-loop` 深挖，并收敛出扩展现有 `platforms/codex` `verifier` 的方向。
+- 本任务当前保留为研究上下文，而不是声称原始目标已经完成。
+
+## Confirmed Findings
+
+- 研究对象属于 `references/external/` 下的外部归档参考资产，不是本仓库当前维护入口。
+- 更合理的复用方向通常是沉淀到 `platforms/codex/`，而不是直接进入根级 repo-local 维护入口。
+- `verifier` 的演化是本轮研究的副产物，不等于整个 `.agents/skills` 研究已经完成。
+- 研究任务与实现任务应尽量分开，避免在同一任务线程中自然滑入过深的实现细节。
+
+## Open Questions
+
+- 24 个 skill 中哪些应继续只作为参考，哪些值得变成长期维护资产。
+- 下一轮优先深挖哪些候选 skill，以及采用什么筛选标准。
+- 后续结论应进入 `platforms/codex/`、repo-local 维护资产，还是继续停留在外部参考层。
+
+## Promotion Targets
+
+- 研究过程中形成的稳定平台资产方向，优先考虑提升到 `platforms/codex/`。
+- 稳定的 repo-local 维护规则或文档治理结论，再提升到根级或 `docs/` 标准文档。
+- 未验证完成的研究判断继续保留在本任务目录。
+
+## Next Session Entrypoint
+
+- 先读本文件，再读：
+  - [skill-summary.md](./skill-summary.md)
+  - [verification-skill-comparison.md](./verification-skill-comparison.md)
+  - [verifier-evolution-checklist.md](./verifier-evolution-checklist.md)
+- 然后先决定下一轮是继续“全局研究与筛选”，还是单独开启新的实现型任务。
+
 ## 原始目标
 
 本轮最初目标不是改造 `verifier`，而是先研究以下目录中的 skill 都是做什么的，并判断哪些值得后续复用：
