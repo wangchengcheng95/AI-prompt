@@ -29,11 +29,15 @@ Initial repo-local skill focus:
 - cross-doc consistency checking across the standard repository-maintenance documents
 - asset-boundary checking so new material lands in the correct root, `platforms/`, `templates/`, or `docs/` home
 
+Operational tracking for these near-term items lives in `docs/tasks/index.yaml` and their task workspaces under `docs/tasks/`.
+
 Deferred repo-local skill backlog:
 
 - repo-doc normalization for turning discussion outcomes into the standard docs set
 - maintenance-change review for checking proposed repository updates against Phase 1 boundaries and repository scope
 - repository intake triage for deciding whether new maintenance material extends an existing asset or deserves a new home
+
+Operational tracking for deferred items should also stay in `docs/tasks/` instead of growing separate todo lists in this document.
 
 ## Near-Term Repo-Local Iteration Contract
 

@@ -74,12 +74,14 @@ Once a goal is accepted for execution, the default loop is:
 
 1. evaluate the task and reduce scope if needed
 2. create or switch to a task branch
-3. form a concise executable plan
-4. implement the change
-5. run the most relevant verification available
-6. summarize acceptance status and residual risks
-7. create at least one focused commit
-8. prepare pull request text and hand the work off for review
+3. register or refresh the task in `docs/tasks/` when the work is likely to span multiple sessions, multiple commits, or a follow-up PR-sized slice
+4. form a concise executable plan
+5. implement the change
+6. run the most relevant verification available
+7. summarize acceptance status and residual risks
+8. create at least one focused commit
+9. refresh the tracked task state and next step in `docs/tasks/` before handoff when the task remains active, blocked, deferred, or spawns follow-up work
+10. prepare pull request text and hand the work off for review
 
 The agent should not stop at analysis if it can continue safely within this loop.
 
@@ -99,6 +101,7 @@ For a task to be considered complete for handoff, the agent should provide:
 - the implemented repository changes
 - the verification performed and its outcome
 - the commit identifier, or the blocking reason if commit creation is prevented by tooling constraints
+- the updated `docs/tasks/index.yaml` entry and task workspace `README.md` when the task is tracked in `docs/tasks/` or needs cross-session continuation
 - pull request title and summary text suitable for review
 - explicit assumptions, known risks, and any remaining manual steps
 

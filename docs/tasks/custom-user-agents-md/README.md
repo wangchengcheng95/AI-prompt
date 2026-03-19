@@ -1,3 +1,19 @@
+---
+task_id: custom-user-agents-md
+title: Custom User AGENTS Task
+status: done
+priority: medium
+kind: documentation
+branch: custom-user-agents-md
+issue: null
+pr: null
+last_updated: 2026-03-19
+next_step: Review platforms/codex/home/AGENTS.md only if another wording pass or one more durable engineering constraint is needed.
+promotion_targets:
+  - platforms/codex/home/AGENTS.md
+  - references/agents-writing-guides.md
+---
+
 # Custom User AGENTS Task
 
 ## Status

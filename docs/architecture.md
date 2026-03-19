@@ -6,12 +6,12 @@ This document records the stable maintenance model, mapping rules, and current-v
 
 ## Maintenance Model
 
-The repository uses a three-part architecture in the current state:
+The repository uses a four-part architecture in the current state:
 
 - repo-maintenance entrypoints at the repository root
 - archived external platform assets under `platforms/`
 - tool-neutral reusable templates under `templates/`
-- task workspaces under `docs/tasks/` for unfinished repo-maintenance task context
+- task workspaces under `docs/tasks/` for unfinished repo-maintenance task context, with a local task index for AI-first resume
 
 The repository may also keep a lightweight support area under `references/`:
 
@@ -21,6 +21,8 @@ The repository may also keep a lightweight support area under `references/`:
 Root entrypoints exist to operate on this repository itself. Archived platform assets are maintained content and are not the active runtime instructions for maintaining this repository. Shared templates are maintained content assets intended to be copied into other repositories, but they are not tied to any single platform carrier.
 
 Task workspaces under `docs/tasks/` are repo-maintenance support material. They are versioned so unfinished work can continue across sessions, but they are not the standard home for stable decisions, architecture, or platform assets.
+
+`docs/tasks/index.yaml` is the local todo ledger for task discovery and resume. Each tracked task should also keep a task-local `README.md` entrypoint that carries the working context.
 
 Reference checkouts under `references/` are not maintained outputs of this repository. They exist only as local comparison material and must not be treated as `platforms/` assets or template content.
 

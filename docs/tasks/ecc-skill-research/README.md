@@ -1,3 +1,35 @@
+---
+task_id: ecc-skill-research
+title: ECC Skill 研究任务
+status: active
+priority: high
+kind: research
+branch: docs-ecc-agent-skills-notes
+issue: null
+pr: https://github.com/wangchengcheng95/AI-prompt/pull/12
+last_updated: 2026-03-19
+next_step: 继续第二轮高优先级 skill 研究，优先 deep-research、market-research、api-design、dmux-workflows，并明确筛选标准与归属边界。
+promotion_targets:
+  - platforms/codex/
+  - docs/EVOLUTION-GOALS.md
+---
+
+---
+task_id: ecc-skill-research
+title: ECC Skill 研究任务
+status: active
+priority: high
+kind: research
+branch: docs-ecc-agent-skills-notes
+issue: null
+pr: https://github.com/wangchengcheng95/AI-prompt/pull/12
+last_updated: 2026-03-19
+next_step: Continue second-round analysis for deep-research, market-research, api-design, and dmux-workflows, then decide reuse boundaries.
+promotion_targets:
+  - platforms/codex/
+  - docs/
+---
+
 # ECC Skill 研究任务
 
 这个任务目录用于记录围绕 `references/external/everything-claude-code/.agents/skills/` 展开的研究背景、中间结论与后续入口。
@@ -185,7 +217,7 @@
 
 ## Todo List
 
-- Future follow-up: consider carrying the "do not commit machine-specific absolute filesystem paths" constraint into `platforms/codex/home/AGENTS.md`, but do not make that platform-asset change in this task.
+- Follow-up is now tracked in [docs/tasks/codex-home-agents-path-constraint/README.md](../codex-home-agents-path-constraint/README.md).
 
 ## 尚未完成的原始目标
 

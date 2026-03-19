@@ -24,6 +24,7 @@ This repository maintains archived/source AI configuration assets for multiple t
 ## Working Rules
 
 - Keep governance and repo-maintenance docs English-first.
+- Use English commit messages for repo-local maintenance work in this repository.
 - For repo-local Codex maintenance tasks, drive work toward a ready-to-merge handoff by following `docs/agent-iteration-contract.md`.
 - For repo-local goal-driven tasks, prefer using `$repo-self-iteration` as the default entry workflow.
 - Inside that workflow, prefer `$git-start-task` for branch setup, `$git-commit` for commit creation, `$repo-doc-simplifier` as a conditional cleanup step for repo-maintenance docs, `$pr-handoff` for review handoff, and `$pr-operator` for actual PR operations.
