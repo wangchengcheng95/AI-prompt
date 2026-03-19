@@ -59,3 +59,9 @@ This document records confirmed design decisions and why they replaced, narrowed
 - Decision: `docs/tasks/index.yaml` is the canonical todo ledger for repo-maintenance tasks, while each tracked task keeps a local `docs/tasks/<task-slug>/README.md` context entrypoint.
 - Why: AI resumes most reliably from versioned local files with stable paths and predictable fields, while GitHub issues and project boards are better treated as optional collaboration mirrors.
 - Impact: New multi-session tasks should be added to `docs/tasks/index.yaml` before they sprawl across comments or ad hoc notes, and other docs should prefer linking back to tracked tasks instead of carrying standalone follow-up lists.
+
+### 2026-03-19 Repo-local maintenance commits use English subjects
+
+- Decision: Repo-local maintenance commits in this repository should use English commit subjects.
+- Why: The repository already keeps its governance and maintenance documentation English-first, and commit history should stay aligned with that stable operating language instead of switching with the chat language.
+- Impact: Repo-local commit workflows, including the local `git-commit` skill, should generate English commit subjects by default.

@@ -9,6 +9,8 @@ description: Git Create Commit
 
 Create a short, focused commit message and commit staged changes.
 
+In this repository, use English commit subjects for repo-local maintenance work.
+
 ## Steps
 
 1. **Review changes**
@@ -22,19 +24,19 @@ Create a short, focused commit message and commit staged changes.
     - `git add -A`
 4. **Create short commit message**
     - Base the message on the actual changes in the diff
-    - Use Chinese for the commit message
-    - Example: `git commit -m "fix(auth): 处理过期令牌刷新"`
-    - Example with issue key: `git commit -m "TASK-123: fix(auth): 处理过期令牌刷新"`
+    - Use English for the commit message
+    - Example: `git commit -m "fix(auth): refresh expired token handling"`
+    - Example with issue key: `git commit -m "TASK-123: fix(auth): refresh expired token handling"`
 
 ## Template
 
-- `git commit -m "<type>(<scope>): <简短摘要>"`
-- With issue key: `git commit -m "<issue-key>: <type>(<scope>): <简短摘要>"`
+- `git commit -m "<type>(<scope>): <short summary>"`
+- With issue key: `git commit -m "<issue-key>: <type>(<scope>): <short summary>"`
 
 ## Rules
 
 - **Length:** <= 72 characters
-- **Language:** Use Chinese for commit messages
-- **Imperative mood:** Use "修复", "添加", "更新" (not "修复了", "添加了", "更新了")
+- **Language:** Use English for commit messages
+- **Imperative mood:** Use verbs such as "fix", "add", "update" (not "fixed", "added", "updated")
 - **No period:** Don't end the subject line with a period
-- **Describe why:** Not just what - "修复问题" is meaningless
+- **Describe why:** Not just what - "fix issue" is too vague
