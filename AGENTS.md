@@ -31,4 +31,3 @@ Keep Phase 1 focused on reducing duplicated maintenance at the project-entry lev
 - Writing or revising skills → `references/skill-writing-guides.md` (use `$skill-creator`)
 - Repo goals and scope → `docs/REPOSITORY-GOALS.md`
 - Past decisions → `docs/decisions.md`
-- Doc layering model → `.cursor/rules/precision-over-verbosity.mdc`
