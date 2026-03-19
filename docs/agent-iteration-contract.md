@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This document defines the repo-local collaboration contract for goal-driven Codex maintenance work in this repository.
+This document defines the repo-local collaboration contract for goal-driven maintenance work in this repository.
 
 The contract is intentionally behavioral rather than template-driven. It constrains how the agent should intake work, decide whether to proceed, drive execution, and hand work back in a ready-to-merge state without freezing the exact wording or shape of plans, reviews, or pull request text.
 

@@ -1,0 +1,15 @@
+---
+alwaysApply: true
+description: Use the repo-local maintenance loop and Cursor workflow skills for goal-driven work in this repository
+---
+
+# Repo Maintenance Loop
+
+## Rules
+
+- For goal-driven repo-local maintenance tasks, classify scope as `accept`, `shrink`, or `stop` before editing.
+- Prefer the smallest reviewable slice that can credibly reach ready-to-merge in one pass.
+- Follow `docs/agent-iteration-contract.md` for the execution loop, handoff fields, and stop conditions.
+- Prefer the repo-local Cursor skills under root `.cursor/skills/` for `repo-self-iteration`, `git-start-task`, `git-commit`, `repo-doc-simplifier`, `pr-handoff`, `pr-operator`, and `prompt-sync` when they match the task.
+- Use English commit subjects for repo-local maintenance commits in this repository.
+- Keep explicit user interactions for decisions that materially change scope, risk, or permissions; otherwise continue with stated assumptions.
