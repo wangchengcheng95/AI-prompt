@@ -78,6 +78,21 @@ Each entry should include at least:
 
 If a task is represented on GitHub, store the GitHub link as a reference only. Do not force AI to reconstruct the task by reading GitHub comments first.
 
+Recommended status values:
+
+- `proposed`
+- `active`
+- `blocked`
+- `deferred`
+- `done`
+- `archived`
+
+Recommended priority values:
+
+- `high`
+- `medium`
+- `low`
+
 ## Task README Contract
 
 Each task workspace `README.md` should start with YAML front matter so both humans and AI can recover the task quickly.

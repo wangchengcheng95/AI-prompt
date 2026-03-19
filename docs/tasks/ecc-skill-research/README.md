@@ -147,7 +147,7 @@ promotion_targets:
 
 ## Todo List
 
-- Future follow-up: consider carrying the "do not commit machine-specific absolute filesystem paths" constraint into `platforms/codex/home/AGENTS.md`, but do not make that platform-asset change in this task.
+- Follow-up is now tracked in [docs/tasks/codex-home-agents-path-constraint/README.md](../codex-home-agents-path-constraint/README.md).
 
 ## 尚未完成的原始目标
 
