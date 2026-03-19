@@ -57,6 +57,8 @@ The standard repository-maintenance documents under `docs/` are:
 - `docs/architecture.md` for stable structure and mapping rules
 - `docs/decisions.md` for dated design decisions
 
+The repository may also keep multi-session task workspaces under `docs/tasks/` when a repo-maintenance task needs versioned handoff context before its stable conclusions are promoted elsewhere.
+
 ## Phase 1 Objective
 
 Phase 1 optimizes for priority `A`: reduce duplicated maintenance across project-entry files.
@@ -92,7 +94,7 @@ Phase 1 does not attempt to:
 - automated adapters or code generation
 - semantic unification of all rules and skills across platforms
 - onboarding additional platforms beyond the current Cursor, Claude, and Codex assets
-- preserving discussion-style design notes when their surviving conclusions have been normalized into the standard docs
+- preserving discussion-style design notes when their surviving conclusions have been normalized into the standard docs or relevant maintained assets
 
 ## Success Criteria
 

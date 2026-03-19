@@ -1,6 +1,6 @@
-# ECC Skill 研究交接记录
+# ECC Skill 研究任务
 
-这是一份临时交接文档，用于记录本轮围绕 `references/external/everything-claude-code/.agents/skills/` 展开的研究背景、中间结论与后续入口。
+这个任务目录用于记录围绕 `references/external/everything-claude-code/.agents/skills/` 展开的研究背景、中间结论与后续入口。
 
 ## 原始目标
 
@@ -31,7 +31,7 @@
 
 ### 1. 全量技能归类与复用优先级
 
-- [ecc-agents-skills-summary.md](/root/github/AI-prompt/docs/tmp/ecc-agents-skills-summary.md)
+- [skill-summary.md](/root/github/AI-prompt/docs/tasks/ecc-skill-research/skill-summary.md)
 
 当前结论：
 
@@ -47,7 +47,7 @@
 
 ### 2. `verification-loop` 与 `verification-phase` 的对比
 
-- [verification-skill-comparison.md](/root/github/AI-prompt/docs/tmp/verification-skill-comparison.md)
+- [verification-skill-comparison.md](/root/github/AI-prompt/docs/tasks/ecc-skill-research/verification-skill-comparison.md)
 
 当前结论：
 
@@ -57,7 +57,7 @@
 
 ### 3. `platforms/codex` 现有 `verifier` 的演化清单
 
-- [verifier-evolution-checklist.md](/root/github/AI-prompt/docs/tmp/verifier-evolution-checklist.md)
+- [verifier-evolution-checklist.md](/root/github/AI-prompt/docs/tasks/ecc-skill-research/verifier-evolution-checklist.md)
 
 当前结论：
 
@@ -150,11 +150,11 @@
 
 新会话、新分支继续时，建议按以下顺序推进：
 
-1. 先读这 4 份临时文档：
-   - [ecc-skill-research-handoff.md](/root/github/AI-prompt/docs/tmp/ecc-skill-research-handoff.md)
-   - [ecc-agents-skills-summary.md](/root/github/AI-prompt/docs/tmp/ecc-agents-skills-summary.md)
-   - [verification-skill-comparison.md](/root/github/AI-prompt/docs/tmp/verification-skill-comparison.md)
-   - [verifier-evolution-checklist.md](/root/github/AI-prompt/docs/tmp/verifier-evolution-checklist.md)
+1. 先读这个任务目录下的 4 份文档：
+   - [README.md](/root/github/AI-prompt/docs/tasks/ecc-skill-research/README.md)
+   - [skill-summary.md](/root/github/AI-prompt/docs/tasks/ecc-skill-research/skill-summary.md)
+   - [verification-skill-comparison.md](/root/github/AI-prompt/docs/tasks/ecc-skill-research/verification-skill-comparison.md)
+   - [verifier-evolution-checklist.md](/root/github/AI-prompt/docs/tasks/ecc-skill-research/verifier-evolution-checklist.md)
 2. 明确下一轮是否继续研究 `verification-loop` 之外的高优先级 skill。
 3. 如果继续全局研究，优先从以下 4 个方向继续：
    - `deep-research`

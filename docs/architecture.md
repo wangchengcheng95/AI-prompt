@@ -11,6 +11,7 @@ The repository uses a three-part architecture in the current state:
 - repo-maintenance entrypoints at the repository root
 - archived external platform assets under `platforms/`
 - tool-neutral reusable templates under `templates/`
+- task workspaces under `docs/tasks/` for unfinished repo-maintenance task context
 
 The repository may also keep a lightweight support area under `references/`:
 
@@ -19,7 +20,11 @@ The repository may also keep a lightweight support area under `references/`:
 
 Root entrypoints exist to operate on this repository itself. Archived platform assets are maintained content and are not the active runtime instructions for maintaining this repository. Shared templates are maintained content assets intended to be copied into other repositories, but they are not tied to any single platform carrier.
 
+Task workspaces under `docs/tasks/` are repo-maintenance support material. They are versioned so unfinished work can continue across sessions, but they are not the standard home for stable decisions, architecture, or platform assets.
+
 Reference checkouts under `references/` are not maintained outputs of this repository. They exist only as local comparison material and must not be treated as `platforms/` assets or template content.
+
+Repo-maintenance work may also use `docs/tasks/` as a versioned task workspace area for multi-session handoffs, research notes, and open questions that are not yet stable repository knowledge.
 
 These reference checkouts may be used to study useful third-party patterns such as skills, hooks, sub-agents, and related platform-native structure before adapting selected ideas into maintained outputs under `platforms/`.
 
