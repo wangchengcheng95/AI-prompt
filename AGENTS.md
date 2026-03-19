@@ -9,11 +9,11 @@ Keep Phase 1 focused on reducing duplicated maintenance at the project-entry lev
 
 ## Boundaries
 
+- Root `AGENTS.md`, root `CLAUDE.md`, root `.claude/`, root `.cursor/`, and selected root `.codex/` assets are repo-maintenance entrypoints only.
 - `platforms/` — external assets maintained for other repositories and tools
 - `templates/` — tool-neutral assets meant to be copied into other repositories
 - `docs/` — repo-maintenance knowledge: goals, architecture, decisions, contracts
-- `.cursor/`, `.codex/` — repo-maintenance entrypoints; keep minimal
-- Root `AGENTS.md` / `CLAUDE.md` — this repository only, not external tools
+- Shared template material must remain separate from repo-maintenance docs unless the user explicitly asks to relocate or delete it.
 
 ## Working Rules
 

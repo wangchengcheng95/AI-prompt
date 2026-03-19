@@ -16,10 +16,11 @@ These files and directories exist only to maintain this repository:
 
 - root `AGENTS.md`
 - root `CLAUDE.md`
+- root `.claude/`
 - root `.cursor/`
 - selected root `.codex/` assets that are explicitly kept for repo maintenance
 
-Repo-local maintenance may be driven through the active root entrypoints, including root `AGENTS.md`, root `.cursor/`, and the minimal repo-local `.codex/` assets that are intentionally kept for maintaining this repository.
+Repo-local maintenance may be driven through the active root entrypoints, including root `AGENTS.md`, root `.claude/`, root `.cursor/`, and the minimal repo-local `.codex/` assets that are intentionally kept for maintaining this repository.
 
 Root `AGENTS.md` is the rules entrypoint for maintaining this repository. It is not the single document that also owns repository positioning, sequencing, or evolution goals. Repository positioning lives in this document by design.
 
@@ -101,7 +102,7 @@ Phase 1 does not attempt to:
 
 ## Success Criteria
 
-1. Root `AGENTS.md`, root `CLAUDE.md`, root `.cursor/`, and selected root `.codex/` assets describe maintenance of this repository only.
+1. Root `AGENTS.md`, root `CLAUDE.md`, root `.claude/`, root `.cursor/`, and selected root `.codex/` assets describe maintenance of this repository only.
 2. Archived external assets live under `platforms/` and remain navigable there.
 3. Shared reusable templates live under `templates/` and remain distinct from repo-maintenance docs and platform-specific assets.
 4. Core repository docs no longer position the repository as a backend-only prompt collection.
