@@ -105,6 +105,7 @@ Each entry should include at least:
 - title
 - status
 - priority
+- phase (for active and proposed tasks)
 - task type
 - task doc path
 - branch
@@ -113,6 +114,12 @@ Each entry should include at least:
 - last updated date
 
 If a task is represented on GitHub, store the GitHub link as a reference only. Do not force AI to reconstruct the task by reading GitHub comments first.
+
+Recommended phase values (for active and proposed tasks; omit for done/deferred):
+
+- `phase-1-active` — currently in progress
+- `phase-1-near-term` — next up, explicitly sequenced in `docs/EVOLUTION-GOALS.md`
+- `phase-1-backlog` — proposed but not yet ordered for near-term pickup
 
 Recommended status values:
 

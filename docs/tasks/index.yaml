@@ -20,6 +20,7 @@ tasks:
     title: "Make the repository more AI-friendly for human-and-AI collaboration"
     status: active
     priority: high
+    phase: phase-1-active
     kind: documentation
     doc: docs/tasks/ai-friendly-repo/README.md
     branch: docs-ai-friendly-repo-positioning
@@ -28,22 +29,11 @@ tasks:
     next_step: "Decide whether the next slice should add a repository-level start-here index or formalize promotion guidance from task workspaces into stable docs."
     last_updated: 2026-03-19
 
-  - id: ai-native-repo-design-principles
-    title: "Archive and evaluate the AI-native repository design-principles draft"
-    status: proposed
-    priority: high
-    kind: documentation
-    doc: docs/tasks/ai-native-repo-design-principles/README.md
-    branch: work
-    issue: null
-    pr: null
-    next_step: "Review the archived draft and decide whether any part should be promoted into stable repo-maintenance docs."
-    last_updated: 2026-03-20
-
   - id: ecc-skill-research
     title: "ECC .agents/skills research and reuse triage"
     status: active
     priority: high
+    phase: phase-1-active
     kind: research
     doc: docs/tasks/ecc-skill-research/README.md
     branch: docs-ecc-agent-skills-notes
@@ -56,6 +46,7 @@ tasks:
     title: "Repo-local cross-doc consistency checking workflow"
     status: proposed
     priority: high
+    phase: phase-1-near-term
     kind: skill
     doc: docs/tasks/cross-doc-consistency-check/README.md
     branch: null
@@ -68,6 +59,7 @@ tasks:
     title: "Repo-local asset boundary checking workflow"
     status: proposed
     priority: high
+    phase: phase-1-near-term
     kind: skill
     doc: docs/tasks/asset-boundary-check/README.md
     branch: null
@@ -76,10 +68,24 @@ tasks:
     next_step: "Define the minimum rules for routing new material into root entrypoints, docs, templates, references, or platforms before implementing any checker."
     last_updated: 2026-03-19
 
+  - id: ai-native-repo-design-principles
+    title: "Archive and evaluate the AI-native repository design-principles draft"
+    status: proposed
+    priority: high
+    phase: phase-1-backlog
+    kind: documentation
+    doc: docs/tasks/ai-native-repo-design-principles/README.md
+    branch: work
+    issue: null
+    pr: null
+    next_step: "Review the archived draft and decide whether any part should be promoted into stable repo-maintenance docs."
+    last_updated: 2026-03-20
+
   - id: pr-workflow-token-efficiency
     title: "Reduce token overhead in repo-local PR interaction workflow"
     status: proposed
     priority: high
+    phase: phase-1-backlog
     kind: skill
     doc: docs/tasks/pr-workflow-token-efficiency/README.md
     branch: null
@@ -92,6 +98,7 @@ tasks:
     title: "Cursor repo-local maintenance follow-ups"
     status: proposed
     priority: medium
+    phase: phase-1-backlog
     kind: documentation
     doc: docs/tasks/cursor-repo-maintenance-followups/README.md
     branch: null
@@ -104,6 +111,7 @@ tasks:
     title: "Carry repo path-portability rule into platforms/codex/home/AGENTS.md"
     status: proposed
     priority: medium
+    phase: phase-1-backlog
     kind: documentation
     doc: docs/tasks/codex-home-agents-path-constraint/README.md
     branch: null
