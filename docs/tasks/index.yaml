@@ -68,18 +68,6 @@ tasks:
     next_step: "Define the minimum rules for routing new material into root entrypoints, docs, templates, references, or platforms before implementing any checker."
     last_updated: 2026-03-19
 
-  - id: ai-native-repo-design-principles
-    title: "Archive and evaluate the AI-native repository design-principles draft"
-    status: proposed
-    priority: high
-    phase: phase-1-backlog
-    kind: documentation
-    doc: docs/tasks/ai-native-repo-design-principles/README.md
-    branch: work
-    issue: null
-    pr: null
-    next_step: "Review the archived draft and decide whether any part should be promoted into stable repo-maintenance docs."
-    last_updated: 2026-03-20
 
   - id: pr-workflow-token-efficiency
     title: "Reduce token overhead in repo-local PR interaction workflow"
