@@ -1,32 +1,21 @@
 # Cross-Platform AI Configuration Archive
 
-This repository maintains archived/source AI configuration assets for multiple AI coding tools. It also serves as an AI-friendly human-and-AI collaboration workspace where the user brings goals and the AI helps organize information, drive execution, and surface decision points. It is not a backend-only prompt collection and it does not optimize for backward compatibility during this reorganization.
-
-Phase 1 focuses on one outcome: reduce duplicated maintenance at the project-entry level by separating repo-maintenance entrypoints from the external platform assets this repository maintains.
-
-## Repository Layout
-
-- `AGENTS.md` - Codex entrypoint for maintaining this repository
-- `CLAUDE.md` - Claude entrypoint for maintaining this repository
-- `.cursor/` - minimal Cursor entrypoints for maintaining this repository
-- `platforms/codex/AGENTS.md` and `platforms/codex/.codex/` - archived external Codex assets
-- `platforms/claude/CLAUDE.md` - archived external Claude entry asset
-- `platforms/cursor/.cursor/` - archived external Cursor assets
-- `docs/REPOSITORY-GOALS.md` - active repository mission, scope, and success criteria
-- `docs/EVOLUTION-GOALS.md` - post-Phase-1 evolution goals
-- `docs/system-overview.md` - stable repository facts and asset categories
-- `docs/architecture.md` - stable maintenance model and mapping rules
-- `docs/decisions.md` - dated design decisions and narrowed conclusions
-
-## Current Contract
-
-- Root entrypoints exist only to maintain this repository itself.
-- External tool assets live under `platforms/` and are maintained there as content.
-- The repository may delete obsolete or redundant root-level material directly when it conflicts with the new contract.
+Source/archive for AI coding tool configuration. Also a human-and-AI collaboration workspace for organizing and driving maintenance tasks.
 
 ## Start Here
 
-- Read `docs/REPOSITORY-GOALS.md` for repository scope.
-- Read `docs/EVOLUTION-GOALS.md` for the next phases after Phase 1.
-- Read `docs/system-overview.md`, `docs/architecture.md`, and `docs/decisions.md` for normalized maintenance knowledge.
-- Go to `platforms/` when you are editing assets intended for other repositories or tools.
+- Maintaining this repo → `AGENTS.md`
+- Understanding repo goals and scope → `docs/REPOSITORY-GOALS.md`
+- Executing a task → `docs/agent-iteration-contract.md`
+- Editing platform assets → `platforms/<tool>/`
+- Reviewing past decisions → `docs/decisions.md`
+- Editing Cursor rules/skills → `.cursor/`
+
+## Layout
+
+- `platforms/` — archived external assets for Codex, Claude, Cursor
+- `templates/` — tool-neutral assets for copying into other repositories
+- `docs/` — repo-maintenance knowledge (goals, architecture, decisions, contracts)
+- `references/` — writing guides for agents and skills
+- `.cursor/` — Cursor entrypoints for maintaining this repository
+- `.codex/` — Codex skills for maintaining this repository

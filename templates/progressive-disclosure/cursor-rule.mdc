@@ -1,0 +1,14 @@
+---
+alwaysApply: true
+description: Organize documentation in layers so AI agents load only what is needed for the current task
+---
+
+# Progressive Disclosure
+
+## Rules
+
+- Layer 1 (always-on): root entry files (AGENTS.md, CLAUDE.md, README.md, and any always-on overview rules) — stay minimal, no background knowledge, routing links only
+- Layer 2 (task-time): task contracts, skill files, workflow docs — loaded when executing a specific task
+- Layer 3 (reference): goals, architecture, decisions, and other docs/ files — consulted only when needed
+- Do not promote layer 3 content into layer 1 files.
+- When a layer 1 file grows continuously, routing is failing — move content down, not up.

@@ -5,12 +5,6 @@ description: Overview for maintaining this repository in Cursor
 
 # Overview
 
-## Mission
-
-- Maintain this repository as a source/archive for cross-platform AI engineering configuration.
-- Keep root entrypoints focused on maintaining this repository itself.
-- Use `docs/REPOSITORY-GOALS.md` as the canonical repository contract.
-
 ## Priority
 
 ```
@@ -19,8 +13,6 @@ Correctness > Structural Clarity > Maintainability > Convenience
 
 ## Apply Here
 
-- root `AGENTS.md`
-- root `CLAUDE.md`
-- root `.cursor/`
-- `docs/`
-- `platforms/`
+- root `AGENTS.md`, root `CLAUDE.md`, root `.cursor/`, `docs/`, `platforms/`
+- Mission and boundaries → `AGENTS.md`
+- Repo goals and scope → `docs/REPOSITORY-GOALS.md`
