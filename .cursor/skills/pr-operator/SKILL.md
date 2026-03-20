@@ -28,16 +28,17 @@ This skill complements `$pr-handoff`.
 
 ## Workflow
 
-1. Confirm whether the task is `push`, `create`, `view`, or `edit`.
+1. Confirm whether the task is `push`, `find-head`, `create`, `view`, or `edit`.
 2. Validate the required inputs for that operation.
-3. Use the bundled `scripts/prctl` command instead of raw `gh`.
-4. For create or edit, validate the PR title in Conventional Commits style.
-5. Return the resulting PR URL or the exact blocking failure plus the next manual step.
+3. Use `find-head` before `create` when the branch may already have a PR.
+4. Use the bundled `scripts/prctl` command instead of raw `gh`.
+5. For create or edit, validate the PR title in Conventional Commits style.
+6. Return the resulting PR URL or the exact blocking failure plus the next manual step.
 
 ## Operations
 
 - `push`: add upstream tracking before PR work
-- `find-head`: check whether the branch already has a PR
+- `find-head`: check whether the branch already has any PR state so create and edit flows can stay idempotent
 - `create`: open a PR with explicit base, head, title, and body file
 - `view`: confirm PR number, title, state, URL, base branch, or head branch
 - `edit`: update only title, body, or both. Prefer this over raw `gh pr edit` because the wrapper uses the lower-level API path that avoids older CLI compatibility issues
@@ -64,6 +65,7 @@ PRCTL="./.cursor/skills/pr-operator/scripts/prctl"
 ## Environment Rules
 
 - Prefer this bundled wrapper over repo-root scripts or raw `gh` commands so the workflow stays migratable with the skill.
+- The wrapper should avoid unnecessary extra GitHub lookups when local Git state already provides the needed repository identity.
 - Only mutate the PR fields the user asked to change.
 - If authentication, network access, or API compatibility blocks the operation, surface the exact command result and the next manual step.
 - Do not merge, close, reopen, approve, or otherwise change review state unless the user explicitly asks for that workflow.
