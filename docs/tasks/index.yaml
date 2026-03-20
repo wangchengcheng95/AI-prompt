@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: 2026-03-19
+last_updated: 2026-03-20
 source_of_truth: local
 github_mirroring: optional
 
@@ -27,6 +27,18 @@ tasks:
     pr: https://github.com/wangchengcheng95/AI-prompt/pull/15
     next_step: "Decide whether the next slice should add a repository-level start-here index or formalize promotion guidance from task workspaces into stable docs."
     last_updated: 2026-03-19
+
+  - id: ai-native-repo-design-principles
+    title: "Archive and evaluate the AI-native repository design-principles draft"
+    status: proposed
+    priority: high
+    kind: documentation
+    doc: docs/tasks/ai-native-repo-design-principles/README.md
+    branch: work
+    issue: null
+    pr: null
+    next_step: "Review the archived draft and decide whether any part should be promoted into stable repo-maintenance docs."
+    last_updated: 2026-03-20
 
   - id: ecc-skill-research
     title: "ECC .agents/skills research and reuse triage"
