@@ -4,10 +4,9 @@ title: AI-Friendly Repo Task
 status: active
 priority: high
 kind: documentation
-branch: docs-ai-friendly-repo-positioning
+branch: null
 issue: null
-pr: https://github.com/wangchengcheng95/AI-prompt/pull/15
-last_updated: 2026-03-19
+last_updated: 2026-03-21
 next_step: Decide whether the next slice should add a repository-level start-here index or formalize promotion guidance from task workspaces into stable docs.
 promotion_targets:
   - docs/system-overview.md
@@ -21,9 +20,8 @@ promotion_targets:
 ## Status
 
 - State: active
-- Branch: `docs-ai-friendly-repo-positioning`
-- PR status: open, PR #15
-- Last updated: 2026-03-19
+- Branch: none currently; start a fresh task branch when resuming implementation
+- Last updated: 2026-03-21
 
 ## Original Goal
 

@@ -6,7 +6,6 @@ priority: medium
 kind: documentation
 branch: null
 issue: null
-pr: null
 last_updated: 2026-03-19
 next_step: Review the recorded migration findings, then decide whether the next slice should add a Cursor quickstart, real Cursor-side trigger validation, or a dedicated repo-local agent shell.
 promotion_targets:

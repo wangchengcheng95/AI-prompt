@@ -8,7 +8,7 @@ Use this area when a task needs to survive across:
 
 - multiple chats
 - multiple commits
-- multiple branches or pull requests
+- multiple branches
 
 This directory is for task state and task context. It is not the home for stable repository policy.
 
@@ -16,16 +16,16 @@ This directory is for task state and task context. It is not the home for stable
 
 `docs/tasks/` now uses two layers:
 
-- `index.yaml` is the canonical todo ledger for task discovery, status, priority, and next-step lookup
+- `index.yaml` is the canonical todo ledger for task discovery, grouped by `status` so unfinished work is visible first
 - `docs/tasks/<task-slug>/README.md` is the canonical context entrypoint for one task
 
-GitHub issues, pull requests, or project cards may mirror this information for human collaboration, but they are optional external surfaces. They are not the primary source of truth for AI resume.
+GitHub issues, pull requests, or project cards may mirror this information for human collaboration, but they are optional external surfaces. They are not the primary source of truth for AI resume, and task docs should not be used to track PR status or links.
 
 ## Active Task Index
 
 Use this as a quick human-readable resume guide.
 
-The canonical task ledger is `docs/tasks/index.yaml`. The list below is a compact entrypoint map for the highest-signal current tasks.
+The canonical task ledger is `docs/tasks/index.yaml`. Its top-level `tasks` map is grouped by status, with unfinished sections first. The list below is a compact entrypoint map for the highest-signal current tasks.
 
 Open one of these entrypoints first when resuming ongoing task work:
 
@@ -34,22 +34,15 @@ Open one of these entrypoints first when resuming ongoing task work:
 - `ai-friendly-repo`
   - Entry: `docs/tasks/ai-friendly-repo/README.md`
   - State: active
-  - Branch: `docs-ai-friendly-repo-positioning`
-  - PR: `#15`
+  - Branch: none currently; create a fresh task branch when resuming implementation
   - Resume here when working on AI-friendly repository structure, indexing, or promotion-flow rules.
-
-- `human-ai-collaborative-maintenance`
-  - Entry: `docs/tasks/human-ai-collaborative-maintenance/README.md`
-  - State: active
-  - Branch / PR: `docs-human-ai-collaboration-todo` / `#22`
-  - Standing note: owner–AI collaboration model; stable facts promoted to `docs/system-overview.md` and `docs/decisions.md`; use other tasks for executable backlog items.
 
 ### Ongoing Research Context
 
 - `ecc-skill-research`
   - Entry: `docs/tasks/ecc-skill-research/README.md`
   - State: research context retained
-  - Branch/PR: see the task README and current Git state
+  - Branch: none currently; create a fresh task branch if a new implementation or research slice starts
   - Resume here when continuing the external skill research thread or the `verifier` evolution context tied to it.
 
 ### Historical Context
@@ -64,6 +57,11 @@ Open one of these entrypoints first when resuming ongoing task work:
   - State: historical context retained
   - Notes: durable conclusions were promoted and the task remains as reference context
 
+- `human-ai-collaborative-maintenance`
+  - Entry: `docs/tasks/human-ai-collaborative-maintenance/README.md`
+  - State: archived standing context
+  - Notes: owner–AI collaboration model is already promoted into stable docs; reopen only if that contract changes materially
+
 When a task becomes active, add it to this index. When it becomes stable history, move it to the historical section rather than deleting the context immediately.
 
 ## What Belongs Here
@@ -74,7 +72,7 @@ Use this area for materials such as:
 - task-level research notes
 - handoff notes for the next session
 - open questions and decision checkpoints
-- a task-local entrypoint that points to the current branch, PR, and next action
+- a task-local entrypoint that points to the current branch, repo paths to open, and next action
 
 ## What Does Not Belong Here
 
@@ -110,6 +108,8 @@ Optional supporting files may sit beside it, for example:
 
 Every tracked task should appear in `docs/tasks/index.yaml`.
 
+Within `index.yaml`, group entries under `tasks.<status>` rather than keeping one flat array. Keep unfinished statuses first so a quick scan reaches `active`, `blocked`, `proposed`, and `deferred` before historical sections such as `done` and `archived`.
+
 Each entry should include at least:
 
 - stable task id
@@ -119,12 +119,11 @@ Each entry should include at least:
 - phase (for active and proposed tasks)
 - task type
 - task doc path
-- branch
-- PR or issue reference when relevant
+- branch when relevant
 - next step
 - last updated date
 
-If a task is represented on GitHub, store the GitHub link as a reference only. Do not force AI to reconstruct the task by reading GitHub comments first.
+If a task is represented on GitHub, keep that as optional human-facing context outside the canonical task fields. Do not force AI to reconstruct the task by reading GitHub comments first.
 
 Recommended phase values (for active and proposed tasks; omit for done/deferred):
 
@@ -160,7 +159,6 @@ The front matter should usually include:
 - `kind`
 - `branch`
 - `issue`
-- `pr`
 - `last_updated`
 - `next_step`
 - `promotion_targets`
@@ -193,7 +191,7 @@ Use [TEMPLATE.md](./TEMPLATE.md) when creating a new task workspace.
 ## Field Intent
 
 - `Status`
-  - record the task state, current branch, PR, and last-updated date
+  - record the task state, current branch, whether more repository work is needed, and the last-updated date
 - `Original Goal`
   - preserve the longer-running task identity even when the current slice changes
 - `Current Slice`
@@ -214,7 +212,7 @@ Use [TEMPLATE.md](./TEMPLATE.md) when creating a new task workspace.
 Update an active or resumable task README when any of the following changes:
 
 - the task state changes
-- the working branch or PR changes
+- the working branch changes
 - the current slice changes
 - a new durable finding is confirmed
 - an open question is resolved, replaced, or newly discovered
@@ -225,7 +223,7 @@ When updating the README, prefer editing the summary sections first and leaving 
 
 ## Lifecycle
 
-1. Add the task to `docs/tasks/index.yaml` when the work is likely to span more than one session or PR-sized slice.
+1. Add the task to `docs/tasks/index.yaml` when the work is likely to span more than one session or one branch-sized implementation slice.
 2. Create or update `docs/tasks/<task-slug>/README.md` as the task context entrypoint.
 3. Add or update the task in the human-readable active task index when its working status changes.
 4. Keep both the index entry and the task README current as conclusions or scope change.

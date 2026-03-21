@@ -6,7 +6,6 @@ priority: medium
 kind: skill
 branch: null
 issue: null
-pr: null
 last_updated: 2026-03-19
 next_step: Return after the higher-priority consistency and boundary-check workflows are better defined.
 promotion_targets:

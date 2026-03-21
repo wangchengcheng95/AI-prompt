@@ -1,14 +1,13 @@
 ---
 task_id: human-ai-collaborative-maintenance
 title: Human-and-AI collaborative repository maintenance
-status: active
+status: archived
 priority: medium
 kind: documentation
-branch: docs-human-ai-collaboration-todo
+branch: null
 issue: null
-pr: https://github.com/wangchengcheng95/AI-prompt/pull/22
 last_updated: 2026-03-21
-next_step: "After PR #22 merges, treat this task as a standing resume hook only; reopen or revise if the owner–AI maintenance contract changes materially."
+next_step: "Reference this task when the owner-AI maintenance contract changes materially or when revisiting why those stable facts were promoted into the standard docs set."
 promotion_targets:
   - docs/REPOSITORY-GOALS.md
   - docs/agent-iteration-contract.md
@@ -35,5 +34,5 @@ This repository is maintained collaboratively by the owner (personal) and AI ass
 
 ## Notes
 
-- This entry records the maintenance model; it is not a standalone delivery backlog.
+- This entry records the maintenance model as archived standing context; it is not a standalone delivery backlog.
 - Use other tasks in [`docs/tasks/index.yaml`](../index.yaml) for concrete, completable work.

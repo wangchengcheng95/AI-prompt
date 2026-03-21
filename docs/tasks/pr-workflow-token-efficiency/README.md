@@ -6,7 +6,6 @@ priority: high
 kind: skill
 branch: null
 issue: null
-pr: null
 last_updated: 2026-03-19
 next_step: Measure where token cost currently comes from across pr-handoff and pr-operator, then define a low-token default path that preserves deterministic PR operations.
 promotion_targets:

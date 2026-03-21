@@ -6,7 +6,6 @@ priority: high
 kind: skill
 branch: null
 issue: null
-pr: null
 last_updated: 2026-03-19
 next_step: Define the minimum rules for routing new material into root entrypoints, docs, templates, references, or platforms before implementing any checker.
 promotion_targets:

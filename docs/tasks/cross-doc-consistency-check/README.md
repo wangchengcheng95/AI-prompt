@@ -6,7 +6,6 @@ priority: high
 kind: skill
 branch: null
 issue: null
-pr: null
 last_updated: 2026-03-19
 next_step: Define the minimum check surface across REPOSITORY-GOALS, architecture, system-overview, decisions, and agent-iteration-contract before implementing any repo-local checker.
 promotion_targets:

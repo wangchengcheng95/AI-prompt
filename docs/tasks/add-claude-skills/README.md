@@ -4,11 +4,10 @@ title: Migrate repo-local Codex maintenance skills to Claude Code
 status: done
 priority: high
 kind: skill
-branch: add-claude-skills
+branch: null
 issue: null
-pr: https://github.com/wangchengcheng95/AI-prompt/pull/18
-last_updated: 2026-03-19
-next_step: Merge PR.
+last_updated: 2026-03-21
+next_step: No further repository changes are needed unless the Claude-side maintenance assets need another migration or wording pass.
 promotion_targets:
   - CLAUDE.md
   - AGENTS.md
