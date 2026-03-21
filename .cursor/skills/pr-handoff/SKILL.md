@@ -20,7 +20,7 @@ Hand actual PR push, create, view, and edit operations to `$pr-operator`.
 3. Capture the branch name and current commit hash.
 4. Push the branch with upstream tracking if it is not already on the remote, preferably through `$pr-operator`.
 5. Check the branch with `$pr-operator find-head` before creating a PR.
-6. If an open PR already exists for the branch, reuse it and only edit metadata when needed.
+6. If an open PR already exists for the branch, reuse it and do not edit its title or body unless the user explicitly asks for that metadata change.
 7. If no open PR exists, prepare a concise PR title and body based on the actual change, using a Conventional Commits style title.
 8. Create the PR if the environment supports it.
 9. If automatic PR creation is unavailable, return a PR link or creation path plus the prepared title and body.
@@ -50,6 +50,7 @@ Include:
 - Prefer creating the PR directly when the required tooling and authentication are available.
 - Prefer using `$pr-operator find-head` before `create` so reruns stay idempotent.
 - Prefer delegating actual PR operations to `$pr-operator`.
+- If an open PR already exists, default to reporting its URL and any suggested title/body updates in the handoff rather than mutating the PR metadata.
 - Do not block handoff on missing `gh` or similar tooling if a branch can still be pushed.
 - If push or PR creation fails, surface the exact command result and the next manual step.
 - Do not merge the PR unless the user explicitly asks for that workflow.

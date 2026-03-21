@@ -14,6 +14,7 @@
 - For goal-driven repo-local maintenance tasks, classify scope as `accept`, `shrink`, or `stop` before editing.
 - Prefer the smallest reviewable slice that can credibly reach ready-to-merge in one pass.
 - Follow `docs/agent-iteration-contract.md` for the execution loop, handoff fields, and stop conditions.
+- When the user states an exploration level for the task, follow `docs/task-exploration-levels.md`.
 - Prefer the repo-local Claude skills under `.claude/skills/` for `repo-self-iteration`, `git-start-task`, `git-commit`, `repo-doc-simplifier`, `pr-handoff`, `pr-operator`, and `prompt-sync` when they match the task.
 - Use English commit subjects for repo-local maintenance commits in this repository.
 - Keep explicit user interactions for decisions that materially change scope, risk, or permissions; otherwise continue with stated assumptions.

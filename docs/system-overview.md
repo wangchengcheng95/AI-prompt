@@ -37,5 +37,6 @@ The repository does not treat every category equally. Shared rules and high-freq
 - Multi-session repo-maintenance task context may live under `docs/tasks/` until its stable conclusions are promoted.
 - `docs/tasks/index.yaml` acts as the local AI-first todo ledger, while task-local `README.md` files hold deeper context.
 - Routine maintenance is a collaboration between the repository owner and AI assistants; authoritative goals and execution boundaries live in `docs/REPOSITORY-GOALS.md` and `docs/agent-iteration-contract.md`, with resumable task state under `docs/tasks/`.
+- User-stated exploration levels are defined in `docs/task-exploration-levels.md`; no broader collaboration-axis scheme is operative in phase 1.
 - Shared semantics matter more than textual similarity between platforms.
 - Phase 1 optimizes for reduced duplicated maintenance, not for immediate generation or full semantic normalization.

@@ -76,6 +76,10 @@ When the task is non-trivial or multiple viable approaches exist, the agent shou
 
 For small, low-risk changes with one obvious path, both research and planning may stay minimal, but the agent should still make the evaluation explicitly rather than skipping it by default.
 
+## User-stated exploration level
+
+When the user states an exploration level for the task, follow `docs/task-exploration-levels.md`. When they do not, use that document’s default (**medium**), which matches the due-diligence expectations above.
+
 ## Execution Loop
 
 Once a goal is accepted for execution, the default loop is:
@@ -122,6 +126,8 @@ For handoff, the agent should provide:
 - the updated `docs/tasks/index.yaml` entry and task workspace `README.md` when the task is tracked in `docs/tasks/` or needs cross-session continuation
 - pull request title and summary text suitable for review
 - explicit assumptions, known risks, and any remaining manual steps
+
+Preparing pull request text does not, by itself, authorize mutating an existing GitHub pull request. Unless the user explicitly asks to create a pull request or change pull request metadata, the agent should keep title and summary updates as handoff output only.
 
 ## Stop Conditions
 

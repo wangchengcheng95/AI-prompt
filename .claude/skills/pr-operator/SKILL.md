@@ -67,6 +67,7 @@ PRCTL="./.claude/skills/pr-operator/scripts/prctl"
 - Prefer this bundled wrapper over repo-root scripts or raw `gh` commands so the workflow stays migratable with the skill.
 - The wrapper should avoid unnecessary extra GitHub lookups when local Git state already provides the needed repository identity.
 - Only mutate the PR fields the user asked to change.
+- Do not use `edit` to refresh or polish existing PR metadata unless the user explicitly asked for a PR title/body change.
 - If authentication, network access, or API compatibility blocks the operation, surface the exact command result and the next manual step.
 - Do not merge, close, reopen, approve, or otherwise change review state unless the user explicitly asks for that workflow.
 
@@ -76,6 +77,7 @@ Stop and ask the user before continuing when:
 
 - the target branch, base branch, or PR number is unclear
 - required verification is still missing before opening the PR
+- the change would update PR title/body without an explicit user request for that metadata change
 - the requested change would modify reviewers, labels, milestones, draft state, or merge state rather than only the normal PR metadata this skill owns
 
 ## Output
