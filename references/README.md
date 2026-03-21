@@ -36,6 +36,16 @@ The current intent of this area is to support comparative study while building o
   - study release-facing defaults and documentation without treating the checkout as a maintained or distributable copy of Claude Code itself
   - extract stable integration ideas while keeping `references/external/` as read-only local study material
 
+### `claude-plugins-official`
+
+- Upstream: <https://github.com/anthropics/claude-plugins-official>
+- Local checkout path: `references/external/claude-plugins-official`
+- Why it is tracked here: official Anthropic catalog of Claude Code plugins; baseline for marketplace layout, plugin metadata, and bundled skills versus third-party marketplaces and this repository's maintained outputs under `platforms/claude/`
+- Current usage focus:
+  - compare official plugin packaging and discovery patterns before adapting repo-owned platform assets
+  - study how upstream groups skills, hooks, and docs inside plugin-shaped bundles
+  - extract stable conventions without treating the checkout as redistributable marketplace content
+
 ### `gstack`
 
 - Upstream: <https://github.com/garrytan/gstack>
@@ -102,6 +112,10 @@ bash scripts/sync-references.sh --only planning-with-files
 bash scripts/sync-references.sh --only claude-code
 ```
 
+```bash
+bash scripts/sync-references.sh --only claude-plugins-official
+```
+
 The script reads `references/repos.manifest.tsv`, clones a repository if it is missing, and otherwise updates it with a fast-forward-only pull.
 
 ## Clone Or Update Manually
@@ -128,6 +142,10 @@ git clone https://github.com/obra/superpowers.git references/external/superpower
 git clone https://github.com/anthropics/claude-code.git references/external/claude-code
 ```
 
+```bash
+git clone https://github.com/anthropics/claude-plugins-official.git references/external/claude-plugins-official
+```
+
 Update an existing checkout:
 
 ```bash
@@ -148,6 +166,10 @@ git -C references/external/superpowers pull --ff-only origin main
 
 ```bash
 git -C references/external/claude-code pull --ff-only origin main
+```
+
+```bash
+git -C references/external/claude-plugins-official pull --ff-only origin main
 ```
 
 ## Notes
