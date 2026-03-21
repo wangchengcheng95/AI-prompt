@@ -1,3 +1,4 @@
 # name	url	branch	local_path
 everything-claude-code	https://github.com/affaan-m/everything-claude-code.git	main	references/external/everything-claude-code
 gstack	https://github.com/garrytan/gstack.git	main	references/external/gstack
+superpowers	https://github.com/obra/superpowers.git	main	references/external/superpowers

@@ -36,6 +36,16 @@ The current intent of this area is to support comparative study while building o
   - study role-based slash-command workflows for planning, review, QA, and release handoff
   - extract reusable ideas about orchestration and guardrails without treating the upstream checkout as a maintained asset
 
+### `superpowers`
+
+- Upstream: <https://github.com/obra/superpowers>
+- Local checkout path: `references/external/superpowers`
+- Why it is tracked here: comparative reference for Claude Code skill conventions, composable workflows, and plugin-style capabilities that may inform maintained outputs under `platforms/`
+- Current usage focus:
+  - compare skill naming, invocation patterns, and cross-skill composition
+  - study workflow-oriented skills (planning, git worktrees, execution discipline) before adapting ideas locally
+  - extract reusable patterns without treating the upstream checkout as a maintained asset
+
 ## Official Documentation Links
 
 ### AGENTS.md Writing Guidance
@@ -61,6 +71,10 @@ bash scripts/sync-references.sh --only everything-claude-code
 bash scripts/sync-references.sh --only gstack
 ```
 
+```bash
+bash scripts/sync-references.sh --only superpowers
+```
+
 The script reads `references/repos.manifest.tsv`, clones a repository if it is missing, and otherwise updates it with a fast-forward-only pull.
 
 ## Clone Or Update Manually
@@ -75,6 +89,10 @@ git clone https://github.com/affaan-m/everything-claude-code.git references/exte
 git clone https://github.com/garrytan/gstack.git references/external/gstack
 ```
 
+```bash
+git clone https://github.com/obra/superpowers.git references/external/superpowers
+```
+
 Update an existing checkout:
 
 ```bash
@@ -83,6 +101,10 @@ git -C references/external/everything-claude-code pull --ff-only origin main
 
 ```bash
 git -C references/external/gstack pull --ff-only origin main
+```
+
+```bash
+git -C references/external/superpowers pull --ff-only origin main
 ```
 
 ## Notes
