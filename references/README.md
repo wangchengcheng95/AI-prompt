@@ -26,6 +26,16 @@ The current intent of this area is to support comparative study while building o
   - compare platform-native packaging and layout choices that may translate well into `platforms/`
   - extract stable ideas and workflows rather than copying upstream assets wholesale
 
+### `claude-code`
+
+- Upstream: <https://github.com/anthropics/claude-code>
+- Local checkout path: `references/external/claude-code`
+- Why it is tracked here: official upstream for the Claude Code agent product; useful baseline when comparing community mirrors, templates, and this repository's maintained outputs under `platforms/claude/`
+- Current usage focus:
+  - compare upstream-recommended skills, hooks, and packaging conventions against archived or adapted assets in this repository
+  - study release-facing defaults and documentation without treating the checkout as a maintained or distributable copy of Claude Code itself
+  - extract stable integration ideas while keeping `references/external/` as read-only local study material
+
 ### `gstack`
 
 - Upstream: <https://github.com/garrytan/gstack>
@@ -88,6 +98,10 @@ bash scripts/sync-references.sh --only superpowers
 bash scripts/sync-references.sh --only planning-with-files
 ```
 
+```bash
+bash scripts/sync-references.sh --only claude-code
+```
+
 The script reads `references/repos.manifest.tsv`, clones a repository if it is missing, and otherwise updates it with a fast-forward-only pull.
 
 ## Clone Or Update Manually
@@ -110,6 +124,10 @@ git clone https://github.com/OthmanAdi/planning-with-files.git references/extern
 git clone https://github.com/obra/superpowers.git references/external/superpowers
 ```
 
+```bash
+git clone https://github.com/anthropics/claude-code.git references/external/claude-code
+```
+
 Update an existing checkout:
 
 ```bash
@@ -126,6 +144,10 @@ git -C references/external/planning-with-files pull --ff-only origin master
 
 ```bash
 git -C references/external/superpowers pull --ff-only origin main
+```
+
+```bash
+git -C references/external/claude-code pull --ff-only origin main
 ```
 
 ## Notes
