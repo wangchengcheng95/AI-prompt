@@ -36,6 +36,15 @@ The current intent of this area is to support comparative study while building o
   - study role-based slash-command workflows for planning, review, QA, and release handoff
   - extract reusable ideas about orchestration and guardrails without treating the upstream checkout as a maintained asset
 
+### `planning-with-files`
+
+- Upstream: <https://github.com/OthmanAdi/planning-with-files>
+- Local checkout path: `references/external/planning-with-files`
+- Why it is tracked here: comparative reference for filesystem-backed planning (markdown task plans, hooks, multi-IDE Agent Skills packaging) that may inform maintained outputs under `platforms/`
+- Current usage focus:
+  - study the three-file planning pattern and hook-driven re-read / completion checks across Claude Code, Cursor, Codex, and related tool layouts
+  - compare skill and plugin packaging without treating the upstream checkout as a maintained asset
+
 ### `superpowers`
 
 - Upstream: <https://github.com/obra/superpowers>
@@ -75,6 +84,10 @@ bash scripts/sync-references.sh --only gstack
 bash scripts/sync-references.sh --only superpowers
 ```
 
+```bash
+bash scripts/sync-references.sh --only planning-with-files
+```
+
 The script reads `references/repos.manifest.tsv`, clones a repository if it is missing, and otherwise updates it with a fast-forward-only pull.
 
 ## Clone Or Update Manually
@@ -90,6 +103,10 @@ git clone https://github.com/garrytan/gstack.git references/external/gstack
 ```
 
 ```bash
+git clone https://github.com/OthmanAdi/planning-with-files.git references/external/planning-with-files
+```
+
+```bash
 git clone https://github.com/obra/superpowers.git references/external/superpowers
 ```
 
@@ -101,6 +118,10 @@ git -C references/external/everything-claude-code pull --ff-only origin main
 
 ```bash
 git -C references/external/gstack pull --ff-only origin main
+```
+
+```bash
+git -C references/external/planning-with-files pull --ff-only origin master
 ```
 
 ```bash

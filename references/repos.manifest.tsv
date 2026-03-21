@@ -1,4 +1,5 @@
 # name	url	branch	local_path
 everything-claude-code	https://github.com/affaan-m/everything-claude-code.git	main	references/external/everything-claude-code
 gstack	https://github.com/garrytan/gstack.git	main	references/external/gstack
+planning-with-files	https://github.com/OthmanAdi/planning-with-files.git	master	references/external/planning-with-files
 superpowers	https://github.com/obra/superpowers.git	main	references/external/superpowers
