@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: 2026-03-20
+last_updated: 2026-03-21
 source_of_truth: local
 github_mirroring: optional
 
@@ -40,6 +40,18 @@ tasks:
     pr: https://github.com/wangchengcheng95/AI-prompt/pull/15
     next_step: "Decide whether the next slice should add a repository-level start-here index or formalize promotion guidance from task workspaces into stable docs."
     last_updated: 2026-03-19
+
+  - id: human-ai-collaborative-maintenance
+    title: "Human-and-AI collaborative repository maintenance"
+    status: active
+    priority: medium
+    kind: documentation
+    doc: docs/tasks/human-ai-collaborative-maintenance/README.md
+    branch: null
+    issue: null
+    pr: null
+    next_step: "Treat maintenance as a shared loop; owner decides scope and merges; AI executes, documents, and tracks substantive work in other task entries as needed."
+    last_updated: 2026-03-21
 
   - id: ecc-skill-research
     title: "ECC .agents/skills research and reuse triage"

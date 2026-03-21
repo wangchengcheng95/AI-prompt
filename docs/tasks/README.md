@@ -38,6 +38,11 @@ Open one of these entrypoints first when resuming ongoing task work:
   - PR: `#15`
   - Resume here when working on AI-friendly repository structure, indexing, or promotion-flow rules.
 
+- `human-ai-collaborative-maintenance`
+  - Entry: `docs/tasks/human-ai-collaborative-maintenance/README.md`
+  - State: active
+  - Standing note: this repository is maintained collaboratively by the owner and AI assistants; use other tasks for executable backlog items.
+
 ### Ongoing Research Context
 
 - `ecc-skill-research`
