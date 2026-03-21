@@ -6,6 +6,12 @@ This document records confirmed design decisions and why they replaced, narrowed
 
 ## Decision Log
 
+### 2026-03-21 Record owner–AI maintenance as a stable system fact
+
+- Decision: Record in `docs/system-overview.md` that routine maintenance is an owner–AI collaboration loop, with authoritative contracts in `docs/REPOSITORY-GOALS.md` and `docs/agent-iteration-contract.md` and task state under `docs/tasks/`.
+- Why: `docs/system-overview.md` is the stable-facts index; the operational model should be discoverable there without relying only on task workspaces or chat context.
+- Impact: Task `human-ai-collaborative-maintenance` cross-links these sources; future changes to the collaboration model should update REPOSITORY-GOALS, agent-iteration-contract, and this overview together.
+
 ### 2026-03-15 Root AGENTS remains a rules entrypoint
 
 - Decision: Root `AGENTS.md` is the rules entrypoint for maintaining this repository, not the single total entrypoint for all repository knowledge.

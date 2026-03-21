@@ -41,6 +41,18 @@ tasks:
     next_step: "Decide whether the next slice should add a repository-level start-here index or formalize promotion guidance from task workspaces into stable docs."
     last_updated: 2026-03-19
 
+  - id: human-ai-collaborative-maintenance
+    title: "Human-and-AI collaborative repository maintenance"
+    status: active
+    priority: medium
+    kind: documentation
+    doc: docs/tasks/human-ai-collaborative-maintenance/README.md
+    branch: docs-human-ai-collaboration-todo
+    issue: null
+    pr: https://github.com/wangchengcheng95/AI-prompt/pull/22
+    next_step: "After PR #22 merges, treat this task as a standing resume hook only; reopen or revise if the owner–AI maintenance contract changes materially."
+    last_updated: 2026-03-21
+
   - id: ecc-skill-research
     title: "ECC .agents/skills research and reuse triage"
     status: active
