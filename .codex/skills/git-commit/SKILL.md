@@ -37,6 +37,7 @@ In this repository, use English commit subjects for repo-local maintenance work.
 
 ## Rules
 
+- **`main` branch:** Do not run `git commit` on `main` unless the user has explicitly allowed committing for this change set in the current conversation; otherwise use `$git-start-task` (or another task branch) or hand off for a user commit
 - **Length:** <= 72 characters
 - **Language:** Use English for commit messages
 - **Imperative mood:** Use verbs such as "fix", "add", "update" (not "fixed", "added", "updated")

@@ -1,0 +1,17 @@
+---
+alwaysApply: true
+description: Do not create git commits on main without explicit user permission for this repository
+---
+
+# Commits on `main`
+
+## Rules
+
+- If the current branch is `main` (or the default branch is `main` and you are on it), **do not run `git commit`** unless the user has **explicitly allowed** committing in this conversation for that change set.
+- It is fine to **prepare** a commit: stage files, show `git diff` / proposed message, and hand off for the user to commit locally.
+- If work needs a commit and the user has not allowed a commit on `main`, **create or switch to a task branch** (see `.cursor/skills/git-start-task/SKILL.md`) and commit there instead, or stop and ask.
+- Emergency fixes are not an exception unless the user explicitly says so.
+
+## Rationale
+
+The user keeps `main` protected from agent-created commits unless they opt in per change.

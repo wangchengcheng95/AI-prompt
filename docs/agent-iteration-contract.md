@@ -82,6 +82,8 @@ When the user states an exploration level for the task, follow `docs/task-explor
 
 ## Execution Loop
 
+**`main` branch commits:** Do not create git commits on `main` unless the user has explicitly allowed committing for that change set in the current conversation. Otherwise create or switch to a task branch before committing, or hand off staged changes and a proposed message for the user to commit locally.
+
 Once a goal is accepted for execution, the default loop is:
 
 1. evaluate task importance, due-diligence needs, and scope reduction
