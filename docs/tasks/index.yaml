@@ -32,6 +32,66 @@ tasks:
   blocked: []
 
   proposed:
+    - id: learn-planning-with-files
+      title: "Learn planning-with-files (filesystem-backed planning)"
+      status: proposed
+      priority: high
+      phase: phase-1-near-term
+      kind: research
+      doc: docs/tasks/learn-planning-with-files/README.md
+      branch: null
+      issue: null
+      next_step: "Sync or open references/external/planning-with-files and study the three-file pattern; note one workflow to try on a real task."
+      last_updated: 2026-03-21
+
+    - id: learn-code-review
+      title: "Learn systematic code review (agent and human)"
+      status: proposed
+      priority: high
+      phase: phase-1-near-term
+      kind: research
+      doc: docs/tasks/learn-code-review/README.md
+      branch: null
+      issue: null
+      next_step: "Run through platforms/cursor/.cursor/commands/general/code-review.md on a real diff; add one project-specific risk to your checklist."
+      last_updated: 2026-03-21
+
+    - id: learn-code-simplifier
+      title: "Learn code and doc simplification discipline"
+      status: proposed
+      priority: high
+      phase: phase-1-near-term
+      kind: research
+      doc: docs/tasks/learn-code-simplifier/README.md
+      branch: null
+      issue: null
+      next_step: "Apply repo-doc-simplifier once to a bloated maintenance doc; derive one simplification rule for code edits."
+      last_updated: 2026-03-21
+
+    - id: learn-webapp-testing
+      title: "Learn web application testing (practical stack)"
+      status: proposed
+      priority: high
+      phase: phase-1-near-term
+      kind: research
+      doc: docs/tasks/learn-webapp-testing/README.md
+      branch: null
+      issue: null
+      next_step: "Pick Playwright or Cypress (or equivalent), finish official quickstart, run one smoke test against local dev."
+      last_updated: 2026-03-21
+
+    - id: learn-ralph-loop
+      title: "Learn the Ralph-style agent iteration loop"
+      status: proposed
+      priority: high
+      phase: phase-1-near-term
+      kind: research
+      doc: docs/tasks/learn-ralph-loop/README.md
+      branch: null
+      issue: null
+      next_step: "Compare docs/agent-iteration-contract.md to one external Ralph-loop source; capture intent, mechanics, and risks in three bullets."
+      last_updated: 2026-03-21
+
     - id: cross-doc-consistency-check
       title: "Repo-local cross-doc consistency checking workflow"
       status: proposed

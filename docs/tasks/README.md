@@ -37,6 +37,16 @@ Open one of these entrypoints first when resuming ongoing task work:
   - Branch: none currently; create a fresh task branch when resuming implementation
   - Resume here when working on AI-friendly repository structure, indexing, or promotion-flow rules.
 
+### Proposed: owner skill learning
+
+Five focused learning tracks (see `docs/tasks/index.yaml` under `proposed`):
+
+- `learn-planning-with-files` — Entry: `docs/tasks/learn-planning-with-files/README.md` — Filesystem-backed planning (`planning-with-files` reference).
+- `learn-code-review` — Entry: `docs/tasks/learn-code-review/README.md` — Systematic review using the archived Cursor code-review command as a baseline.
+- `learn-code-simplifier` — Entry: `docs/tasks/learn-code-simplifier/README.md` — Doc simplifier skill first, then code simplification habits.
+- `learn-webapp-testing` — Entry: `docs/tasks/learn-webapp-testing/README.md` — Hands-on E2E or integration testing stack.
+- `learn-ralph-loop` — Entry: `docs/tasks/learn-ralph-loop/README.md` — Ralph-style agent loops vs this repo’s iteration contract.
+
 ### Ongoing Research Context
 
 - `ecc-skill-research`
