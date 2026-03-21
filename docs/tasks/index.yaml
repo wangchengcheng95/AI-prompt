@@ -12,20 +12,9 @@ tasks:
       phase: phase-1-active
       kind: documentation
       doc: docs/tasks/ai-friendly-repo/README.md
-      branch: docs-ai-friendly-repo-positioning
+      branch: null
       issue: null
       next_step: "Decide whether the next slice should add a repository-level start-here index or formalize promotion guidance from task workspaces into stable docs."
-      last_updated: 2026-03-19
-
-    - id: human-ai-collaborative-maintenance
-      title: "Human-and-AI collaborative repository maintenance"
-      status: active
-      priority: medium
-      kind: documentation
-      doc: docs/tasks/human-ai-collaborative-maintenance/README.md
-      branch: docs-human-ai-collaboration-todo
-      issue: null
-      next_step: "Keep this task as a standing resume hook only; reopen or revise it if the owner-AI maintenance contract changes materially."
       last_updated: 2026-03-21
 
     - id: ecc-skill-research
@@ -35,10 +24,10 @@ tasks:
       phase: phase-1-active
       kind: research
       doc: docs/tasks/ecc-skill-research/README.md
-      branch: docs-ecc-agent-skills-notes
+      branch: null
       issue: null
       next_step: "Continue second-round analysis for deep-research, market-research, api-design, and dmux-workflows, then decide reuse boundaries."
-      last_updated: 2026-03-19
+      last_updated: 2026-03-21
 
   blocked: []
 
@@ -144,10 +133,10 @@ tasks:
       priority: high
       kind: skill
       doc: docs/tasks/add-claude-skills/README.md
-      branch: add-claude-skills
+      branch: null
       issue: null
       next_step: "No further repository changes are needed unless the Claude-side maintenance assets need another migration or wording pass."
-      last_updated: 2026-03-19
+      last_updated: 2026-03-21
 
     - id: custom-user-agents-md
       title: "Custom user-level Codex AGENTS asset"
@@ -155,12 +144,23 @@ tasks:
       priority: medium
       kind: documentation
       doc: docs/tasks/custom-user-agents-md/README.md
-      branch: custom-user-agents-md
+      branch: null
       issue: null
       next_step: "Review platforms/codex/home/AGENTS.md only if one more wording pass or an additional durable constraint is needed."
-      last_updated: 2026-03-19
+      last_updated: 2026-03-21
 
   archived:
+    - id: human-ai-collaborative-maintenance
+      title: "Human-and-AI collaborative repository maintenance"
+      status: archived
+      priority: medium
+      kind: documentation
+      doc: docs/tasks/human-ai-collaborative-maintenance/README.md
+      branch: null
+      issue: null
+      next_step: "Reference this task when the owner-AI maintenance contract changes materially or when revisiting why those stable facts were promoted into the standard docs set."
+      last_updated: 2026-03-21
+
     - id: pre-change-due-diligence
       title: "[URGENT] Pre-change gate: authoritative docs and planning by importance"
       status: archived

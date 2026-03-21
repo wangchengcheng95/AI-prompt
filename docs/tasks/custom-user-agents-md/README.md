@@ -4,9 +4,9 @@ title: Custom User AGENTS Task
 status: done
 priority: medium
 kind: documentation
-branch: custom-user-agents-md
+branch: null
 issue: null
-last_updated: 2026-03-19
+last_updated: 2026-03-21
 next_step: Review platforms/codex/home/AGENTS.md only if another wording pass or one more durable engineering constraint is needed.
 promotion_targets:
   - platforms/codex/home/AGENTS.md
@@ -18,10 +18,10 @@ promotion_targets:
 ## Status
 
 - State: formal asset created
-- Branch: `custom-user-agents-md`
+- Branch: none currently
 - Primary artifact: `platforms/codex/home/AGENTS.md`
 - Supporting reference: `references/agents-writing-guides.md`
-- Last updated: 2026-03-19
+- Last updated: 2026-03-21
 
 ## Goal
 

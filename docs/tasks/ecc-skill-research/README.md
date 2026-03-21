@@ -4,9 +4,9 @@ title: ECC Skill 研究任务
 status: active
 priority: high
 kind: research
-branch: docs-ecc-agent-skills-notes
+branch: null
 issue: null
-last_updated: 2026-03-19
+last_updated: 2026-03-21
 next_step: 继续第二轮高优先级 skill 研究，优先 deep-research、market-research、api-design、dmux-workflows，并明确筛选标准与归属边界。
 promotion_targets:
   - platforms/codex/
@@ -19,9 +19,9 @@ title: ECC Skill 研究任务
 status: active
 priority: high
 kind: research
-branch: docs-ecc-agent-skills-notes
+branch: null
 issue: null
-last_updated: 2026-03-19
+last_updated: 2026-03-21
 next_step: Continue second-round analysis for deep-research, market-research, api-design, and dmux-workflows, then decide reuse boundaries.
 promotion_targets:
   - platforms/codex/
@@ -35,8 +35,8 @@ promotion_targets:
 ## Status
 
 - State: research context retained
-- Branch: `docs-ecc-agent-skills-notes`
-- Last updated: 2026-03-19
+- Branch: none currently; start a fresh task branch if a new research or implementation slice begins
+- Last updated: 2026-03-21
 
 ## Original Goal
 

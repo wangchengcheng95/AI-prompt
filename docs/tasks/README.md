@@ -34,21 +34,15 @@ Open one of these entrypoints first when resuming ongoing task work:
 - `ai-friendly-repo`
   - Entry: `docs/tasks/ai-friendly-repo/README.md`
   - State: active
-  - Branch: `docs-ai-friendly-repo-positioning`
+  - Branch: none currently; create a fresh task branch when resuming implementation
   - Resume here when working on AI-friendly repository structure, indexing, or promotion-flow rules.
-
-- `human-ai-collaborative-maintenance`
-  - Entry: `docs/tasks/human-ai-collaborative-maintenance/README.md`
-  - State: active
-  - Branch: `docs-human-ai-collaboration-todo`
-  - Standing note: owner–AI collaboration model; stable facts promoted to `docs/system-overview.md` and `docs/decisions.md`; use other tasks for executable backlog items.
 
 ### Ongoing Research Context
 
 - `ecc-skill-research`
   - Entry: `docs/tasks/ecc-skill-research/README.md`
   - State: research context retained
-  - Branch: see the task README and current Git state
+  - Branch: none currently; create a fresh task branch if a new implementation or research slice starts
   - Resume here when continuing the external skill research thread or the `verifier` evolution context tied to it.
 
 ### Historical Context
@@ -62,6 +56,11 @@ Open one of these entrypoints first when resuming ongoing task work:
   - Entry: `docs/tasks/custom-user-agents-md/README.md`
   - State: historical context retained
   - Notes: durable conclusions were promoted and the task remains as reference context
+
+- `human-ai-collaborative-maintenance`
+  - Entry: `docs/tasks/human-ai-collaborative-maintenance/README.md`
+  - State: archived standing context
+  - Notes: owner–AI collaboration model is already promoted into stable docs; reopen only if that contract changes materially
 
 When a task becomes active, add it to this index. When it becomes stable history, move it to the historical section rather than deleting the context immediately.
 
