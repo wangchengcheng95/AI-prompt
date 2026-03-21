@@ -26,6 +26,36 @@ The current intent of this area is to support comparative study while building o
   - compare platform-native packaging and layout choices that may translate well into `platforms/`
   - extract stable ideas and workflows rather than copying upstream assets wholesale
 
+### `claude-code`
+
+- Upstream: <https://github.com/anthropics/claude-code>
+- Local checkout path: `references/external/claude-code`
+- Why it is tracked here: official upstream for the Claude Code agent product; useful baseline when comparing community mirrors, templates, and this repository's maintained outputs under `platforms/claude/`
+- Current usage focus:
+  - compare upstream-recommended skills, hooks, and packaging conventions against archived or adapted assets in this repository
+  - study release-facing defaults and documentation without treating the checkout as a maintained or distributable copy of Claude Code itself
+  - extract stable integration ideas while keeping `references/external/` as read-only local study material
+
+### `claude-plugins-official`
+
+- Upstream: <https://github.com/anthropics/claude-plugins-official>
+- Local checkout path: `references/external/claude-plugins-official`
+- Why it is tracked here: official Anthropic catalog of Claude Code plugins; baseline for marketplace layout, plugin metadata, and bundled skills versus third-party marketplaces and this repository's maintained outputs under `platforms/claude/`
+- Current usage focus:
+  - compare official plugin packaging and discovery patterns before adapting repo-owned platform assets
+  - study how upstream groups skills, hooks, and docs inside plugin-shaped bundles
+  - extract stable conventions without treating the checkout as redistributable marketplace content
+
+### `anthropic-skills`
+
+- Upstream: <https://github.com/anthropics/skills>
+- Local checkout path: `references/external/anthropic-skills` (manifest name disambiguates this repository's own skill trees under `.cursor/skills/` and similar)
+- Why it is tracked here: official Anthropic reference collection for Agent Skills documentation and examples; complements `claude-code` and `claude-plugins-official` when aligning maintained outputs under `platforms/claude/`
+- Current usage focus:
+  - compare upstream skill authoring patterns, front matter conventions, and worked examples
+  - study how official samples structure `SKILL.md` and supporting material before adapting ideas locally
+  - extract stable conventions without treating the checkout as a maintained asset of this repository
+
 ### `gstack`
 
 - Upstream: <https://github.com/garrytan/gstack>
@@ -88,6 +118,18 @@ bash scripts/sync-references.sh --only superpowers
 bash scripts/sync-references.sh --only planning-with-files
 ```
 
+```bash
+bash scripts/sync-references.sh --only claude-code
+```
+
+```bash
+bash scripts/sync-references.sh --only claude-plugins-official
+```
+
+```bash
+bash scripts/sync-references.sh --only anthropic-skills
+```
+
 The script reads `references/repos.manifest.tsv`, clones a repository if it is missing, and otherwise updates it with a fast-forward-only pull.
 
 ## Clone Or Update Manually
@@ -110,6 +152,18 @@ git clone https://github.com/OthmanAdi/planning-with-files.git references/extern
 git clone https://github.com/obra/superpowers.git references/external/superpowers
 ```
 
+```bash
+git clone https://github.com/anthropics/claude-code.git references/external/claude-code
+```
+
+```bash
+git clone https://github.com/anthropics/claude-plugins-official.git references/external/claude-plugins-official
+```
+
+```bash
+git clone https://github.com/anthropics/skills.git references/external/anthropic-skills
+```
+
 Update an existing checkout:
 
 ```bash
@@ -126,6 +180,18 @@ git -C references/external/planning-with-files pull --ff-only origin master
 
 ```bash
 git -C references/external/superpowers pull --ff-only origin main
+```
+
+```bash
+git -C references/external/claude-code pull --ff-only origin main
+```
+
+```bash
+git -C references/external/claude-plugins-official pull --ff-only origin main
+```
+
+```bash
+git -C references/external/anthropic-skills pull --ff-only origin main
 ```
 
 ## Notes
