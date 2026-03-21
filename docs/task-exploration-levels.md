@@ -2,7 +2,7 @@
 
 ## Status
 
-**Operative for phase 1.** When the user states how much discovery and alignment should precede execution, agents follow this playbook. Other collaboration dimensions (scope, urgency, blast radius, authority) stay **reference-only** in `docs/task-collaboration-dimensions-proposal.md` until a later phase.
+**Operative for phase 1.** When the user states how much discovery and alignment should precede execution, agents follow this playbook. Other collaboration dimensions (scope, urgency, blast radius, authority) are intentionally not adopted in phase 1 unless a later decision makes one operative.
 
 ## Purpose
 
@@ -57,5 +57,4 @@ If a stated level is clearly disproportionate to the actual task (for example **
 
 ## See also
 
-- Archived multi-dimension proposal: `docs/task-collaboration-dimensions-proposal.md`
 - Execution contract: `docs/agent-iteration-contract.md`
