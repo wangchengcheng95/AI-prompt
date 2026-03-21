@@ -28,6 +28,7 @@ Keep Phase 1 focused on reducing duplicated maintenance at the project-entry lev
 ## Read More
 
 - Executing a task → `docs/agent-iteration-contract.md` (use `$repo-self-iteration`)
+- User-stated exploration intensity → `docs/task-exploration-levels.md`
 - Writing or revising `AGENTS.md` → `references/agents-writing-guides.md`
 - Writing or revising skills → `references/skill-writing-guides.md` (use `$skill-creator`)
 - Repo goals and scope → `docs/REPOSITORY-GOALS.md`

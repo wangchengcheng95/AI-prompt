@@ -76,6 +76,10 @@ When the task is non-trivial or multiple viable approaches exist, the agent shou
 
 For small, low-risk changes with one obvious path, both research and planning may stay minimal, but the agent should still make the evaluation explicitly rather than skipping it by default.
 
+## User-stated exploration level
+
+When the user states an exploration level for the task, follow `docs/task-exploration-levels.md` for research breadth, alignment, planning depth, and handoff density. When they do not, use that document’s default (**medium**), which matches the due-diligence expectations above.
+
 ## Execution Loop
 
 Once a goal is accepted for execution, the default loop is:

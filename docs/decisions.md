@@ -6,6 +6,12 @@ This document records confirmed design decisions and why they replaced, narrowed
 
 ## Decision Log
 
+### 2026-03-21 Operative exploration levels (phase 1)
+
+- Decision: Introduce `docs/task-exploration-levels.md` as the operative mapping when the user states task exploration intensity; add a short pointer in `docs/agent-iteration-contract.md`; link from `AGENTS.md`. Other collaboration dimensions remain reference-only in `docs/task-collaboration-dimensions-proposal.md` until a later phase.
+- Why: Ships a concrete agent-visible playbook for one axis without expanding layer-1 entry files or making scope/urgency/risk/authority operative yet.
+- Impact: Tagged exploration overrides default due-diligence *style* per level doc; untagged behavior stays the prior contract default (equivalent to medium).
+
 ### 2026-03-21 Record owner–AI maintenance as a stable system fact
 
 - Decision: Record in `docs/system-overview.md` that routine maintenance is an owner–AI collaboration loop, with authoritative contracts in `docs/REPOSITORY-GOALS.md` and `docs/agent-iteration-contract.md` and task state under `docs/tasks/`.
