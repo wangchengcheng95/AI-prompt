@@ -6,9 +6,8 @@ priority: medium
 kind: documentation
 branch: docs-human-ai-collaboration-todo
 issue: null
-pr: https://github.com/wangchengcheng95/AI-prompt/pull/22
 last_updated: 2026-03-21
-next_step: "After PR #22 merges, treat this task as a standing resume hook only; reopen or revise if the owner–AI maintenance contract changes materially."
+next_step: "Keep this task as a standing resume hook only; reopen or revise it if the owner-AI maintenance contract changes materially."
 promotion_targets:
   - docs/REPOSITORY-GOALS.md
   - docs/agent-iteration-contract.md

@@ -6,7 +6,6 @@ priority: medium
 kind: documentation
 branch: custom-user-agents-md
 issue: null
-pr: null
 last_updated: 2026-03-19
 next_step: Review platforms/codex/home/AGENTS.md only if another wording pass or one more durable engineering constraint is needed.
 promotion_targets:
@@ -22,7 +21,6 @@ promotion_targets:
 - Branch: `custom-user-agents-md`
 - Primary artifact: `platforms/codex/home/AGENTS.md`
 - Supporting reference: `references/agents-writing-guides.md`
-- PR status: do not create yet
 - Last updated: 2026-03-19
 
 ## Goal

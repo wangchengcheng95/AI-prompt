@@ -6,7 +6,6 @@ priority: high
 kind: research
 branch: docs-ecc-agent-skills-notes
 issue: null
-pr: https://github.com/wangchengcheng95/AI-prompt/pull/12
 last_updated: 2026-03-19
 next_step: 继续第二轮高优先级 skill 研究，优先 deep-research、market-research、api-design、dmux-workflows，并明确筛选标准与归属边界。
 promotion_targets:
@@ -22,7 +21,6 @@ priority: high
 kind: research
 branch: docs-ecc-agent-skills-notes
 issue: null
-pr: https://github.com/wangchengcheng95/AI-prompt/pull/12
 last_updated: 2026-03-19
 next_step: Continue second-round analysis for deep-research, market-research, api-design, and dmux-workflows, then decide reuse boundaries.
 promotion_targets:
@@ -38,7 +36,6 @@ promotion_targets:
 
 - State: research context retained
 - Branch: `docs-ecc-agent-skills-notes`
-- PR: [#12](https://github.com/wangchengcheng95/AI-prompt/pull/12)
 - Last updated: 2026-03-19
 
 ## Original Goal

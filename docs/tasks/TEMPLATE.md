@@ -6,7 +6,6 @@ priority: medium
 kind: research
 branch: null
 issue: null
-pr: null
 last_updated: YYYY-MM-DD
 next_step: <one concrete next action>
 promotion_targets:
@@ -34,7 +33,7 @@ State what is already done, what remains open, and whether the task is active, b
 
 ## Next Session Entrypoint
 
-State the exact next step. If relevant, include the branch, PR, or file path the next session should open first.
+State the exact next step. If relevant, include the branch or file path the next session should open first, and whether more repository changes are still needed.
 
 ## Promotion Targets
 

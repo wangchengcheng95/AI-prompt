@@ -14,7 +14,6 @@ tasks:
       doc: docs/tasks/ai-friendly-repo/README.md
       branch: docs-ai-friendly-repo-positioning
       issue: null
-      pr: https://github.com/wangchengcheng95/AI-prompt/pull/15
       next_step: "Decide whether the next slice should add a repository-level start-here index or formalize promotion guidance from task workspaces into stable docs."
       last_updated: 2026-03-19
 
@@ -26,8 +25,7 @@ tasks:
       doc: docs/tasks/human-ai-collaborative-maintenance/README.md
       branch: docs-human-ai-collaboration-todo
       issue: null
-      pr: https://github.com/wangchengcheng95/AI-prompt/pull/22
-      next_step: "After PR #22 merges, treat this task as a standing resume hook only; reopen or revise if the owner-AI maintenance contract changes materially."
+      next_step: "Keep this task as a standing resume hook only; reopen or revise it if the owner-AI maintenance contract changes materially."
       last_updated: 2026-03-21
 
     - id: ecc-skill-research
@@ -39,7 +37,6 @@ tasks:
       doc: docs/tasks/ecc-skill-research/README.md
       branch: docs-ecc-agent-skills-notes
       issue: null
-      pr: https://github.com/wangchengcheng95/AI-prompt/pull/12
       next_step: "Continue second-round analysis for deep-research, market-research, api-design, and dmux-workflows, then decide reuse boundaries."
       last_updated: 2026-03-19
 
@@ -55,7 +52,6 @@ tasks:
       doc: docs/tasks/cross-doc-consistency-check/README.md
       branch: null
       issue: null
-      pr: null
       next_step: "Define the minimum check surface across REPOSITORY-GOALS, architecture, system-overview, decisions, and agent-iteration-contract before implementing any repo-local checker."
       last_updated: 2026-03-19
 
@@ -68,7 +64,6 @@ tasks:
       doc: docs/tasks/asset-boundary-check/README.md
       branch: null
       issue: null
-      pr: null
       next_step: "Define the minimum rules for routing new material into root entrypoints, docs, templates, references, or platforms before implementing any checker."
       last_updated: 2026-03-19
 
@@ -81,7 +76,6 @@ tasks:
       doc: docs/tasks/pr-workflow-token-efficiency/README.md
       branch: null
       issue: null
-      pr: null
       next_step: "Measure where token cost currently comes from across pr-handoff and pr-operator, then define a low-token default path that preserves deterministic PR operations."
       last_updated: 2026-03-19
 
@@ -94,7 +88,6 @@ tasks:
       doc: docs/tasks/cursor-repo-maintenance-followups/README.md
       branch: null
       issue: null
-      pr: null
       next_step: "Review the recorded migration findings, then decide whether the next slice should add a Cursor quickstart, real Cursor-side trigger validation, or a dedicated repo-local agent shell."
       last_updated: 2026-03-19
 
@@ -107,7 +100,6 @@ tasks:
       doc: docs/tasks/codex-home-agents-path-constraint/README.md
       branch: null
       issue: null
-      pr: null
       next_step: "Review platforms/codex/home/AGENTS.md and decide whether the repo-local no-absolute-path rule should be copied as a stable platform-asset constraint."
       last_updated: 2026-03-19
 
@@ -120,7 +112,6 @@ tasks:
       doc: docs/tasks/repo-doc-normalization/README.md
       branch: null
       issue: null
-      pr: null
       next_step: "Return after the higher-priority consistency and boundary-check workflows are better defined."
       last_updated: 2026-03-19
 
@@ -132,7 +123,6 @@ tasks:
       doc: docs/tasks/maintenance-change-review/README.md
       branch: null
       issue: null
-      pr: null
       next_step: "Return after the repository boundary model and task intake loop need stronger pre-merge review enforcement."
       last_updated: 2026-03-19
 
@@ -144,7 +134,6 @@ tasks:
       doc: docs/tasks/repository-intake-triage/README.md
       branch: null
       issue: null
-      pr: null
       next_step: "Return after repeated maintenance tasks show that new-material placement decisions still need a dedicated intake workflow."
       last_updated: 2026-03-19
 
@@ -157,8 +146,7 @@ tasks:
       doc: docs/tasks/add-claude-skills/README.md
       branch: add-claude-skills
       issue: null
-      pr: https://github.com/wangchengcheng95/AI-prompt/pull/18
-      next_step: "Merge PR."
+      next_step: "No further repository changes are needed unless the Claude-side maintenance assets need another migration or wording pass."
       last_updated: 2026-03-19
 
     - id: custom-user-agents-md
@@ -169,7 +157,6 @@ tasks:
       doc: docs/tasks/custom-user-agents-md/README.md
       branch: custom-user-agents-md
       issue: null
-      pr: null
       next_step: "Review platforms/codex/home/AGENTS.md only if one more wording pass or an additional durable constraint is needed."
       last_updated: 2026-03-19
 
@@ -182,6 +169,5 @@ tasks:
       doc: docs/tasks/pre-change-due-diligence/README.md
       branch: null
       issue: null
-      pr: null
       next_step: "Reference this task only when revisiting why the due-diligence rule was promoted into docs/agent-iteration-contract.md or when reconsidering a root-level reminder."
       last_updated: 2026-03-21

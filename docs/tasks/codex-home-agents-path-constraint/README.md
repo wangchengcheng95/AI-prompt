@@ -6,7 +6,6 @@ priority: medium
 kind: documentation
 branch: null
 issue: null
-pr: null
 last_updated: 2026-03-19
 next_step: Review platforms/codex/home/AGENTS.md and decide whether the repo-local no-absolute-path rule should be copied as a stable platform-asset constraint.
 promotion_targets:

@@ -6,7 +6,6 @@ priority: urgent
 kind: documentation
 branch: null
 issue: null
-pr: null
 last_updated: 2026-03-21
 next_step: "Reference this task only when revisiting why the due-diligence rule was promoted into docs/agent-iteration-contract.md or when reconsidering a root-level reminder."
 promotion_targets:

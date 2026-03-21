@@ -6,7 +6,6 @@ priority: medium
 kind: skill
 branch: null
 issue: null
-pr: null
 last_updated: 2026-03-19
 next_step: Return after repeated maintenance tasks show that new-material placement decisions still need a dedicated intake workflow.
 promotion_targets:

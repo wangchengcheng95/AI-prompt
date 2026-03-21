@@ -6,7 +6,6 @@ priority: medium
 kind: skill
 branch: null
 issue: null
-pr: null
 last_updated: 2026-03-19
 next_step: Return after the repository boundary model and task intake loop need stronger pre-merge review enforcement.
 promotion_targets:

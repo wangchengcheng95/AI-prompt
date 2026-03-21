@@ -6,7 +6,6 @@ priority: high
 kind: documentation
 branch: docs-ai-friendly-repo-positioning
 issue: null
-pr: https://github.com/wangchengcheng95/AI-prompt/pull/15
 last_updated: 2026-03-19
 next_step: Decide whether the next slice should add a repository-level start-here index or formalize promotion guidance from task workspaces into stable docs.
 promotion_targets:
@@ -22,7 +21,6 @@ promotion_targets:
 
 - State: active
 - Branch: `docs-ai-friendly-repo-positioning`
-- PR status: open, PR #15
 - Last updated: 2026-03-19
 
 ## Original Goal
