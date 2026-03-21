@@ -16,7 +16,7 @@ This directory is for task state and task context. It is not the home for stable
 
 `docs/tasks/` now uses two layers:
 
-- `index.yaml` is the canonical todo ledger for task discovery, status, priority, and next-step lookup
+- `index.yaml` is the canonical todo ledger for task discovery, grouped by `status` so unfinished work is visible first
 - `docs/tasks/<task-slug>/README.md` is the canonical context entrypoint for one task
 
 GitHub issues, pull requests, or project cards may mirror this information for human collaboration, but they are optional external surfaces. They are not the primary source of truth for AI resume.
@@ -25,7 +25,7 @@ GitHub issues, pull requests, or project cards may mirror this information for h
 
 Use this as a quick human-readable resume guide.
 
-The canonical task ledger is `docs/tasks/index.yaml`. The list below is a compact entrypoint map for the highest-signal current tasks.
+The canonical task ledger is `docs/tasks/index.yaml`. Its top-level `tasks` map is grouped by status, with unfinished sections first. The list below is a compact entrypoint map for the highest-signal current tasks.
 
 Open one of these entrypoints first when resuming ongoing task work:
 
@@ -109,6 +109,8 @@ Optional supporting files may sit beside it, for example:
 ## Index Contract
 
 Every tracked task should appear in `docs/tasks/index.yaml`.
+
+Within `index.yaml`, group entries under `tasks.<status>` rather than keeping one flat array. Keep unfinished statuses first so a quick scan reaches `active`, `blocked`, `proposed`, and `deferred` before historical sections such as `done` and `archived`.
 
 Each entry should include at least:
 
