@@ -180,6 +180,7 @@ The body should usually include:
 - current status
 - confirmed findings
 - open questions
+- dead ends (approaches ruled out)
 - next session entrypoint
 - promotion targets for stable conclusions
 
@@ -191,8 +192,9 @@ For active or resumable tasks, prefer these top-level body sections near the top
 4. `Current Status`
 5. `Confirmed Findings`
 6. `Open Questions`
-7. `Promotion Targets`
-8. `Next Session Entrypoint`
+7. `Dead Ends`
+8. `Promotion Targets`
+9. `Next Session Entrypoint`
 
 The section titles do not need to be the only sections in the file, but these fields should be easy to find without scanning the whole narrative history first.
 
@@ -212,6 +214,8 @@ Use [TEMPLATE.md](./TEMPLATE.md) when creating a new task workspace.
   - capture validated conclusions that should not need to be rediscovered next session
 - `Open Questions`
   - expose unresolved choices, missing information, or scope decisions
+- `Dead Ends`
+  - record approaches that were tried and ruled out, so future sessions do not repeat them; update before ending any exploration session
 - `Promotion Targets`
   - say where stable conclusions should move when they stop being task-local
 - `Next Session Entrypoint`
@@ -226,6 +230,7 @@ Update an active or resumable task README when any of the following changes:
 - the current slice changes
 - a new durable finding is confirmed
 - an open question is resolved, replaced, or newly discovered
+- an approach is tried and ruled out (add to Dead Ends before the session ends, not after)
 - the next best resume point changes
 - a conclusion becomes stable enough to promote into the standard docs set or a maintained asset
 

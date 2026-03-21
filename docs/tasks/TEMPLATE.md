@@ -31,6 +31,14 @@ State what is already done, what remains open, and whether the task is active, b
 
 - List only the questions that still affect scope, implementation, or promotion.
 
+## Dead Ends
+
+<!-- Record approaches that were tried and ruled out, so the next session does not repeat them. -->
+
+| Approach | Attempt | Outcome |
+|----------|---------|---------|
+|          | 1       |         |
+
 ## Next Session Entrypoint
 
 State the exact next step. If relevant, include the branch or file path the next session should open first, and whether more repository changes are still needed.
