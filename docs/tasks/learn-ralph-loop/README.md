@@ -1,13 +1,13 @@
 ---
 task_id: learn-ralph-loop
 title: Learn the Ralph-style agent iteration loop
-status: proposed
+status: archived
 priority: high
 kind: research
 branch: null
 issue: null
 last_updated: 2026-03-21
-next_step: "Read `docs/agent-iteration-contract.md` and compare it to one external 'Ralph loop' write-up you trust; write three bullets: same intent, different mechanics, and risks to avoid."
+next_step: "Reference when resuming Ralph-loop learning or comparing unbounded agent loops to docs/agent-iteration-contract.md; reopen as proposed/active only if you want this track back on the canonical ledger."
 promotion_targets:
   - docs/agent-iteration-contract.md
   - .cursor/skills/repo-self-iteration/SKILL.md
@@ -17,7 +17,7 @@ promotion_targets:
 
 ## Status
 
-- State: proposed (owner learning track)
+- State: archived (owner paused tracked learning; informal study may continue outside the task ledger)
 - Branch: none unless you change repo iteration contract or skills
 - Last updated: 2026-03-21
 
@@ -33,7 +33,8 @@ Understand **Ralph loop** style workflows: repeated agent cycles over a fixed sp
 
 ## Current Status
 
-- Task registered; no external source chosen or comparison written yet.
+- Archived from the active ledger: owner chose not to keep this learning thread in `proposed` while exploration is still early.
+- Informal notes may reference external implementations such as `references/external/claude-code/plugins/ralph-wiggum` (Claude Code–specific); no repo contract or skill changes were required for archival.
 
 ## Confirmed Findings
 
@@ -50,6 +51,8 @@ Understand **Ralph loop** style workflows: repeated agent cycles over a fixed sp
 - Personal automation scripts stay outside this repository unless they become maintained assets under an appropriate `platforms/` home.
 
 ## Next Session Entrypoint
+
+When reopening this topic, restore the task to `proposed` or `active` in `docs/tasks/index.yaml` if you want ledger-backed tracking again. Then:
 
 1. Skim `docs/agent-iteration-contract.md` (feasibility gate and execution loop).
 2. Pick one external Ralph-loop article or repository README to read critically.

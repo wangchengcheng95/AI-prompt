@@ -80,18 +80,6 @@ tasks:
       next_step: "Pick Playwright or Cypress (or equivalent), finish official quickstart, run one smoke test against local dev."
       last_updated: 2026-03-21
 
-    - id: learn-ralph-loop
-      title: "Learn the Ralph-style agent iteration loop"
-      status: proposed
-      priority: high
-      phase: phase-1-near-term
-      kind: research
-      doc: docs/tasks/learn-ralph-loop/README.md
-      branch: null
-      issue: null
-      next_step: "Compare docs/agent-iteration-contract.md to one external Ralph-loop source; capture intent, mechanics, and risks in three bullets."
-      last_updated: 2026-03-21
-
     - id: cross-doc-consistency-check
       title: "Repo-local cross-doc consistency checking workflow"
       status: proposed
@@ -210,6 +198,17 @@ tasks:
       last_updated: 2026-03-21
 
   archived:
+    - id: learn-ralph-loop
+      title: "Learn the Ralph-style agent iteration loop"
+      status: archived
+      priority: high
+      kind: research
+      doc: docs/tasks/learn-ralph-loop/README.md
+      branch: null
+      issue: null
+      next_step: "Reference when resuming Ralph-loop learning or comparing unbounded agent loops to docs/agent-iteration-contract.md; reopen as proposed/active only if you want this track back on the canonical ledger."
+      last_updated: 2026-03-21
+
     - id: human-ai-collaborative-maintenance
       title: "Human-and-AI collaborative repository maintenance"
       status: archived
