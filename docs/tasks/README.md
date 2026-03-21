@@ -41,7 +41,8 @@ Open one of these entrypoints first when resuming ongoing task work:
 - `human-ai-collaborative-maintenance`
   - Entry: `docs/tasks/human-ai-collaborative-maintenance/README.md`
   - State: active
-  - Standing note: this repository is maintained collaboratively by the owner and AI assistants; use other tasks for executable backlog items.
+  - Branch / PR: `docs-human-ai-collaboration-todo` / `#22`
+  - Standing note: owner–AI collaboration model; stable facts promoted to `docs/system-overview.md` and `docs/decisions.md`; use other tasks for executable backlog items.
 
 ### Ongoing Research Context
 

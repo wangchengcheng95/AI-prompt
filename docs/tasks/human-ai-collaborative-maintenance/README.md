@@ -4,11 +4,16 @@ title: Human-and-AI collaborative repository maintenance
 status: active
 priority: medium
 kind: documentation
-branch: null
+branch: docs-human-ai-collaboration-todo
 issue: null
-pr: null
+pr: https://github.com/wangchengcheng95/AI-prompt/pull/22
 last_updated: 2026-03-21
-next_step: Treat maintenance as a shared loop; owner decides scope and merges; AI executes, documents, and tracks substantive work in other task entries as needed.
+next_step: "After PR #22 merges, treat this task as a standing resume hook only; reopen or revise if the owner–AI maintenance contract changes materially."
+promotion_targets:
+  - docs/REPOSITORY-GOALS.md
+  - docs/agent-iteration-contract.md
+  - docs/system-overview.md
+  - docs/decisions.md
 ---
 
 # Human-and-AI collaborative repository maintenance
@@ -17,7 +22,18 @@ next_step: Treat maintenance as a shared loop; owner decides scope and merges; A
 
 This repository is maintained collaboratively by the owner (personal) and AI assistants. The owner sets goals, approves material scope or risk changes, and owns final integration decisions; AI agents propose and apply changes, run standing checklists, and keep task state in `docs/tasks/` honest.
 
+## Authoritative references
+
+- [Repository contract and collaboration framing](../REPOSITORY-GOALS.md) — primary objective and boundaries
+- [Goal-to-ready-to-merge loop](../agent-iteration-contract.md) — execution and handoff expectations
+- [Stable system facts](../system-overview.md) — includes the owner–AI maintenance constraint
+- [Decision log](../decisions.md) — dated rationale for promoting this model into system overview
+
+## Related tasks
+
+- [`ai-friendly-repo`](../ai-friendly-repo/README.md) — AI-friendly structure, indexing, and promotion flow
+
 ## Notes
 
 - This entry records the maintenance model; it is not a standalone delivery backlog.
-- Use other tasks in `docs/tasks/index.yaml` for concrete, completable work.
+- Use other tasks in [`docs/tasks/index.yaml`](../index.yaml) for concrete, completable work.
