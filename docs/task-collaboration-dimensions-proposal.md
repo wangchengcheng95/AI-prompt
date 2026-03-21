@@ -2,7 +2,7 @@
 
 ## Status
 
-This document **archives a proposed classification** for human–AI collaboration. It is **reference material only**: it does not, by itself, change agent behavior until linked from an operative contract or skill.
+This document **archives a proposed classification** for human–AI collaboration. It is **reference material only**: it does not, by itself, make these dimensions operative. In phase 1, only the `exploration` axis has been adopted separately through `docs/task-exploration-levels.md`; the other dimensions here remain archived reference until explicitly wired.
 
 ## 1. Exploration (uncertainty / discovery) — must we establish facts first?
 
@@ -36,4 +36,5 @@ This document **archives a proposed classification** for human–AI collaboratio
 
 ## Read more
 
+- Operative phase-1 exploration levels: `docs/task-exploration-levels.md`
 - Repository maintenance contract: `docs/agent-iteration-contract.md`.

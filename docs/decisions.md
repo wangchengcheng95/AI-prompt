@@ -22,7 +22,7 @@ This document records confirmed design decisions and why they replaced, narrowed
 
 - Decision: Store the five-dimension collaboration taxonomy (exploration, scope, urgency, blast radius, authority) as English-first reference in `docs/task-collaboration-dimensions-proposal.md`, marked as non-operative until wired into a contract or skill.
 - Why: Preserves the rationale and definitions without merging a long reference into layer-1 entry files; supports later phased adoption (e.g. exploration-only levels first).
-- Impact: Agents and maintainers can cite a single stable URL in-repo; operative behavior still follows `docs/agent-iteration-contract.md` until explicitly extended.
+- Impact: Agents and maintainers can cite a single stable URL in-repo; the archive itself introduces no behavior change, and any operative adoption must be recorded separately.
 
 ### 2026-03-15 Root AGENTS remains a rules entrypoint
 
