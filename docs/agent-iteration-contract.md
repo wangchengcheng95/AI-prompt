@@ -78,7 +78,7 @@ For small, low-risk changes with one obvious path, both research and planning ma
 
 ## User-stated exploration level
 
-When the user states an exploration level for the task, follow `docs/task-exploration-levels.md` for research breadth, alignment, planning depth, and handoff density. When they do not, use that document’s default (**medium**), which matches the due-diligence expectations above.
+When the user states an exploration level for the task, follow `docs/task-exploration-levels.md`. When they do not, use that document’s default (**medium**), which matches the due-diligence expectations above.
 
 ## Execution Loop
 
