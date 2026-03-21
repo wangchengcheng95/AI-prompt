@@ -1,3 +1,8 @@
+default_operator_advisories:
+  - 本仓库 platforms/ 归档可能对应多种编辑器、CLI 或扩展；本同步脚本不安装任何插件或外部工具。
+  - 可选依赖与上游索引见 references/README.md。
+  - 示例：部分 Cursor 归档会引用 Superpowers 等扩展（需在扩展市场自行安装）。
+
 bundles:
   codex-home:
     kind: user-home

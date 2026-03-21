@@ -14,6 +14,7 @@
 
 ## Operational Rules
 
+- After each successful `prompt_sync.py` invocation, stderr may include a bordered advisory from `sync-manifest.yaml` (`default_operator_advisories` and optional per-bundle `operator_advisories`). Suppress with `PROMPT_SYNC_SKIP_PLUGIN_ADVISORY=1` if needed.
 - Always preview before writing.
 - Stop on `drift-local`, `conflict`, `unmanaged`, or `missing-target`.
 - Only backflow paths that are already managed by the manifest, unless the user first updates the manifest.

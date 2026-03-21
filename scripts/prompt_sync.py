@@ -21,6 +21,8 @@ STATE_DIR = ".ai-prompt-sync"
 STATE_FILE = f"{STATE_DIR}/state.yaml"
 BLOCKING_CLASSIFICATIONS = {"drift-local", "conflict", "unmanaged", "missing-target"}
 
+ADVISORY_RULE_WIDTH = 80
+
 
 class SyncError(Exception):
     """Raised when config or invocation is invalid."""
@@ -491,6 +493,45 @@ class PromptSyncService:
         destination_abs.parent.mkdir(parents=True, exist_ok=True)
         destination_abs.write_bytes(target_abs.read_bytes())
 
+    def operator_advisory_lines(self, bundle_name: str | None) -> list[str]:
+        """Lines from sync-manifest.yaml: default_operator_advisories plus optional bundle operator_advisories."""
+        lines: list[str] = []
+        default = self.manifest.get("default_operator_advisories")
+        if isinstance(default, list):
+            for item in default:
+                if isinstance(item, str):
+                    text = item.strip()
+                    if text:
+                        lines.append(text)
+        if bundle_name:
+            bundle = self._bundles().get(bundle_name)
+            if isinstance(bundle, dict):
+                extra = bundle.get("operator_advisories")
+                if isinstance(extra, list):
+                    for item in extra:
+                        if isinstance(item, str):
+                            text = item.strip()
+                            if text:
+                                lines.append(text)
+        return lines
+
+
+def format_operator_advisory_box(lines: list[str]) -> str:
+    if not lines:
+        return ""
+    border = "=" * ADVISORY_RULE_WIDTH
+    body = "\n".join(lines)
+    return f"\n{border}\n{body}\n{border}\n"
+
+
+def emit_operator_advisory(service: PromptSyncService, bundle_name: str | None) -> None:
+    """Print manifest-driven operator notes to stderr (optional tooling); never installs anything."""
+    if os.environ.get("PROMPT_SYNC_SKIP_PLUGIN_ADVISORY", "").strip():
+        return
+    boxed = format_operator_advisory_box(service.operator_advisory_lines(bundle_name))
+    if boxed:
+        print(boxed, file=sys.stderr, end="")
+
 
 def format_result(result: OperationResult) -> str:
     lines = [f"{result.command}: target={result.target_name}"]
@@ -558,6 +599,7 @@ def main(argv: list[str] | None = None) -> int:
         return EXIT_ERROR
 
     print(format_result(result))
+    emit_operator_advisory(service, result.bundle_name)
     return EXIT_BLOCKED if result.has_blockers() else EXIT_OK
 
 

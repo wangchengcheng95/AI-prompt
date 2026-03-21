@@ -1,11 +1,21 @@
+import io
 import os
+import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 import yaml
 
-from scripts.prompt_sync import EXIT_BLOCKED, EXIT_OK, PromptSyncService, main
+from scripts.prompt_sync import (
+    EXIT_BLOCKED,
+    EXIT_OK,
+    PromptSyncService,
+    emit_operator_advisory,
+    format_operator_advisory_box,
+    main,
+)
 
 
 class PromptSyncTest(unittest.TestCase):
@@ -23,6 +33,9 @@ class PromptSyncTest(unittest.TestCase):
         (self.repo_root / "platforms/codex/.codex/skills/sample/SKILL.md").write_text("skill v1\n", encoding="utf-8")
         (self.repo_root / "sync-manifest.yaml").write_text(
             """
+default_operator_advisories:
+  - sync-test-default-advisory
+
 bundles:
   codex-home:
     kind: user-home
@@ -35,6 +48,8 @@ bundles:
         type: workspace
     managed_paths:
       - AGENTS.md
+    operator_advisories:
+      - sync-test-bundle-advisory
     backflow:
       enabled: true
       default_destination: platforms/codex/home/AGENTS.md
@@ -177,10 +192,59 @@ targets:
             "AGENTS.md",
         ])
 
+    def test_format_operator_advisory_box_empty(self):
+        self.assertEqual(format_operator_advisory_box([]), "")
+
+    def test_operator_advisory_lines_merge_default_and_bundle(self):
+        home_lines = self.service.operator_advisory_lines("codex-home")
+        self.assertEqual(
+            home_lines,
+            ["sync-test-default-advisory", "sync-test-bundle-advisory"],
+        )
+        core_lines = self.service.operator_advisory_lines("codex-platform-core")
+        self.assertEqual(core_lines, ["sync-test-default-advisory"])
+
+    def test_emit_operator_advisory_prints_to_stderr(self):
+        stderr = io.StringIO()
+        popped = os.environ.pop("PROMPT_SYNC_SKIP_PLUGIN_ADVISORY", None)
+        try:
+            with patch.object(sys, "stderr", stderr):
+                emit_operator_advisory(self.service, "codex-home")
+        finally:
+            if popped is not None:
+                os.environ["PROMPT_SYNC_SKIP_PLUGIN_ADVISORY"] = popped
+        out = stderr.getvalue()
+        self.assertIn("sync-test-default-advisory", out)
+        self.assertIn("sync-test-bundle-advisory", out)
+        self.assertLess(out.index("sync-test-default-advisory"), out.index("sync-test-bundle-advisory"))
+
+    def test_emit_operator_advisory_respects_skip_env(self):
+        stderr = io.StringIO()
+        with patch.dict(os.environ, {"PROMPT_SYNC_SKIP_PLUGIN_ADVISORY": "1"}):
+            with patch.object(sys, "stderr", stderr):
+                emit_operator_advisory(self.service, "codex-home")
+        self.assertEqual(stderr.getvalue(), "")
+
+    def test_emit_silent_when_manifest_has_no_advisories(self):
+        path = self.repo_root / "sync-manifest.yaml"
+        data = yaml.safe_load(path.read_text(encoding="utf-8"))
+        data.pop("default_operator_advisories", None)
+        for bundle in (data.get("bundles") or {}).values():
+            if isinstance(bundle, dict):
+                bundle.pop("operator_advisories", None)
+        path.write_text(yaml.safe_dump(data, sort_keys=False, allow_unicode=True), encoding="utf-8")
+        bare = PromptSyncService(self.repo_root)
+        stderr = io.StringIO()
+        with patch.object(sys, "stderr", stderr):
+            emit_operator_advisory(bare, "codex-home")
+        self.assertEqual(stderr.getvalue(), "")
+
     def test_cli_exit_codes(self):
         original_repo_root = os.environ.get("PROMPT_SYNC_REPO_ROOT")
+        original_skip = os.environ.get("PROMPT_SYNC_SKIP_PLUGIN_ADVISORY")
         try:
             os.environ["PROMPT_SYNC_REPO_ROOT"] = str(self.repo_root)
+            os.environ["PROMPT_SYNC_SKIP_PLUGIN_ADVISORY"] = "1"
             exit_code = main(["preview-export", "--bundle", "codex-home", "--target", "local-codex-home"])
             self.assertEqual(exit_code, EXIT_OK)
             self.service.export("codex-home", "local-codex-home")
@@ -192,6 +256,29 @@ targets:
                 os.environ.pop("PROMPT_SYNC_REPO_ROOT", None)
             else:
                 os.environ["PROMPT_SYNC_REPO_ROOT"] = original_repo_root
+            if original_skip is None:
+                os.environ.pop("PROMPT_SYNC_SKIP_PLUGIN_ADVISORY", None)
+            else:
+                os.environ["PROMPT_SYNC_SKIP_PLUGIN_ADVISORY"] = original_skip
+
+    def test_cli_stderr_includes_advisory_when_not_skipped(self):
+        original_repo_root = os.environ.get("PROMPT_SYNC_REPO_ROOT")
+        popped = os.environ.pop("PROMPT_SYNC_SKIP_PLUGIN_ADVISORY", None)
+        stderr = io.StringIO()
+        try:
+            os.environ["PROMPT_SYNC_REPO_ROOT"] = str(self.repo_root)
+            with patch.object(sys, "stderr", stderr):
+                code = main(["preview-export", "--bundle", "codex-home", "--target", "local-codex-home"])
+            self.assertEqual(code, EXIT_OK)
+        finally:
+            if popped is not None:
+                os.environ["PROMPT_SYNC_SKIP_PLUGIN_ADVISORY"] = popped
+            if original_repo_root is None:
+                os.environ.pop("PROMPT_SYNC_REPO_ROOT", None)
+            else:
+                os.environ["PROMPT_SYNC_REPO_ROOT"] = original_repo_root
+        self.assertIn("sync-test-default-advisory", stderr.getvalue())
+        self.assertIn("sync-test-bundle-advisory", stderr.getvalue())
 
 
 if __name__ == "__main__":

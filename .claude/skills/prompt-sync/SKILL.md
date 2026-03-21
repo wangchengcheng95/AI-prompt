@@ -21,6 +21,7 @@ The system treats this repository as the only upstream and uses explicit bundle 
 4. Refuse unmanaged paths and stop on `drift-local`, `conflict`, or `missing-target`.
 5. Use `export` or `import-backflow` only when the preview output contains only safe changes.
 6. Summarize the exact classifications, applied paths, and any remaining blockers.
+7. After a successful CLI run, `scripts/prompt_sync.py` may print a stderr advisory box built from `sync-manifest.yaml`: root `default_operator_advisories` plus optional per-bundle `operator_advisories` (this tool never installs plugins or external tools). Set `PROMPT_SYNC_SKIP_PLUGIN_ADVISORY=1` to suppress it (for tests or automation).
 
 ## Boundaries
 
