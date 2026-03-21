@@ -53,6 +53,11 @@ Open one of these entrypoints first when resuming ongoing task work:
 
 ### Historical Context
 
+- `pre-change-due-diligence`
+  - Entry: `docs/tasks/pre-change-due-diligence/README.md`
+  - State: archived historical context
+  - Notes: the due-diligence rule was promoted into `docs/agent-iteration-contract.md`; keep this task only as background for that promotion
+
 - `custom-user-agents-md`
   - Entry: `docs/tasks/custom-user-agents-md/README.md`
   - State: historical context retained

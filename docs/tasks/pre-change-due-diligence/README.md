@@ -1,14 +1,14 @@
 ---
 task_id: pre-change-due-diligence
 title: "[URGENT] Pre-change gate: authoritative docs and planning by importance"
-status: active
+status: archived
 priority: urgent
 kind: documentation
 branch: null
 issue: null
 pr: null
-last_updated: 2026-03-20
-next_step: "Before any repo-local maintenance edit, run the standing checklist below; promote conclusions into agent-iteration-contract or AGENTS.md when they stabilize."
+last_updated: 2026-03-21
+next_step: "Reference this task only when revisiting why the due-diligence rule was promoted into docs/agent-iteration-contract.md or when reconsidering a root-level reminder."
 promotion_targets:
   - docs/agent-iteration-contract.md
   - AGENTS.md
@@ -20,6 +20,8 @@ promotion_targets:
 
 Make importance-aware **due diligence** the default before repository changes: decide when to consult **authoritative online documentation** and when to **draft a plan first**, instead of editing immediately.
 
+This task is now complete because the stable execution rule has been promoted into `docs/agent-iteration-contract.md`.
+
 ## Standing Checklist (apply before edits)
 
 Treat this as an **urgent** recurring gate for repo-local maintenance work.
@@ -30,20 +32,23 @@ Treat this as an **urgent** recurring gate for repo-local maintenance work.
 
 ## Current Status
 
-Evergreen process reminder tracked in the task index. No branch or PR required until this is folded into stable maintainer docs.
+- Stable rule promoted into `docs/agent-iteration-contract.md`.
+- No branch or PR was required for the task-local reminder itself.
+- The task workspace now remains as historical context for why the rule was added.
 
 ## Confirmed Findings
 
 - Importance is contextual: the same file change can be low-risk or high-risk depending on blast radius and uncertainty.
 - Official docs reduce silent drift from training cutoffs and informal recall.
+- The repo-local execution contract should explicitly require evaluating whether authoritative online sources are needed before implementation, not just whether a plan is needed.
 
 ## Open Questions
 
-- Whether to merge this gate verbatim into `docs/agent-iteration-contract.md` or keep it task-local until usage proves the wording.
+- Whether future usage proves `AGENTS.md` also needs a one-line reminder, or whether the task-time contract is the correct permanent home.
 
 ## Next Session Entrypoint
 
-When maintaining the repo, open `docs/tasks/index.yaml`, confirm this task remains `active`, and apply the checklist before the first edit of the session when the work is not trivial.
+When revisiting this topic, open `docs/agent-iteration-contract.md` first and confirm the stable wording still matches actual repo-maintenance behavior.
 
 ## Promotion Targets
 
