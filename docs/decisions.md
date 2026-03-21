@@ -6,6 +6,12 @@ This document records confirmed design decisions and why they replaced, narrowed
 
 ## Decision Log
 
+### 2026-03-21 No agent commits on `main` without explicit permission
+
+- Decision: Agents must not run `git commit` while on `main` unless the user explicitly allows that change set to be committed in the current conversation. Documented in root `AGENTS.md`, `docs/agent-iteration-contract.md`, `.cursor/rules/git-main-no-commit.mdc`, and repo-local `git-commit` skills (Cursor, Claude, Codex).
+- Why: The user wants `main` protected from unprompted agent commits; task branches or user-run commits remain the default outlet.
+- Impact: Routine maintenance should use `$git-start-task` (or equivalent) before committing, or hand off diffs and a proposed message for a user commit on `main`.
+
 ### 2026-03-21 Pull request metadata changes require explicit user intent
 
 - Decision: Preparing or refreshing PR title/body text does not, by itself, authorize editing an existing pull request. Agents should only create a PR or mutate PR metadata when the user explicitly asks for that operation.

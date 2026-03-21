@@ -17,6 +17,7 @@ Keep Phase 1 focused on reducing duplicated maintenance at the project-entry lev
 
 ## Working Rules
 
+- On branch `main`, do not `git commit` unless the user has explicitly allowed committing for that change set in the current conversation; otherwise use a task branch or hand off diffs for the user to commit
 - English commit messages; repo-relative links; no machine-absolute paths
 - Ask before deleting discussion records, templates, or user-authored material
 - Before creating a new asset, search for an existing home and extend it instead
