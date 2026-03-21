@@ -127,6 +127,8 @@ For handoff, the agent should provide:
 - pull request title and summary text suitable for review
 - explicit assumptions, known risks, and any remaining manual steps
 
+Preparing pull request text does not, by itself, authorize mutating an existing GitHub pull request. Unless the user explicitly asks to create a pull request or change pull request metadata, the agent should keep title and summary updates as handoff output only.
+
 ## Stop Conditions
 
 The agent should stop and ask the user when any of the following applies:

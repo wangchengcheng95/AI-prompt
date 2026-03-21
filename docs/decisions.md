@@ -6,6 +6,12 @@ This document records confirmed design decisions and why they replaced, narrowed
 
 ## Decision Log
 
+### 2026-03-21 Pull request metadata changes require explicit user intent
+
+- Decision: Preparing or refreshing PR title/body text does not, by itself, authorize editing an existing pull request. Agents should only create a PR or mutate PR metadata when the user explicitly asks for that operation.
+- Why: Frequent PR mutation adds interaction overhead and forces the agent to spend effort on a user-facing surface that often does not need to change.
+- Impact: PR handoff can still prepare suggested title/body text, but existing PR metadata should stay untouched by default.
+
 ### 2026-03-21 Operative exploration levels (phase 1)
 
 - Decision: Introduce `docs/task-exploration-levels.md` as the operative mapping when the user states task exploration intensity; add a short pointer in `docs/agent-iteration-contract.md`; link from `AGENTS.md`. Other collaboration dimensions are intentionally not adopted in phase 1.
