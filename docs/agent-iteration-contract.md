@@ -2,9 +2,9 @@
 
 ## Purpose
 
-This document defines the repo-local collaboration contract for goal-driven maintenance work in this repository.
+This document defines the behavioral contract for goal-driven repo-maintenance work in this repository.
 
-The contract is intentionally behavioral rather than template-driven. It constrains how the agent should intake work, decide whether to proceed, drive execution, and hand work back in a ready-to-merge state without freezing the exact wording or shape of plans, reviews, or pull request text.
+It governs how the agent should intake work, decide whether to proceed, execute it, and hand it back in a `ready-to-merge` state without freezing one exact template for plans, reviews, or pull request text.
 
 ## Scope
 
@@ -14,29 +14,14 @@ It does not define the behavior of archived external platform assets under `plat
 
 ## Target Outcome
 
-The target outcome for a task is `ready-to-merge`, not automatic merge.
-
-For a task to reach `ready-to-merge`, the agent should normally drive the work through:
-
-- goal intake and feasibility check
-- scope reduction when needed
-- branch creation
-- execution planning
-- implementation
-- self-verification
-- commit creation
-- pull request draft preparation
-
-Final merge authority remains with the user.
-
-## Goal Intake
+The target outcome for a task is `ready-to-merge`, not automatic merge. Final merge authority remains with the user.
 
 Goals may come from either:
 
 - a user-specified subset of `docs/EVOLUTION-GOALS.md`
 - an ad hoc repository-maintenance goal raised during collaboration
 
-The agent should first decide whether the goal is suitable for a single bounded task in this repository.
+The agent should first decide whether the goal is suitable for one bounded task in this repository.
 
 A goal is a good fit when it:
 
@@ -68,14 +53,37 @@ The agent should only spend explicit interaction budget on decisions that materi
 
 Outside those cases, the agent should make reasonable assumptions, continue execution, and state those assumptions in the final handoff.
 
+## Pre-Execution Due Diligence
+
+Before entering implementation, the agent should explicitly evaluate whether the task needs extra due diligence.
+
+This check should cover:
+
+- task importance, including scope, reversibility, blast radius, and familiarity with the tools or APIs involved
+- whether the work depends on unfamiliar, version-sensitive, vendor-specific, security-relevant, or publish/migration-sensitive behavior
+- whether the task has a single obvious path or needs a short discussion or plan first
+
+When the task is non-trivial, the agent should consult authoritative online sources before relying on memory or guesses.
+
+Preferred sources are the relevant official or authoritative sites for the task, such as:
+
+- vendor or product documentation
+- API references and framework documentation
+- specifications or standards documents
+- release notes, migration guides, or security advisories
+
+When the task is non-trivial or multiple viable approaches exist, the agent should produce a concise plan before editing.
+
+For small, low-risk changes with one obvious path, both research and planning may stay minimal, but the agent should still make the evaluation explicitly rather than skipping it by default.
+
 ## Execution Loop
 
 Once a goal is accepted for execution, the default loop is:
 
-1. evaluate the task and reduce scope if needed
-2. create or switch to a task branch
-3. register or refresh the task in `docs/tasks/` when the work is likely to span multiple sessions, multiple commits, or a follow-up PR-sized slice
-4. form a concise executable plan
+1. evaluate task importance, due-diligence needs, and scope reduction
+2. consult authoritative online sources and form a concise plan when the task warrants it
+3. create or switch to a task branch
+4. register or refresh the task in `docs/tasks/` when the work is likely to span multiple sessions, multiple commits, or a follow-up PR-sized slice
 5. implement the change
 6. run the most relevant verification available
 7. summarize acceptance status and residual risks
@@ -94,19 +102,6 @@ When the repo-local Git skills are available, prefer using:
 
 Skills live under `.claude/skills/` for Claude Code and `.cursor/skills/` for Cursor.
 
-## Delivery Contract
-
-For a task to be considered complete for handoff, the agent should provide:
-
-- the branch name used for the work, or the blocking reason if branch creation is prevented by tooling constraints
-- a concise record of the plan actually followed
-- the implemented repository changes
-- the verification performed and its outcome
-- the commit identifier, or the blocking reason if commit creation is prevented by tooling constraints
-- the updated `docs/tasks/index.yaml` entry and task workspace `README.md` when the task is tracked in `docs/tasks/` or needs cross-session continuation
-- pull request title and summary text suitable for review
-- explicit assumptions, known risks, and any remaining manual steps
-
 ## Ready-to-Merge Definition
 
 Work is `ready-to-merge` when all of the following are true:
@@ -116,6 +111,17 @@ Work is `ready-to-merge` when all of the following are true:
 - verification has been performed to the extent available in the current environment
 - the current state, risks, and assumptions are visible to the user
 - the user can review the result as a normal pull request candidate without needing the agent to explain missing basic context
+
+For handoff, the agent should provide:
+
+- the branch name used for the work, or the blocking reason if branch creation is prevented by tooling constraints
+- a concise record of the plan actually followed
+- the implemented repository changes
+- the verification performed and its outcome
+- the commit identifier, or the blocking reason if commit creation is prevented by tooling constraints
+- the updated `docs/tasks/index.yaml` entry and task workspace `README.md` when the task is tracked in `docs/tasks/` or needs cross-session continuation
+- pull request title and summary text suitable for review
+- explicit assumptions, known risks, and any remaining manual steps
 
 ## Stop Conditions
 
@@ -127,11 +133,9 @@ The agent should stop and ask the user when any of the following applies:
 - the task requires deletion or irreversible changes to user-authored material with unclear ownership
 - repository or tool constraints prevent required branch, verification, commit, or pull request steps
 
-## Feedback Loop
+## Follow-Up
 
-After handoff, the user may request changes to the same task.
-
-The default follow-up behavior is to continue on the same task branch, refine the existing work, refresh verification, and update the commit history through additional normal commits unless the user explicitly asks for a different workflow.
+After handoff, follow-up requests should normally continue on the same task branch, refine the existing work, refresh verification, and update the commit history through additional normal commits unless the user explicitly asks for a different workflow.
 
 ## Future Evolution
 

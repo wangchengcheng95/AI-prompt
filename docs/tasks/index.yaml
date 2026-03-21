@@ -1,20 +1,20 @@
 schema_version: 1
-last_updated: 2026-03-20
+last_updated: 2026-03-21
 source_of_truth: local
 github_mirroring: optional
 
 tasks:
   - id: pre-change-due-diligence
     title: "[URGENT] Pre-change gate: authoritative docs and planning by importance"
-    status: active
+    status: archived
     priority: urgent
     kind: documentation
     doc: docs/tasks/pre-change-due-diligence/README.md
     branch: null
     issue: null
     pr: null
-    next_step: "Before any repo-local maintenance edit, run the standing checklist in docs/tasks/pre-change-due-diligence/README.md."
-    last_updated: 2026-03-20
+    next_step: "Reference this task only when revisiting why the due-diligence rule was promoted into docs/agent-iteration-contract.md or when reconsidering a root-level reminder."
+    last_updated: 2026-03-21
 
   - id: add-claude-skills
     title: "Migrate repo-local Codex maintenance skills to Claude"
