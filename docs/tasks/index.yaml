@@ -53,7 +53,7 @@ tasks:
       doc: docs/tasks/learn-code-review/README.md
       branch: null
       issue: null
-      next_step: "Run through platforms/cursor/.cursor/commands/general/code-review.md on a real diff; add one project-specific risk to your checklist."
+      next_step: "Study references/external/claude-code/plugins/code-review (README, manifest, command); contrast multi-agent PR review with the archived Cursor checklist."
       last_updated: 2026-03-21
 
     - id: learn-code-simplifier

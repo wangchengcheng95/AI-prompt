@@ -7,7 +7,7 @@ kind: research
 branch: null
 issue: null
 last_updated: 2026-03-21
-next_step: "Walk through `platforms/cursor/.cursor/commands/general/code-review.md` once with a real small diff; extend the checklist with one project-specific risk you care about."
+next_step: "Study `references/external/claude-code/plugins/code-review` (README, plugin manifest, `commands/code-review.md`); note how multi-agent PR review and confidence scoring differ from the archived Cursor checklist command."
 promotion_targets:
   - platforms/cursor/.cursor/commands/general/code-review.md
   - .cursor/skills/
@@ -27,8 +27,9 @@ Practice **code review** as a repeatable discipline: scope comprehension, correc
 
 ## Current Slice
 
-- Internal reference: archived Cursor command at `platforms/cursor/.cursor/commands/general/code-review.md`.
-- Outcome: complete at least one full pass (understand change → validate behavior → quality → security) on a real PR-sized diff and record one lesson learned.
+- Primary study: Claude Code **Code Review** plugin checkout at `references/external/claude-code/plugins/code-review` (parallel agents, confidence threshold, PR-oriented flow).
+- Secondary reference: archived Cursor checklist at `platforms/cursor/.cursor/commands/general/code-review.md` for contrast after the plugin pass.
+- Outcome: summarize one takeaway (for example agent split, scoring, or skip rules) under **Confirmed Findings**; optional second slice is still a real diff walkthrough with the Cursor command.
 
 ## Current Status
 
@@ -50,6 +51,7 @@ Practice **code review** as a repeatable discipline: scope comprehension, correc
 
 ## Next Session Entrypoint
 
-1. Open `platforms/cursor/.cursor/commands/general/code-review.md`.
-2. Pick one recent or staged change set in any repository you maintain.
-3. Run the checklist; add bullets under **Confirmed Findings** for patterns you want to reuse.
+1. Open `references/external/claude-code/plugins/code-review/README.md`, then `commands/code-review.md` and `.claude-plugin/plugin.json`.
+2. Note command arguments, agent roles, confidence cutoff, and skip conditions; compare mentally to a single-agent checklist review.
+3. When ready, either run `/code-review` in a Claude Code context that has the plugin, or defer execution and still capture design notes under **Confirmed Findings**.
+4. Later: use `platforms/cursor/.cursor/commands/general/code-review.md` on a real diff if you want the Cursor-side baseline exercise.
