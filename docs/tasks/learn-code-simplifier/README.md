@@ -1,54 +1,57 @@
 ---
 task_id: learn-code-simplifier
-title: Learn code and doc simplification discipline
+title: Learn code-simplifier plugin (claude-plugins-official)
 status: proposed
 priority: high
 kind: research
 branch: null
 issue: null
-last_updated: 2026-03-21
-next_step: "Read `.cursor/skills/repo-doc-simplifier/SKILL.md` (and `.claude/skills/` mirror if you use Claude Code); apply it once to one bloated doc, then list one simplification rule you will reuse for code edits."
+last_updated: 2026-03-22
+next_step: "Ensure references/external/claude-plugins-official is synced (see references/README.md); read plugins/code-simplifier/.claude-plugin/plugin.json and plugins/code-simplifier/agents/code-simplifier.md; note one adoptable simplification rule and how it differs from repo Markdown simplification."
 promotion_targets:
+  - references/README.md
   - .cursor/skills/repo-doc-simplifier/SKILL.md
   - docs/
 ---
 
-# Learn code and doc simplification discipline
+# Learn code-simplifier plugin (claude-plugins-official)
 
 ## Status
 
 - State: proposed (owner learning track)
 - Branch: none unless you change maintained skills or docs
-- Last updated: 2026-03-21
+- Last updated: 2026-03-22
 
 ## Original Goal
 
-Internalize **simplification** as an explicit skill: remove duplication and dead weight while preserving true constraints—starting from this repository’s doc simplifier skill and extending the same mindset to code.
+Understand Anthropic’s upstream **`code-simplifier`** plugin: how the agent is scoped, what “simplify” means there (clarity and maintainability without behavior change), and what is reusable versus project-specific—**primary source** is the local reference checkout under `references/external/claude-plugins-official/plugins/code-simplifier/`.
 
 ## Current Slice
 
-- Study repo-local skill: `.cursor/skills/repo-doc-simplifier/SKILL.md`.
-- Apply: one controlled pass on a single maintenance Markdown file that has grown repetitive.
-- Reflect: translate one technique to code (for example delete redundant branches, collapse parallel explanations, preserve public behavior).
+- Sync or verify checkout: `references/external/claude-plugins-official` (manifest: `references/repos.manifest.tsv`; instructions: `references/README.md` § `claude-plugins-official`).
+- Read: `plugins/code-simplifier/.claude-plugin/plugin.json` and `plugins/code-simplifier/agents/code-simplifier.md`.
+- Contrast (optional): `.cursor/skills/repo-doc-simplifier/SKILL.md` for **Markdown** constraint-preserving compression versus **code** refinement in the upstream agent prompt.
 
 ## Current Status
 
-- Task registered; no applied simplification logged here yet.
+- Task scope corrected to the official plugin path; no study notes logged here yet.
 
 ## Confirmed Findings
 
-- This repository already defines a focused process for compressing repo-maintenance Markdown without dropping constraints.
+- Upstream layout (when synced): plugin metadata plus `agents/code-simplifier.md` (subagent/agent definition: preserve functionality, apply project standards from `CLAUDE.md`, focus on recently modified code unless told otherwise).
+- This repository’s `repo-doc-simplifier` skill addresses **maintenance docs**, not the same artifact as the upstream **code** simplifier agent.
 
 ## Open Questions
 
-- Should “simplifier” practice stay doc-only here, or do you want a separate code-focused checklist skill later?
+- Which parts of the upstream prompt are portable into a repo-local skill or rule versus left as Claude Code runtime behavior only?
 
 ## Promotion Targets
 
-- Improvements to the simplifier skill itself → same skill file under `.cursor/skills/` / `.claude/skills/` with normal PR review.
-- General engineering habits → personal notes only unless they become repo policy.
+- Durable integration ideas → `docs/decisions.md` or relevant `platforms/<tool>/` notes.
+- Optional cross-link or contrast notes → `references/README.md` only if it helps future sync/study, not redundant catalog text.
 
 ## Next Session Entrypoint
 
-1. Open `.cursor/skills/repo-doc-simplifier/SKILL.md` and follow it literally once.
-2. Record before/after takeaway in **Confirmed Findings** (one or two bullets, no essay).
+1. Run or verify: `bash scripts/sync-references.sh --only claude-plugins-official` (when network and policy allow).
+2. Open `references/external/claude-plugins-official/plugins/code-simplifier/agents/code-simplifier.md` and skim `plugin.json`.
+3. Add one or two bullets under **Confirmed Findings** (concrete rules or boundaries you will reuse).
