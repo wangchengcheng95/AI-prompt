@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: 2026-03-22
+last_updated: 2026-03-21
 source_of_truth: local
 github_mirroring: optional
 
@@ -67,6 +67,18 @@ tasks:
       issue: null
       next_step: "Sync or open references/external/claude-plugins-official/plugins/code-simplifier; read plugin.json and agents/code-simplifier.md; contrast with repo-doc-simplifier for doc vs code scope."
       last_updated: 2026-03-22
+
+    - id: learn-gstack
+      title: "Learn gstack (garrytan/gstack reference)"
+      status: proposed
+      priority: high
+      phase: phase-1-near-term
+      kind: research
+      doc: docs/tasks/learn-gstack/README.md
+      branch: null
+      issue: null
+      next_step: "Sync or verify references/external/gstack; read upstream README and skill/command layout; note one adoptable pattern for role workflows or packaging versus platforms/ assets."
+      last_updated: 2026-03-21
 
     - id: learn-webapp-testing
       title: "Learn web application testing (practical stack)"
