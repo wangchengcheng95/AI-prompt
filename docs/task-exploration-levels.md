@@ -42,7 +42,7 @@ Use when facts are unclear, stakes are higher, or the user wants explicit alignm
 
 | Area | Expectation |
 |------|-------------|
-| External research | Start broad enough to reduce wrong-path risk; narrow iteratively; cite or link sources when conclusions affect behavior, security, compatibility, or migrations. |
+| External research | Start broad enough to reduce wrong-path risk; narrow iteratively. For facts about platform APIs, tool capabilities, or compatibility: (1) scan `references/repos.manifest.tsv` and read relevant local checkouts, (2) use WebSearch for authoritative online sources. Cite or link sources when conclusions affect behavior, security, compatibility, or migrations. |
 | User alignment | Short structured check (goal, constraints, success criteria) before substantial edits unless the user clearly waived it. |
 | Planning | Written plan before large or cross-cutting edits; incorporate user feedback if they engage. |
 | Handoff | Explicit assumptions and residual unknowns; cite key sources where they drove decisions. |
