@@ -1,0 +1,11 @@
+{
+  "terminal.integrated.env.linux": {
+    "PLAYWRIGHT_BROWSERS_PATH": "${workspaceFolder}/gstack/.pw-browsers"
+  },
+  "terminal.integrated.env.osx": {
+    "PLAYWRIGHT_BROWSERS_PATH": "${workspaceFolder}/gstack/.pw-browsers"
+  },
+  "terminal.integrated.env.windows": {
+    "PLAYWRIGHT_BROWSERS_PATH": "${workspaceFolder}\\gstack\\.pw-browsers"
+  }
+}

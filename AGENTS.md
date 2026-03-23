@@ -11,6 +11,7 @@ Keep Phase 1 focused on reducing duplicated maintenance at the project-entry lev
 
 - Root `AGENTS.md`, root `CLAUDE.md`, root `.claude/`, root `.cursor/`, and selected root `.codex/` assets are repo-maintenance entrypoints only.
 - `platforms/` — external assets maintained for other repositories and tools
+- **gstack** — vendored at repo root `gstack/` (upstream MIT), for **this repository only** (not under `platforms/`). Cursor-style agents discover skills via `.agents/skills/` (symlinks into `gstack/`). After clone, run `bash scripts/bootstrap-gstack.sh` once: builds `browse/` under `gstack/`, installs Chromium into `gstack/.pw-browsers/` (gitignored), and does **not** write `~/.codex`, `~/.gstack`, or the default Playwright cache. Optional: `.vscode/settings.json` sets `PLAYWRIGHT_BROWSERS_PATH` for integrated terminals. Reference-only checkout remains at `references/external/gstack`.
 - `templates/` — tool-neutral assets meant to be copied into other repositories
 - `docs/` — repo-maintenance knowledge: goals, architecture, decisions, contracts
 - Shared template material must remain separate from repo-maintenance docs unless the user explicitly asks to relocate or delete it.

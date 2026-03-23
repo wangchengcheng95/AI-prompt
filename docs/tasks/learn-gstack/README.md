@@ -1,13 +1,13 @@
 ---
 task_id: learn-gstack
 title: Learn gstack (garrytan/gstack reference)
-status: proposed
+status: in_progress
 priority: high
 kind: research
 branch: null
 issue: null
 last_updated: 2026-03-21
-next_step: "Sync or verify checkout at references/external/gstack (references/README.md; bash scripts/sync-references.sh --only gstack); read upstream README and skill/command layout; note one adoptable pattern for role workflows or packaging versus this repo's platforms/ assets."
+next_step: "Use vendored gstack/ at repo root + bash scripts/bootstrap-gstack.sh after clone; compare gstack workflows with .cursor/skills/ when promoting patterns; sync references/external/gstack then rsync to gstack/ when bumping upstream."
 promotion_targets:
   - platforms/
   - docs/decisions.md
@@ -39,6 +39,7 @@ Study the **`gstack`** comparative reference checkout at `references/external/gs
 ## Confirmed Findings
 
 - This repository already documents why `gstack` is tracked and how to sync it in `references/README.md`.
+- **Installed for Cursor-style discovery:** vendored copy at repo root `gstack/` (not under `platforms/`), workspace symlinks under `.agents/skills/gstack*` → `gstack/` (and generated `gstack-*` skill dirs). One-time local build: `bash scripts/bootstrap-gstack.sh` (Bun; `browse/dist/`, `node_modules/`, `.pw-browsers/` gitignored; bootstrap does not use `./setup --host codex` so it does not write `~/.codex` or `~/.gstack`). Documented in root `AGENTS.md`.
 
 ## Open Questions
 
