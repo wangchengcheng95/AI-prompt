@@ -70,15 +70,15 @@ tasks:
 
     - id: learn-gstack
       title: "Learn gstack (garrytan/gstack reference)"
-      status: proposed
+      status: in_progress
       priority: high
       phase: phase-1-near-term
       kind: research
       doc: docs/tasks/learn-gstack/README.md
-      branch: null
+      branch: install-gstack-repo
       issue: null
-      next_step: "Sync or verify references/external/gstack; read upstream README and skill/command layout; note one adoptable pattern for role workflows or packaging versus platforms/ assets."
-      last_updated: 2026-03-21
+      next_step: "Use platforms/gstack + bash scripts/bootstrap-gstack.sh after clone; compare with .cursor/skills/ when promoting; rsync from references/external/gstack when bumping upstream."
+      last_updated: 2026-03-23
 
     - id: learn-webapp-testing
       title: "Learn web application testing (practical stack)"
