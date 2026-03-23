@@ -65,7 +65,7 @@ The current intent of this area is to support comparative study while building o
   - compare repo-distributed skill layouts and setup patterns for local tool installation
   - study role-based slash-command workflows for planning, review, QA, and release handoff
   - extract reusable ideas about orchestration and guardrails without treating the upstream checkout as a maintained asset
-- Maintained vendored copy for this repository (Cursor / Codex-style discovery): `platforms/gstack/` — refresh from `references/external/gstack` when bumping upstream, then run `bash scripts/bootstrap-gstack.sh`
+- Vendored copy used **only by this repo** (not under `platforms/`): root `gstack/` — refresh from `references/external/gstack` when bumping upstream, then run `bash scripts/bootstrap-gstack.sh` (repo-local only; no `~/.codex` / `~/.gstack`)
 
 ### `planning-with-files`
 

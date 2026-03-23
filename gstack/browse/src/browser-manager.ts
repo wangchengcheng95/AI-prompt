@@ -15,9 +15,32 @@
  *   restores state. Falls back to clean slate on any failure.
  */
 
+import { existsSync } from 'fs';
+import { dirname, join } from 'path';
 import { chromium, type Browser, type BrowserContext, type BrowserContextOptions, type Page, type Locator, type Cookie } from 'playwright';
 import { addConsoleEntry, addNetworkEntry, addDialogEntry, networkBuffer, type DialogEntry } from './buffers';
 import { validateNavigationUrl } from './url-validation';
+
+/**
+ * Repo-local bootstrap installs Chromium under <gstack>/.pw-browsers. When the env var
+ * is unset, point Playwright there if that directory exists (argv[0] is browse/dist/browse).
+ */
+function ensurePlaywrightBrowsersPathEnv(): void {
+  if (process.env.PLAYWRIGHT_BROWSERS_PATH) return;
+  try {
+    const exe = process.argv[0];
+    if (!exe) return;
+    const distDir = dirname(exe);
+    const browseRoot = dirname(distDir);
+    const gstackRoot = dirname(browseRoot);
+    const local = join(gstackRoot, '.pw-browsers');
+    if (existsSync(local)) {
+      process.env.PLAYWRIGHT_BROWSERS_PATH = local;
+    }
+  } catch {
+    // ignore resolution errors
+  }
+}
 
 export interface RefEntry {
   locator: Locator;
@@ -62,6 +85,7 @@ export class BrowserManager {
   private consecutiveFailures: number = 0;
 
   async launch() {
+    ensurePlaywrightBrowsersPathEnv();
     this.browser = await chromium.launch({ headless: true });
 
     // Chromium crash → exit with clear message
